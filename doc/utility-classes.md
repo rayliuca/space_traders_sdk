@@ -1,21 +1,42 @@
 
 # Utility Classes Documentation
 
-## ApiHelper
+## ApiHelper Class
 
-A utility class for processing API Calls. Also contains classes for supporting standard datetime formats.
+This is a Helper class with commonly used utilities for the SDK.
+
+### Fields
+
+| Name | Description | Type |
+|  --- | --- | --- |
+| mapper | Deserialization of Json data. | `ObjectMapper` |
 
 ### Methods
 
+| Name | Description | Return Type |
+|  --- | --- | --- |
+| `serialize(Object obj)` | Json Serialization of a given object. | `String` |
+| `deserialize(String json)` | Json deserialization of the given Json string. | `LinkedHashMap<String, Object>` |
+| `deserialize(String json, Class<T> clazz)` | Json deserialization of the given Json string. | `<T extends Object> T` |
+| `deserialize(String json, TypeReference<T> typeReference)` | JSON Deserialization of the given json string. | `<T extends Object> T` |
+| `deserializeArray(String json, Class<T[]> classArray)` | JSON Deserialization of the given json string. | `<T extends Object> List<T>` |
+
+## FileWrapper Class
+
+Class to wrap file and contentType to be sent as part of a HTTP request.
+
+### Constructors
+
 | Name | Description |
 |  --- | --- |
-| json_deserialize | Deserializes a JSON string to a Python dictionary. |
+| `FileWrapper(File file)` | Initialization constructor. |
+| `FileWrapper(File file, String contentType)` | Initialization constructor. |
 
-### Classes
+### Methods
 
-| Name | Description |
-|  --- | --- |
-| HttpDateTime | A wrapper for datetime to support HTTP date format. |
-| UnixDateTime | A wrapper for datetime to support Unix date format. |
-| RFC3339DateTime | A wrapper for datetime to support RFC3339 format. |
+| Name | Description | Return Type |
+|  --- | --- | --- |
+| `getFile()` | File instance. | `File` |
+| `getContentType()` | Content type of the file. | `String` |
+
 

@@ -1,7 +1,7 @@
 # Navigation
 
-```python
-navigation_controller = client.navigation
+```java
+NavigationController navigationController = client.getNavigationController();
 ```
 
 ## Class Name
@@ -23,16 +23,16 @@ navigation_controller = client.navigation
 
 Transition your ship from orbit to docked. Consecutive calls to this endpoint will succeed.
 
-```python
-def post_my_ships_ship_symbol_dock(self,
-                                  ship_symbol)
+```java
+CompletableFuture<MyShipsDockResponse> postMyShipsShipSymbolDockAsync(
+    final String shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The symbol of the ship |
+| `shipSymbol` | `String` | Template, Required | The symbol of the ship |
 
 ## Response Type
 
@@ -40,10 +40,15 @@ def post_my_ships_ship_symbol_dock(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```java
+String shipSymbol = "shipSymbol2";
 
-result = navigation_controller.post_my_ships_ship_symbol_dock(ship_symbol)
+navigationController.postMyShipsShipSymbolDockAsync(shipSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*
@@ -61,16 +66,16 @@ result = navigation_controller.post_my_ships_ship_symbol_dock(ship_symbol)
 
 Transition your ship from docked into orbit. Ships are placed into orbit by default when arriving at a destination. Consecutive calls to this endpoint will continue to return a 200 response status.
 
-```python
-def post_my_ships_ship_symbol_orbit(self,
-                                   ship_symbol)
+```java
+CompletableFuture<MyShipsOrbitResponse> postMyShipsShipSymbolOrbitAsync(
+    final String shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The symbol of the ship |
+| `shipSymbol` | `String` | Template, Required | The symbol of the ship |
 
 ## Response Type
 
@@ -78,10 +83,15 @@ def post_my_ships_ship_symbol_orbit(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```java
+String shipSymbol = "shipSymbol2";
 
-result = navigation_controller.post_my_ships_ship_symbol_orbit(ship_symbol)
+navigationController.postMyShipsShipSymbolOrbitAsync(shipSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*
@@ -99,17 +109,17 @@ result = navigation_controller.post_my_ships_ship_symbol_orbit(ship_symbol)
 
 Jump Ship
 
-```python
-def post_my_ships_ship_symbol_jump(self,
-                                  ship_symbol,
-                                  body=None)
+```java
+CompletableFuture<MyShipsJumpResponse> postMyShipsShipSymbolJumpAsync(
+    final String shipSymbol,
+    final MyShipsJumpRequest body)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `String` | Template, Required | - |
 | `body` | [`MyShipsJumpRequest`](../../doc/models/my-ships-jump-request.md) | Body, Optional | - |
 
 ## Response Type
@@ -118,10 +128,15 @@ def post_my_ships_ship_symbol_jump(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```java
+String shipSymbol = "shipSymbol2";
 
-result = navigation_controller.post_my_ships_ship_symbol_jump(ship_symbol)
+navigationController.postMyShipsShipSymbolJumpAsync(shipSymbol, null).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*
@@ -146,16 +161,16 @@ result = navigation_controller.post_my_ships_ship_symbol_jump(ship_symbol)
 
 Jump Cooldown
 
-```python
-def get_my_ships_ship_symbol_jump(self,
-                                 ship_symbol)
+```java
+CompletableFuture<MyShipsJumpResponse1> getMyShipsShipSymbolJumpAsync(
+    final String shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `String` | Template, Required | - |
 
 ## Response Type
 
@@ -163,10 +178,15 @@ def get_my_ships_ship_symbol_jump(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```java
+String shipSymbol = "shipSymbol2";
 
-result = navigation_controller.get_my_ships_ship_symbol_jump(ship_symbol)
+navigationController.getMyShipsShipSymbolJumpAsync(shipSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 
@@ -174,16 +194,16 @@ result = navigation_controller.get_my_ships_ship_symbol_jump(ship_symbol)
 
 Refuel Ship
 
-```python
-def post_my_ships_ship_symbol_refuel(self,
-                                    ship_symbol)
+```java
+CompletableFuture<MyShipsRefuelResponse> postMyShipsShipSymbolRefuelAsync(
+    final String shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `String` | Template, Required | - |
 
 ## Response Type
 
@@ -191,10 +211,15 @@ def post_my_ships_ship_symbol_refuel(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```java
+String shipSymbol = "shipSymbol2";
 
-result = navigation_controller.post_my_ships_ship_symbol_refuel(ship_symbol)
+navigationController.postMyShipsShipSymbolRefuelAsync(shipSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*
@@ -213,17 +238,17 @@ result = navigation_controller.post_my_ships_ship_symbol_refuel(ship_symbol)
 
 Navigate Ship
 
-```python
-def post_my_ships_ship_symbol_navigate(self,
-                                      ship_symbol,
-                                      body=None)
+```java
+CompletableFuture<MyShipsNavigateResponse> postMyShipsShipSymbolNavigateAsync(
+    final String shipSymbol,
+    final MyShipsNavigateRequest body)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The ship symbol |
+| `shipSymbol` | `String` | Template, Required | The ship symbol |
 | `body` | [`MyShipsNavigateRequest`](../../doc/models/my-ships-navigate-request.md) | Body, Optional | - |
 
 ## Response Type
@@ -232,10 +257,15 @@ def post_my_ships_ship_symbol_navigate(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```java
+String shipSymbol = "shipSymbol2";
 
-result = navigation_controller.post_my_ships_ship_symbol_navigate(ship_symbol)
+navigationController.postMyShipsShipSymbolNavigateAsync(shipSymbol, null).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*
@@ -260,16 +290,16 @@ result = navigation_controller.post_my_ships_ship_symbol_navigate(ship_symbol)
 
 Get the status of your last navigation.
 
-```python
-def get_my_ships_ship_symbol_navigate(self,
-                                     ship_symbol)
+```java
+CompletableFuture<MyShipsNavigateResponse1> getMyShipsShipSymbolNavigateAsync(
+    final String shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The ship symbol |
+| `shipSymbol` | `String` | Template, Required | The ship symbol |
 
 ## Response Type
 
@@ -277,10 +307,15 @@ def get_my_ships_ship_symbol_navigate(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```java
+String shipSymbol = "shipSymbol2";
 
-result = navigation_controller.get_my_ships_ship_symbol_navigate(ship_symbol)
+navigationController.getMyShipsShipSymbolNavigateAsync(shipSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*

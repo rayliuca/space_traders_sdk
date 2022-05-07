@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `TradeSymbol` | `String` | Required | - | String getTradeSymbol() | setTradeSymbol(String tradeSymbol) |
 
 ## Example (as JSON)
 

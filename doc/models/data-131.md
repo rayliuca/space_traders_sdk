@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `cooldown` | [`Cooldown`](../../doc/models/cooldown.md) | Optional | - |
-| `system` | [`System`](../../doc/models/system.md) | Optional | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Cooldown` | [`Cooldown`](../../doc/models/cooldown.md) | Optional | - | Cooldown getCooldown() | setCooldown(Cooldown cooldown) |
+| `System` | [`System`](../../doc/models/system.md) | Optional | - | System getSystem() | setSystem(System system) |
 
 ## Example (as JSON)
 

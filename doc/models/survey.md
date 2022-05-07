@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `signature` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `deposits` | `List of string` | Required | - |
-| `expiration` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Signature` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getSignature() | setSignature(String signature) |
+| `Deposits` | `List<String>` | Required | - | List<String> getDeposits() | setDeposits(List<String> deposits) |
+| `Expiration` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getExpiration() | setExpiration(String expiration) |
 
 ## Example (as JSON)
 

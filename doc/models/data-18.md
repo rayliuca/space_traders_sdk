@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `exports` | [`List of MarketTrade`](../../doc/models/market-trade.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
-| `imports` | [`List of MarketTrade`](../../doc/models/market-trade.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
-| `exchange` | [`List of MarketTrade`](../../doc/models/market-trade.md) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Exports` | [`List<MarketTrade>`](../../doc/models/market-trade.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* | List<MarketTrade> getExports() | setExports(List<MarketTrade> exports) |
+| `Imports` | [`List<MarketTrade>`](../../doc/models/market-trade.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* | List<MarketTrade> getImports() | setImports(List<MarketTrade> imports) |
+| `Exchange` | [`List<MarketTrade>`](../../doc/models/market-trade.md) | Required | - | List<MarketTrade> getExchange() | setExchange(List<MarketTrade> exchange) |
 
 ## Example (as JSON)
 

@@ -1,7 +1,7 @@
 # Shipyards
 
-```python
-shipyards_controller = client.shipyards
+```java
+ShipyardsController shipyardsController = client.getShipyardsController();
 ```
 
 ## Class Name
@@ -20,9 +20,9 @@ shipyards_controller = client.shipyards
 
 Purchase a ship
 
-```python
-def post_my_ships(self,
-                 body=None)
+```java
+CompletableFuture<MyShipsResponse2> postMyShipsAsync(
+    final MyShipsRequest body)
 ```
 
 ## Parameters
@@ -37,8 +37,13 @@ def post_my_ships(self,
 
 ## Example Usage
 
-```python
-result = shipyards_controller.post_my_ships()
+```java
+shipyardsController.postMyShipsAsync(null).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 
@@ -46,16 +51,16 @@ result = shipyards_controller.post_my_ships()
 
 Returns a list of all shipyards in a system.
 
-```python
-def get_systems_system_symbol_shipyards(self,
-                                       system_symbol)
+```java
+CompletableFuture<SystemsShipyardsResponse> getSystemsSystemSymbolShipyardsAsync(
+    final String systemSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | the system symbol |
+| `systemSymbol` | `String` | Template, Required | the system symbol |
 
 ## Response Type
 
@@ -63,10 +68,15 @@ def get_systems_system_symbol_shipyards(self,
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
+```java
+String systemSymbol = "systemSymbol4";
 
-result = shipyards_controller.get_systems_system_symbol_shipyards(system_symbol)
+shipyardsController.getSystemsSystemSymbolShipyardsAsync(systemSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 
@@ -74,18 +84,18 @@ result = shipyards_controller.get_systems_system_symbol_shipyards(system_symbol)
 
 Shipyard Details
 
-```python
-def get_systems_system_symbol_shipyards_waypoint_symbol(self,
-                                                       system_symbol,
-                                                       waypoint_symbol)
+```java
+CompletableFuture<SystemsShipyardsResponse1> getSystemsSystemSymbolShipyardsWaypointSymbolAsync(
+    final String systemSymbol,
+    final String waypointSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
-| `waypoint_symbol` | `string` | Template, Required | The waypoint symbol |
+| `systemSymbol` | `String` | Template, Required | The system symbol |
+| `waypointSymbol` | `String` | Template, Required | The waypoint symbol |
 
 ## Response Type
 
@@ -93,11 +103,16 @@ def get_systems_system_symbol_shipyards_waypoint_symbol(self,
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
-waypoint_symbol = 'waypointSymbol2'
+```java
+String systemSymbol = "systemSymbol4";
+String waypointSymbol = "waypointSymbol2";
 
-result = shipyards_controller.get_systems_system_symbol_shipyards_waypoint_symbol(system_symbol, waypoint_symbol)
+shipyardsController.getSystemsSystemSymbolShipyardsWaypointSymbolAsync(systemSymbol, waypointSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 
@@ -105,18 +120,18 @@ result = shipyards_controller.get_systems_system_symbol_shipyards_waypoint_symbo
 
 Shipyard Listings
 
-```python
-def get_systems_system_symbol_shipyards_waypoint_symbol_ships(self,
-                                                             system_symbol,
-                                                             waypoint_symbol)
+```java
+CompletableFuture<SystemsShipyardsShipsResponse> getSystemsSystemSymbolShipyardsWaypointSymbolShipsAsync(
+    final String systemSymbol,
+    final String waypointSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
-| `waypoint_symbol` | `string` | Template, Required | The waypoint symbol |
+| `systemSymbol` | `String` | Template, Required | The system symbol |
+| `waypointSymbol` | `String` | Template, Required | The waypoint symbol |
 
 ## Response Type
 
@@ -124,10 +139,15 @@ def get_systems_system_symbol_shipyards_waypoint_symbol_ships(self,
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
-waypoint_symbol = 'waypointSymbol2'
+```java
+String systemSymbol = "systemSymbol4";
+String waypointSymbol = "waypointSymbol2";
 
-result = shipyards_controller.get_systems_system_symbol_shipyards_waypoint_symbol_ships(system_symbol, waypoint_symbol)
+shipyardsController.getSystemsSystemSymbolShipyardsWaypointSymbolShipsAsync(systemSymbol, waypointSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 

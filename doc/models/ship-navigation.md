@@ -7,13 +7,13 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `departure` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `destination` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `duration_remaining` | `int` | Required | - |
-| `arrived_at` | `object` | Optional | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `ShipSymbol` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getShipSymbol() | setShipSymbol(String shipSymbol) |
+| `Departure` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getDeparture() | setDeparture(String departure) |
+| `Destination` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getDestination() | setDestination(String destination) |
+| `DurationRemaining` | `int` | Required | - | int getDurationRemaining() | setDurationRemaining(int durationRemaining) |
+| `ArrivedAt` | `Object` | Optional | - | Object getArrivedAt() | setArrivedAt(Object arrivedAt) |
 
 ## Example (as JSON)
 

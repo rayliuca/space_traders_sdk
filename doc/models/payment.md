@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `on_accepted` | `int` | Required | - |
-| `on_fulfilled` | `int` | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `OnAccepted` | `int` | Required | - | int getOnAccepted() | setOnAccepted(int onAccepted) |
+| `OnFulfilled` | `int` | Required | - | int getOnFulfilled() | setOnFulfilled(int onFulfilled) |
 
 ## Example (as JSON)
 

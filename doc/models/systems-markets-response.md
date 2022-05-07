@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `data` | `List of string` | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Data` | `List<String>` | Required | - | List<String> getData() | setData(List<String> data) |
 
 ## Example (as JSON)
 

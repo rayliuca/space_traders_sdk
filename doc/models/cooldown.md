@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `duration` | `int` | Required | - |
-| `expiration` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Duration` | `int` | Required | - | int getDuration() | setDuration(int duration) |
+| `Expiration` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getExpiration() | setExpiration(String expiration) |
 
 ## Example (as JSON)
 

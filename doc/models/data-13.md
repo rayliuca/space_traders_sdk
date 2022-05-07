@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `ships` | [`List of ScannedShip`](../../doc/models/scanned-ship.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
-| `cooldown` | [`Cooldown`](../../doc/models/cooldown.md) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Ships` | [`List<ScannedShip>`](../../doc/models/scanned-ship.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* | List<ScannedShip> getShips() | setShips(List<ScannedShip> ships) |
+| `Cooldown` | [`Cooldown`](../../doc/models/cooldown.md) | Required | - | Cooldown getCooldown() | setCooldown(Cooldown cooldown) |
 
 ## Example (as JSON)
 

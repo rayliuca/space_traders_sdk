@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `data` | [`Ship`](../../doc/models/ship.md) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Data` | [`Ship`](../../doc/models/ship.md) | Required | - | Ship getData() | setData(Ship data) |
 
 ## Example (as JSON)
 

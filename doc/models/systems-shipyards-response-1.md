@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `data` | [`Shipyard`](../../doc/models/shipyard.md) | Optional | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Data` | [`Shipyard`](../../doc/models/shipyard.md) | Optional | - | Shipyard getData() | setData(Shipyard data) |
 
 ## Example (as JSON)
 

@@ -1,7 +1,7 @@
 # Trade
 
-```python
-trade_controller = client.trade
+```java
+TradeController tradeController = client.getTradeController();
 ```
 
 ## Class Name
@@ -18,17 +18,17 @@ trade_controller = client.trade
 
 Purchase Cargo
 
-```python
-def post_my_ships_ship_symbol_purchase(self,
-                                      ship_symbol,
-                                      body=None)
+```java
+CompletableFuture<MyShipsPurchaseResponse> postMyShipsShipSymbolPurchaseAsync(
+    final String shipSymbol,
+    final MyShipsPurchaseRequest body)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `String` | Template, Required | - |
 | `body` | [`MyShipsPurchaseRequest`](../../doc/models/my-ships-purchase-request.md) | Body, Optional | - |
 
 ## Response Type
@@ -37,10 +37,15 @@ def post_my_ships_ship_symbol_purchase(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```java
+String shipSymbol = "shipSymbol2";
 
-result = trade_controller.post_my_ships_ship_symbol_purchase(ship_symbol)
+tradeController.postMyShipsShipSymbolPurchaseAsync(shipSymbol, null).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*
@@ -61,17 +66,17 @@ result = trade_controller.post_my_ships_ship_symbol_purchase(ship_symbol)
 
 Sell cargo from your ship's hold to the local market.
 
-```python
-def post_my_ships_ship_symbol_sell(self,
-                                  ship_symbol,
-                                  body=None)
+```java
+CompletableFuture<MyShipsSellResponse> postMyShipsShipSymbolSellAsync(
+    final String shipSymbol,
+    final MyShipsSellRequest body)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `String` | Template, Required | - |
 | `body` | [`MyShipsSellRequest`](../../doc/models/my-ships-sell-request.md) | Body, Optional | - |
 
 ## Response Type
@@ -80,10 +85,15 @@ def post_my_ships_ship_symbol_sell(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```java
+String shipSymbol = "shipSymbol2";
 
-result = trade_controller.post_my_ships_ship_symbol_sell(ship_symbol)
+tradeController.postMyShipsShipSymbolSellAsync(shipSymbol, null).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*

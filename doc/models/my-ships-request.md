@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `id` | `string` | Optional | The id of the shipyard listing you want to purchase. |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Id` | `String` | Optional | The id of the shipyard listing you want to purchase. | String getId() | setId(String id) |
 
 ## Example (as JSON)
 

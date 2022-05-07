@@ -1,7 +1,7 @@
 # Agents
 
-```python
-agents_controller = client.agents
+```java
+AgentsController agentsController = client.getAgentsController();
 ```
 
 ## Class Name
@@ -32,9 +32,9 @@ Return to the contract destination and execute the `/my/ships/{shipSymbol}/deliv
 
 When your contract is fulfilled, you can call `/my/contracts/{contractId}/fulfill` to retrieve payment.
 
-```python
-def post_agents(self,
-               body=None)
+```java
+CompletableFuture<AgentsResponse> postAgentsAsync(
+    final AgentsRequest body)
 ```
 
 ## Parameters
@@ -49,8 +49,13 @@ def post_agents(self,
 
 ## Example Usage
 
-```python
-result = agents_controller.post_agents()
+```java
+agentsController.postAgentsAsync(null).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*
@@ -141,8 +146,8 @@ result = agents_controller.post_agents()
 
 Fetch your agent's details.
 
-```python
-def get_my_agent(self)
+```java
+CompletableFuture<MyAgentResponse> getMyAgentAsync()
 ```
 
 ## Response Type
@@ -151,8 +156,13 @@ def get_my_agent(self)
 
 ## Example Usage
 
-```python
-result = agents_controller.get_my_agent()
+```java
+agentsController.getMyAgentAsync().thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*

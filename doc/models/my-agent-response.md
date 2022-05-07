@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `data` | [`Agent`](../../doc/models/agent.md) | Optional | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Data` | [`Agent`](../../doc/models/agent.md) | Optional | - | Agent getData() | setData(Agent data) |
 
 ## Example (as JSON)
 

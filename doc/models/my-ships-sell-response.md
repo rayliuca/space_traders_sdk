@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `data` | [`Trade`](../../doc/models/trade.md) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Data` | [`Trade`](../../doc/models/trade.md) | Required | - | Trade getData() | setData(Trade data) |
 
 ## Example (as JSON)
 

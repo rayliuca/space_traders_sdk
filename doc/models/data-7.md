@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `cooldown` | [`Cooldown`](../../doc/models/cooldown.md) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Cooldown` | [`Cooldown`](../../doc/models/cooldown.md) | Required | - | Cooldown getCooldown() | setCooldown(Cooldown cooldown) |
 
 ## Example (as JSON)
 

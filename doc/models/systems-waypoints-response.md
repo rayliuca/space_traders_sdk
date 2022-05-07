@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `data` | [`List of Waypoint`](../../doc/models/waypoint.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
-| `meta` | [`Meta`](../../doc/models/meta.md) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Data` | [`List<Waypoint>`](../../doc/models/waypoint.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* | List<Waypoint> getData() | setData(List<Waypoint> data) |
+| `Meta` | [`Meta`](../../doc/models/meta.md) | Required | - | Meta getMeta() | setMeta(Meta meta) |
 
 ## Example (as JSON)
 

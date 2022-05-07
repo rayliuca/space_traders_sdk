@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `data` | [`System`](../../doc/models/system.md) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Data` | [`System`](../../doc/models/system.md) | Required | - | System getData() | setData(System data) |
 
 ## Example (as JSON)
 

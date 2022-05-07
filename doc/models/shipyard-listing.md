@@ -7,17 +7,17 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `id` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `waypoint` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `price` | `int` | Required | - |
-| `role` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `frame` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `reactor` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `engine` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `modules` | `List of string` | Required | - |
-| `mounts` | `List of string` | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Id` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getId() | setId(String id) |
+| `Waypoint` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getWaypoint() | setWaypoint(String waypoint) |
+| `Price` | `int` | Required | - | int getPrice() | setPrice(int price) |
+| `Role` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getRole() | setRole(String role) |
+| `Frame` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getFrame() | setFrame(String frame) |
+| `Reactor` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getReactor() | setReactor(String reactor) |
+| `Engine` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getEngine() | setEngine(String engine) |
+| `Modules` | `List<String>` | Required | - | List<String> getModules() | setModules(List<String> modules) |
+| `Mounts` | `List<String>` | Required | - | List<String> getMounts() | setMounts(List<String> mounts) |
 
 ## Example (as JSON)
 

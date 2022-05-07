@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `ship` | [`Ship`](../../doc/models/ship.md) | Optional | - |
-| `credits` | `int` | Optional | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Ship` | [`Ship`](../../doc/models/ship.md) | Optional | - | Ship getShip() | setShip(Ship ship) |
+| `Credits` | `Integer` | Optional | - | Integer getCredits() | setCredits(Integer credits) |
 
 ## Example (as JSON)
 

@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `data` | [`List of Ship`](../../doc/models/ship.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
-| `meta` | [`Meta`](../../doc/models/meta.md) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Data` | [`List<Ship>`](../../doc/models/ship.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* | List<Ship> getData() | setData(List<Ship> data) |
+| `Meta` | [`Meta`](../../doc/models/meta.md) | Required | - | Meta getMeta() | setMeta(Meta meta) |
 
 ## Example (as JSON)
 

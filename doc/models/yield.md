@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `units` | `int` | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `TradeSymbol` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getTradeSymbol() | setTradeSymbol(String tradeSymbol) |
+| `Units` | `int` | Required | - | int getUnits() | setUnits(int units) |
 
 ## Example (as JSON)
 

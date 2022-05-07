@@ -7,17 +7,17 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `sector` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `mtype` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `x` | `int` | Required | - |
-| `y` | `int` | Required | - |
-| `waypoints` | `List of string` | Required | - |
-| `factions` | `List of string` | Required | - |
-| `charted` | `bool` | Required | - |
-| `charted_by` | `string` | Optional | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Symbol` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getSymbol() | setSymbol(String symbol) |
+| `Sector` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getSector() | setSector(String sector) |
+| `Type` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getType() | setType(String type) |
+| `X` | `int` | Required | - | int getX() | setX(int x) |
+| `Y` | `int` | Required | - | int getY() | setY(int y) |
+| `Waypoints` | `List<String>` | Required | - | List<String> getWaypoints() | setWaypoints(List<String> waypoints) |
+| `Factions` | `List<String>` | Required | - | List<String> getFactions() | setFactions(List<String> factions) |
+| `Charted` | `boolean` | Required | - | boolean getCharted() | setCharted(boolean charted) |
+| `ChartedBy` | `String` | Optional | - | String getChartedBy() | setChartedBy(String chartedBy) |
 
 ## Example (as JSON)
 

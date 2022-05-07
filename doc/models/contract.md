@@ -7,15 +7,15 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `id` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `faction` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `mtype` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `terms` | [`Terms`](../../doc/models/terms.md) | Required | - |
-| `accepted` | `bool` | Required | - |
-| `fulfilled` | `bool` | Required | - |
-| `expires_at` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Id` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getId() | setId(String id) |
+| `Faction` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getFaction() | setFaction(String faction) |
+| `Type` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getType() | setType(String type) |
+| `Terms` | [`Terms`](../../doc/models/terms.md) | Required | - | Terms getTerms() | setTerms(Terms terms) |
+| `Accepted` | `boolean` | Required | - | boolean getAccepted() | setAccepted(boolean accepted) |
+| `Fulfilled` | `boolean` | Required | - | boolean getFulfilled() | setFulfilled(boolean fulfilled) |
+| `ExpiresAt` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getExpiresAt() | setExpiresAt(String expiresAt) |
 
 ## Example (as JSON)
 

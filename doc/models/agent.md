@@ -7,12 +7,12 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `account_id` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `headquarters` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `credits` | `int` | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `AccountId` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getAccountId() | setAccountId(String accountId) |
+| `Symbol` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getSymbol() | setSymbol(String symbol) |
+| `Headquarters` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getHeadquarters() | setHeadquarters(String headquarters) |
+| `Credits` | `int` | Required | - | int getCredits() | setCredits(int credits) |
 
 ## Example (as JSON)
 

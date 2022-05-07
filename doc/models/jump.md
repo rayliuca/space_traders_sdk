@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `destination` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `ShipSymbol` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getShipSymbol() | setShipSymbol(String shipSymbol) |
+| `Destination` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getDestination() | setDestination(String destination) |
 
 ## Example (as JSON)
 

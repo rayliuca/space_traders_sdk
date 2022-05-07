@@ -7,12 +7,12 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `destination` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `units` | `int` | Required | - |
-| `fulfilled` | `int` | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `TradeSymbol` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getTradeSymbol() | setTradeSymbol(String tradeSymbol) |
+| `Destination` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getDestination() | setDestination(String destination) |
+| `Units` | `int` | Required | - | int getUnits() | setUnits(int units) |
+| `Fulfilled` | `int` | Required | - | int getFulfilled() | setFulfilled(int fulfilled) |
 
 ## Example (as JSON)
 

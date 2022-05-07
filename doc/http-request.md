@@ -1,16 +1,22 @@
 
-# HttpRequest
+# HttpRequest Class
 
-Represents a single Http Request.
+Class for creating and managing HTTP Requests.
 
-## Parameters
+## Constructors
 
-| Name | Type | Tag | Description |
-|  --- | --- | --- | --- |
-| http_method | HttpMethodEnum |  | The HTTP method of the request. |
-| query_url | str |  | The endpoint URL for the API request. |
-| headers | dict | optional | Request headers. |
-| query_parameters | dict | optional | Query parameters to add in the URL. |
-| parameters | dict &#124; str | optional | Request body, either as a serialized string or else a list of parameters to form encode. |
-| files | dict | optional | Files to be sent with the request. |
+| Name | Description |
+|  --- | --- |
+| `HttpRequest(HttpMethod method, StringBuilder queryUrlBuilder, Headers headers, Map<String, Object> queryParameters, List< SimpleEntry < String, Object >> parameters)` | Initializes a simple http request. |
+
+## Methods
+
+| Name | Description | Return Type |
+|  --- | --- | --- |
+| `getHttpMethod()` | HttpMethod for the http request. | `HttpMethod` |
+| `getHeaders()` | Headers for the http request. | `Headers` |
+| `getQueryUrl()` | Query url for the http request. | `String` |
+| `getParameters()` | Parameters for the http request. | `List<SimpleEntry<String, Object>>` |
+| `getQueryParameters()` | Query parameters for the http request. | `Map<String, Object>` |
+| `addQueryParameter(String key, Object value)` | Add Query parameter in http request. | `void` |
 

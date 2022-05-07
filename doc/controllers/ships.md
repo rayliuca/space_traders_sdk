@@ -1,7 +1,7 @@
 # Ships
 
-```python
-ships_controller = client.ships
+```java
+ShipsController shipsController = client.getShipsController();
 ```
 
 ## Class Name
@@ -21,17 +21,17 @@ ships_controller = client.ships
 
 Jettison cargo from your ship's cargo hold.
 
-```python
-def post_my_ships_ship_symbol_jettison(self,
-                                      ship_symbol,
-                                      body=None)
+```java
+CompletableFuture<MyShipsJettisonResponse> postMyShipsShipSymbolJettisonAsync(
+    final String shipSymbol,
+    final MyShipsJettisonRequest body)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `String` | Template, Required | - |
 | `body` | [`MyShipsJettisonRequest`](../../doc/models/my-ships-jettison-request.md) | Body, Optional | - |
 
 ## Response Type
@@ -40,10 +40,15 @@ def post_my_ships_ship_symbol_jettison(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```java
+String shipSymbol = "shipSymbol2";
 
-result = ships_controller.post_my_ships_ship_symbol_jettison(ship_symbol)
+shipsController.postMyShipsShipSymbolJettisonAsync(shipSymbol, null).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*
@@ -62,17 +67,17 @@ result = ships_controller.post_my_ships_ship_symbol_jettison(ship_symbol)
 
 Execute a ship scan to view approach / departing ships, system information or details about a waypoint. Send a scan mode to select the type of scan performed by your ship.
 
-```python
-def post_my_ships_ship_symbol_scan(self,
-                                  ship_symbol,
-                                  body=None)
+```java
+CompletableFuture<MyShipsScanResponse> postMyShipsShipSymbolScanAsync(
+    final String shipSymbol,
+    final MyShipsScanRequest body)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `String` | Template, Required | - |
 | `body` | [`MyShipsScanRequest`](../../doc/models/my-ships-scan-request.md) | Body, Optional | - |
 
 ## Response Type
@@ -81,12 +86,17 @@ def post_my_ships_ship_symbol_scan(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
-body = MyShipsScanRequest()
-body.mode = ModeEnum.APPROACHING_SHIPS
+```java
+String shipSymbol = "shipSymbol2";
+MyShipsScanRequest body = new MyShipsScanRequest();
+body.setMode(ModeEnum.APPROACHING_SHIPS);
 
-result = ships_controller.post_my_ships_ship_symbol_scan(ship_symbol, body)
+shipsController.postMyShipsShipSymbolScanAsync(shipSymbol, body).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 
@@ -94,16 +104,16 @@ result = ships_controller.post_my_ships_ship_symbol_scan(ship_symbol, body)
 
 Scan Cooldown
 
-```python
-def get_my_ships_ship_symbol_scan(self,
-                                 ship_symbol)
+```java
+CompletableFuture<MyShipsScanResponse1> getMyShipsShipSymbolScanAsync(
+    final String shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `String` | Template, Required | - |
 
 ## Response Type
 
@@ -111,10 +121,15 @@ def get_my_ships_ship_symbol_scan(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```java
+String shipSymbol = "shipSymbol2";
 
-result = ships_controller.get_my_ships_ship_symbol_scan(ship_symbol)
+shipsController.getMyShipsShipSymbolScanAsync(shipSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*
@@ -135,16 +150,16 @@ result = ships_controller.get_my_ships_ship_symbol_scan(ship_symbol)
 
 Retrieve the details of your ship.
 
-```python
-def get_my_ships_ship_symbol(self,
-                            ship_symbol)
+```java
+CompletableFuture<MyShipsResponse> getMyShipsShipSymbolAsync(
+    final String shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `String` | Template, Required | - |
 
 ## Response Type
 
@@ -152,10 +167,15 @@ def get_my_ships_ship_symbol(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```java
+String shipSymbol = "shipSymbol2";
 
-result = ships_controller.get_my_ships_ship_symbol(ship_symbol)
+shipsController.getMyShipsShipSymbolAsync(shipSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 
@@ -163,8 +183,8 @@ result = ships_controller.get_my_ships_ship_symbol(ship_symbol)
 
 Retrieve all of your ships.
 
-```python
-def get_my_ships(self)
+```java
+CompletableFuture<MyShipsResponse1> getMyShipsAsync()
 ```
 
 ## Response Type
@@ -173,8 +193,13 @@ def get_my_ships(self)
 
 ## Example Usage
 
-```python
-result = ships_controller.get_my_ships()
+```java
+shipsController.getMyShipsAsync().thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*

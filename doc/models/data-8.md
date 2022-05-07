@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `surveys` | [`List of Survey`](../../doc/models/survey.md) | Optional | - |
-| `cooldown` | [`Cooldown`](../../doc/models/cooldown.md) | Optional | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Surveys` | [`List<Survey>`](../../doc/models/survey.md) | Optional | - | List<Survey> getSurveys() | setSurveys(List<Survey> surveys) |
+| `Cooldown` | [`Cooldown`](../../doc/models/cooldown.md) | Optional | - | Cooldown getCooldown() | setCooldown(Cooldown cooldown) |
 
 ## Example (as JSON)
 

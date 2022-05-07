@@ -7,12 +7,12 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `waypoint_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `trade_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `credits` | `int` | Required | - |
-| `units` | `int` | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `WaypointSymbol` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getWaypointSymbol() | setWaypointSymbol(String waypointSymbol) |
+| `TradeSymbol` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getTradeSymbol() | setTradeSymbol(String tradeSymbol) |
+| `Credits` | `int` | Required | - | int getCredits() | setCredits(int credits) |
+| `Units` | `int` | Required | - | int getUnits() | setUnits(int units) |
 
 ## Example (as JSON)
 

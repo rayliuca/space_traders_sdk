@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `frame` | `float` | Required | - |
-| `reactor` | `float` | Required | - |
-| `engine` | `float` | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Frame` | `double` | Required | - | double getFrame() | setFrame(double frame) |
+| `Reactor` | `double` | Required | - | double getReactor() | setReactor(double reactor) |
+| `Engine` | `double` | Required | - | double getEngine() | setEngine(double engine) |
 
 ## Example (as JSON)
 

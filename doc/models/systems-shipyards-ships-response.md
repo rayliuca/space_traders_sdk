@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `data` | [`List of ShipyardListing`](../../doc/models/shipyard-listing.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
-| `meta` | [`Meta`](../../doc/models/meta.md) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Data` | [`List<ShipyardListing>`](../../doc/models/shipyard-listing.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* | List<ShipyardListing> getData() | setData(List<ShipyardListing> data) |
+| `Meta` | [`Meta`](../../doc/models/meta.md) | Required | - | Meta getMeta() | setMeta(Meta meta) |
 
 ## Example (as JSON)
 

@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `destination` | `string` | Optional | The system symbol to jump to. |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Destination` | `String` | Optional | The system symbol to jump to. | String getDestination() | setDestination(String destination) |
 
 ## Example (as JSON)
 

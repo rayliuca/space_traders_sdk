@@ -5,42 +5,47 @@ The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
-| `http_client_instance` | `HttpClient` | The Http Client passed from the sdk user for making requests |
-| `override_http_client_configuration` | `bool` | The value which determines to override properties of the passed Http Client from the sdk user |
-| `http_call_back` | `HttpCallBack` | The callback value that is invoked before and after an HTTP call is made to an endpoint |
-| `timeout` | `float` | The value to use for connection timeout. <br> **Default: 60** |
-| `max_retries` | `int` | The number of times to retry an endpoint call if it fails. <br> **Default: 0** |
-| `backoff_factor` | `float` | A backoff factor to apply between attempts after the second try. <br> **Default: 2** |
-| `retry_statuses` | `Array of int` | The http statuses on which retry is to be done. <br> **Default: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524]** |
-| `retry_methods` | `Array of string` | The http methods on which retry is to be done. <br> **Default: ['GET', 'PUT']** |
-| `access_token` | `string` | The OAuth 2.0 Access Token to use for API requests. |
+| `httpClientConfig` | `ReadonlyHttpClientConfiguration` | Http Client Configuration instance. |
+| `accessToken` | `String` | The OAuth 2.0 Access Token to use for API requests. |
 
 The API client can be initialized as follows:
 
-```python
-from spacetradersapi.spacetradersapi_client import SpacetradersapiClient
-from spacetradersapi.configuration import Environment
-
-client = SpacetradersapiClient(
-    access_token='AccessToken',
-    environment=Environment.PRODUCTION,)
+```java
+SpaceTradersAPIClient client = new SpaceTradersAPIClient.Builder()
+    .httpClientConfig(configBuilder -> configBuilder
+            .timeout(0))
+    .accessToken("AccessToken")
+    .build();
 ```
 
-## SpaceTraders API Client
+## SpaceTraders APIClient Class
 
 The gateway for the SDK. This class acts as a factory for the Controllers and also holds the configuration of the SDK.
 
-## Controllers
+### Controllers
 
-| Name | Description |
-|  --- | --- |
-| ships | Gets ShipsController |
-| markets | Gets MarketsController |
-| trade | Gets TradeController |
-| navigation | Gets NavigationController |
-| agents | Gets AgentsController |
-| contracts | Gets ContractsController |
-| extract | Gets ExtractController |
-| systems | Gets SystemsController |
-| shipyards | Gets ShipyardsController |
+| Name | Description | Return Type |
+|  --- | --- | --- |
+| `getShipsController()` | Provides access to Ships controller. | `ShipsController` |
+| `getMarketsController()` | Provides access to Markets controller. | `MarketsController` |
+| `getTradeController()` | Provides access to Trade controller. | `TradeController` |
+| `getNavigationController()` | Provides access to Navigation controller. | `NavigationController` |
+| `getAgentsController()` | Provides access to Agents controller. | `AgentsController` |
+| `getContractsController()` | Provides access to Contracts controller. | `ContractsController` |
+| `getExtractController()` | Provides access to Extract controller. | `ExtractController` |
+| `getSystemsController()` | Provides access to Systems controller. | `SystemsController` |
+| `getShipyardsController()` | Provides access to Shipyards controller. | `ShipyardsController` |
+
+### Methods
+
+| Name | Description | Return Type |
+|  --- | --- | --- |
+| `shutdown()` | Shutdown the underlying HttpClient instance. | `void` |
+| `getEnvironment()` | Current API environment. | `Environment` |
+| `getHttpClient()` | The HTTP Client instance to use for making HTTP requests. | `HttpClient` |
+| `getHttpClientConfig()` | Http Client Configuration instance. | `ReadonlyHttpClientConfiguration` |
+| `getBearerAuthCredentials()` | The credentials to use with BearerAuth. | `BearerAuthCredentials` |
+| `getAccessToken()` | OAuth 2.0 Access Token. | `String` |
+| `getBaseUri(Server server)` | Get base URI by current environment | `String` |
+| `getBaseUri()` | Get base URI by current environment | `String` |
 

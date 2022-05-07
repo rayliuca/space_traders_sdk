@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `survey` | [`Survey`](../../doc/models/survey.md) | Optional | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Survey` | [`Survey`](../../doc/models/survey.md) | Optional | - | Survey getSurvey() | setSurvey(Survey survey) |
 
 ## Example (as JSON)
 

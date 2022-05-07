@@ -1,7 +1,7 @@
 # Contracts
 
-```python
-contracts_controller = client.contracts
+```java
+ContractsController contractsController = client.getContractsController();
 ```
 
 ## Class Name
@@ -20,17 +20,17 @@ contracts_controller = client.contracts
 
 Deliver cargo on a given contract.
 
-```python
-def post_my_ships_ship_symbol_deliver(self,
-                                     ship_symbol,
-                                     body=None)
+```java
+CompletableFuture<MyShipsDeliverResponse> postMyShipsShipSymbolDeliverAsync(
+    final String shipSymbol,
+    final MyShipsDeliverRequest body)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The symbol of the ship |
+| `shipSymbol` | `String` | Template, Required | The symbol of the ship |
 | `body` | [`MyShipsDeliverRequest`](../../doc/models/my-ships-deliver-request.md) | Body, Optional | - |
 
 ## Response Type
@@ -39,10 +39,15 @@ def post_my_ships_ship_symbol_deliver(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```java
+String shipSymbol = "shipSymbol2";
 
-result = contracts_controller.post_my_ships_ship_symbol_deliver(ship_symbol)
+contractsController.postMyShipsShipSymbolDeliverAsync(shipSymbol, null).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 
@@ -50,8 +55,8 @@ result = contracts_controller.post_my_ships_ship_symbol_deliver(ship_symbol)
 
 List all of your contracts.
 
-```python
-def get_my_contracts(self)
+```java
+CompletableFuture<MyContractsResponse> getMyContractsAsync()
 ```
 
 ## Response Type
@@ -60,8 +65,13 @@ def get_my_contracts(self)
 
 ## Example Usage
 
-```python
-result = contracts_controller.get_my_contracts()
+```java
+contractsController.getMyContractsAsync().thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*
@@ -106,16 +116,16 @@ result = contracts_controller.get_my_contracts()
 
 Get the details of a contract by ID.
 
-```python
-def get_my_contracts_contract_id(self,
-                                contract_id)
+```java
+CompletableFuture<MyContractsResponse1> getMyContractsContractIdAsync(
+    final String contractId)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `contract_id` | `string` | Template, Required | The contract ID |
+| `contractId` | `String` | Template, Required | The contract ID |
 
 ## Response Type
 
@@ -123,10 +133,15 @@ def get_my_contracts_contract_id(self,
 
 ## Example Usage
 
-```python
-contract_id = 'contractId2'
+```java
+String contractId = "contractId2";
 
-result = contracts_controller.get_my_contracts_contract_id(contract_id)
+contractsController.getMyContractsContractIdAsync(contractId).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*
@@ -164,16 +179,16 @@ result = contracts_controller.get_my_contracts_contract_id(contract_id)
 
 Accept a contract.
 
-```python
-def post_my_contracts_contract_id_accept(self,
-                                        contract_id)
+```java
+CompletableFuture<MyContractsAcceptResponse> postMyContractsContractIdAcceptAsync(
+    final String contractId)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `contract_id` | `string` | Template, Required | - |
+| `contractId` | `String` | Template, Required | - |
 
 ## Response Type
 
@@ -181,9 +196,14 @@ def post_my_contracts_contract_id_accept(self,
 
 ## Example Usage
 
-```python
-contract_id = 'contractId2'
+```java
+String contractId = "contractId2";
 
-result = contracts_controller.post_my_contracts_contract_id_accept(contract_id)
+contractsController.postMyContractsContractIdAcceptAsync(contractId).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 

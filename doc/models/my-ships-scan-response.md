@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `data` | [`object`]($m/) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Data` | [`MyShipsScanResponseData`]($m/MyShipsScanResponseData) | Required | - | MyShipsScanResponseData getData() | setData(MyShipsScanResponseData data) |
 
 ## Example (as JSON)
 

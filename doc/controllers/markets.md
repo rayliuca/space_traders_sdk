@@ -1,7 +1,7 @@
 # Markets
 
-```python
-markets_controller = client.markets
+```java
+MarketsController marketsController = client.getMarketsController();
 ```
 
 ## Class Name
@@ -24,17 +24,17 @@ Use this endpoint to deploy a Communications Relay to a waypoint. A waypoint wit
 
 Communication relays can be purchased from a market that exports `COMM_RELAY_I`.
 
-```python
-def post_my_ships_ship_symbol_deploy(self,
-                                    ship_symbol,
-                                    body=None)
+```java
+CompletableFuture<Void> postMyShipsShipSymbolDeployAsync(
+    final String shipSymbol,
+    final MyShipsDeployRequest body)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The ship symbol |
+| `shipSymbol` | `String` | Template, Required | The ship symbol |
 | `body` | [`MyShipsDeployRequest`](../../doc/models/my-ships-deploy-request.md) | Body, Optional | - |
 
 ## Response Type
@@ -43,10 +43,15 @@ def post_my_ships_ship_symbol_deploy(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```java
+String shipSymbol = "shipSymbol2";
 
-result = markets_controller.post_my_ships_ship_symbol_deploy(ship_symbol)
+marketsController.postMyShipsShipSymbolDeployAsync(shipSymbol, null).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 
@@ -54,16 +59,16 @@ result = markets_controller.post_my_ships_ship_symbol_deploy(ship_symbol)
 
 Trade Imports
 
-```python
-def get_trade_trade_symbol_imports(self,
-                                  trade_symbol)
+```java
+CompletableFuture<TradeImportsResponse> getTradeTradeSymbolImportsAsync(
+    final String tradeSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Template, Required | The trade symbol |
+| `tradeSymbol` | `String` | Template, Required | The trade symbol |
 
 ## Response Type
 
@@ -71,10 +76,15 @@ def get_trade_trade_symbol_imports(self,
 
 ## Example Usage
 
-```python
-trade_symbol = 'tradeSymbol8'
+```java
+String tradeSymbol = "tradeSymbol8";
 
-result = markets_controller.get_trade_trade_symbol_imports(trade_symbol)
+marketsController.getTradeTradeSymbolImportsAsync(tradeSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 
@@ -82,16 +92,16 @@ result = markets_controller.get_trade_trade_symbol_imports(trade_symbol)
 
 Trade Exports
 
-```python
-def get_trade_trade_symbol_exports(self,
-                                  trade_symbol)
+```java
+CompletableFuture<TradeExportsResponse> getTradeTradeSymbolExportsAsync(
+    final String tradeSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Template, Required | The trade symbol |
+| `tradeSymbol` | `String` | Template, Required | The trade symbol |
 
 ## Response Type
 
@@ -99,10 +109,15 @@ def get_trade_trade_symbol_exports(self,
 
 ## Example Usage
 
-```python
-trade_symbol = 'tradeSymbol8'
+```java
+String tradeSymbol = "tradeSymbol8";
 
-result = markets_controller.get_trade_trade_symbol_exports(trade_symbol)
+marketsController.getTradeTradeSymbolExportsAsync(tradeSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 
@@ -110,16 +125,16 @@ result = markets_controller.get_trade_trade_symbol_exports(trade_symbol)
 
 Trade Exchanges
 
-```python
-def get_trade_trade_symbol_exchange(self,
-                                   trade_symbol)
+```java
+CompletableFuture<TradeExchangeResponse> getTradeTradeSymbolExchangeAsync(
+    final String tradeSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Template, Required | The trade symbol |
+| `tradeSymbol` | `String` | Template, Required | The trade symbol |
 
 ## Response Type
 
@@ -127,10 +142,15 @@ def get_trade_trade_symbol_exchange(self,
 
 ## Example Usage
 
-```python
-trade_symbol = 'tradeSymbol8'
+```java
+String tradeSymbol = "tradeSymbol8";
 
-result = markets_controller.get_trade_trade_symbol_exchange(trade_symbol)
+marketsController.getTradeTradeSymbolExchangeAsync(tradeSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 
@@ -140,16 +160,16 @@ Retrieve a list of all charted markets in the given system. Markets are only ava
 
 To install a communications relay at a market, look at the `my/ships/{shipSymbol}/deploy` endpoint.
 
-```python
-def get_systems_system_symbol_markets(self,
-                                     system_symbol)
+```java
+CompletableFuture<SystemsMarketsResponse> getSystemsSystemSymbolMarketsAsync(
+    final String systemSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
+| `systemSymbol` | `String` | Template, Required | The system symbol |
 
 ## Response Type
 
@@ -157,10 +177,15 @@ def get_systems_system_symbol_markets(self,
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
+```java
+String systemSymbol = "systemSymbol4";
 
-result = markets_controller.get_systems_system_symbol_markets(system_symbol)
+marketsController.getSystemsSystemSymbolMarketsAsync(systemSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*
@@ -187,18 +212,18 @@ Market data is only available if you have a ship at the location, or the locatio
 
 See `/my/ships/{shipSymbol}/deploy` for deploying relays at a location.
 
-```python
-def get_systems_system_symbol_markets_waypoint_symbol(self,
-                                                     system_symbol,
-                                                     waypoint_symbol)
+```java
+CompletableFuture<SystemsMarketsResponse1> getSystemsSystemSymbolMarketsWaypointSymbolAsync(
+    final String systemSymbol,
+    final String waypointSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
-| `waypoint_symbol` | `string` | Template, Required | The waypoint symbol |
+| `systemSymbol` | `String` | Template, Required | The system symbol |
+| `waypointSymbol` | `String` | Template, Required | The waypoint symbol |
 
 ## Response Type
 
@@ -206,11 +231,16 @@ def get_systems_system_symbol_markets_waypoint_symbol(self,
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
-waypoint_symbol = 'waypointSymbol2'
+```java
+String systemSymbol = "systemSymbol4";
+String waypointSymbol = "waypointSymbol2";
 
-result = markets_controller.get_systems_system_symbol_markets_waypoint_symbol(system_symbol, waypoint_symbol)
+marketsController.getSystemsSystemSymbolMarketsWaypointSymbolAsync(systemSymbol, waypointSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*

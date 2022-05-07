@@ -7,14 +7,14 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `registration` | [`Registration`](../../doc/models/registration.md) | Required | - |
-| `frame_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `reactor_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `engine_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `expiration` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Symbol` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getSymbol() | setSymbol(String symbol) |
+| `Registration` | [`Registration`](../../doc/models/registration.md) | Required | - | Registration getRegistration() | setRegistration(Registration registration) |
+| `FrameSymbol` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getFrameSymbol() | setFrameSymbol(String frameSymbol) |
+| `ReactorSymbol` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getReactorSymbol() | setReactorSymbol(String reactorSymbol) |
+| `EngineSymbol` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getEngineSymbol() | setEngineSymbol(String engineSymbol) |
+| `Expiration` | `String` | Required | **Constraints**: *Minimum Length*: `1` | String getExpiration() | setExpiration(String expiration) |
 
 ## Example (as JSON)
 

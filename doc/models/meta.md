@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `total` | `int` | Required | - |
-| `page` | `int` | Required | - |
-| `limit` | `int` | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Total` | `int` | Required | - | int getTotal() | setTotal(int total) |
+| `Page` | `int` | Required | - | int getPage() | setPage(int page) |
+| `Limit` | `int` | Required | - | int getLimit() | setLimit(int limit) |
 
 ## Example (as JSON)
 

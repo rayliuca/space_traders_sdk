@@ -1,7 +1,7 @@
 # Extract
 
-```python
-extract_controller = client.extract
+```java
+ExtractController extractController = client.getExtractController();
 ```
 
 ## Class Name
@@ -20,17 +20,17 @@ extract_controller = client.extract
 
 Extract resources from the waypoint into your ship. Send a survey as the payload to target specific yields. The entire survey must be sent as it contains a signature that the backend verifies.
 
-```python
-def post_my_ships_ship_symbol_extract(self,
-                                     ship_symbol,
-                                     body=None)
+```java
+CompletableFuture<MyShipsExtractResponse> postMyShipsShipSymbolExtractAsync(
+    final String shipSymbol,
+    final MyShipsExtractRequest body)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The ship symbol |
+| `shipSymbol` | `String` | Template, Required | The ship symbol |
 | `body` | [`MyShipsExtractRequest`](../../doc/models/my-ships-extract-request.md) | Body, Optional | - |
 
 ## Response Type
@@ -39,11 +39,16 @@ def post_my_ships_ship_symbol_extract(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
-body = MyShipsExtractRequest()
+```java
+String shipSymbol = "shipSymbol2";
+MyShipsExtractRequest body = new MyShipsExtractRequest();
 
-result = extract_controller.post_my_ships_ship_symbol_extract(ship_symbol, body)
+extractController.postMyShipsShipSymbolExtractAsync(shipSymbol, body).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*
@@ -71,16 +76,16 @@ result = extract_controller.post_my_ships_ship_symbol_extract(ship_symbol, body)
 
 Get the status of your last extraction.
 
-```python
-def get_my_ships_ship_symbol_extract(self,
-                                    ship_symbol)
+```java
+CompletableFuture<MyShipsExtractResponse1> getMyShipsShipSymbolExtractAsync(
+    final String shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The ship symbol |
+| `shipSymbol` | `String` | Template, Required | The ship symbol |
 
 ## Response Type
 
@@ -88,10 +93,15 @@ def get_my_ships_ship_symbol_extract(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```java
+String shipSymbol = "shipSymbol2";
 
-result = extract_controller.get_my_ships_ship_symbol_extract(ship_symbol)
+extractController.getMyShipsShipSymbolExtractAsync(shipSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*
@@ -114,16 +124,16 @@ If you want to target specific yields for an extraction, you can survey a waypoi
 
 Your ship will enter a cooldown between consecutive survey requests. Surveys will eventually expire after a period of time. Multiple ships can use the same survey for extraction.
 
-```python
-def post_my_ships_ship_symbol_survey(self,
-                                    ship_symbol)
+```java
+CompletableFuture<MyShipsSurveyResponse> postMyShipsShipSymbolSurveyAsync(
+    final String shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `String` | Template, Required | - |
 
 ## Response Type
 
@@ -131,10 +141,15 @@ def post_my_ships_ship_symbol_survey(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```java
+String shipSymbol = "shipSymbol2";
 
-result = extract_controller.post_my_ships_ship_symbol_survey(ship_symbol)
+extractController.postMyShipsShipSymbolSurveyAsync(shipSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*
@@ -207,16 +222,16 @@ result = extract_controller.post_my_ships_ship_symbol_survey(ship_symbol)
 
 Executing a survey will initiate a cooldown for a number of seconds before you can call it again. This endpoint returns the details of your cooldown, or a 404 if there is no cooldown for the survey action.
 
-```python
-def get_my_ships_ship_symbol_survey(self,
-                                   ship_symbol)
+```java
+CompletableFuture<MyShipsSurveyResponse1> getMyShipsShipSymbolSurveyAsync(
+    final String shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `String` | Template, Required | - |
 
 ## Response Type
 
@@ -224,10 +239,15 @@ def get_my_ships_ship_symbol_survey(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```java
+String shipSymbol = "shipSymbol2";
 
-result = extract_controller.get_my_ships_ship_symbol_survey(ship_symbol)
+extractController.getMyShipsShipSymbolSurveyAsync(shipSymbol).thenAccept(result -> {
+    // TODO success callback handler
+}).exceptionally(exception -> {
+    // TODO failure callback handler
+    return null;
+});
 ```
 
 ## Example Response *(as JSON)*
