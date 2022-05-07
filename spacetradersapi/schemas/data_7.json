@@ -1,0 +1,13 @@
+{
+  "id": "Data7",
+  "title": "Data7",
+  "type": "object",
+  "properties": {
+    "cooldown": {
+      "$ref": "Cooldown.json"
+    }
+  },
+  "required": [
+    "cooldown"
+  ]
+}

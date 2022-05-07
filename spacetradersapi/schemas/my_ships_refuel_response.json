@@ -1,0 +1,23 @@
+{
+  "id": "My Ships Refuel Response",
+  "title": "My Ships Refuel Response",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "data": {
+          "credits": 0,
+          "fuel": 0
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "data": {
+      "$ref": "Data12"
+    }
+  },
+  "required": [
+    "data"
+  ]
+}

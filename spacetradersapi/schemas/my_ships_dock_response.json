@@ -1,0 +1,22 @@
+{
+  "id": "My Ships Dock Response",
+  "title": "My Ships Dock Response",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "data": {
+          "status": "DOCKED"
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "data": {
+      "$ref": "Data3"
+    }
+  },
+  "required": [
+    "data"
+  ]
+}

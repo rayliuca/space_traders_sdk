@@ -1,0 +1,89 @@
+{
+  "id": "My Ships Survey Response",
+  "title": "My Ships Survey Response",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "data": [
+          {
+            "signature": "X1-OE-D2DD38",
+            "deposits": [
+              "COPPER_ORE"
+            ],
+            "expiration": "2022-03-08T05:41:55.514Z"
+          },
+          {
+            "signature": "X1-OE-B58FEB",
+            "deposits": [
+              "ALUMINUM_ORE",
+              "ALUMINUM_ORE",
+              "ALUMINUM_ORE"
+            ],
+            "expiration": "2022-03-08T05:39:15.519Z"
+          },
+          {
+            "signature": "X1-OE-0E326C",
+            "deposits": [
+              "ALUMINUM_ORE",
+              "SILICON"
+            ],
+            "expiration": "2022-03-08T05:20:27.521Z"
+          },
+          {
+            "signature": "X1-OE-5CDFA4",
+            "deposits": [
+              "COPPER_ORE",
+              "COPPER_ORE",
+              "COPPER_ORE",
+              "IRON_ORE"
+            ],
+            "expiration": "2022-03-08T05:44:34.522Z"
+          },
+          {
+            "signature": "X1-OE-86C3A1",
+            "deposits": [
+              "COPPER_ORE",
+              "COPPER_ORE",
+              "IRON_ORE"
+            ],
+            "expiration": "2022-03-08T05:43:45.522Z"
+          },
+          {
+            "signature": "X1-OE-C97BEA",
+            "deposits": [
+              "ALUMINUM_ORE",
+              "COPPER_ORE",
+              "QUARTZ",
+              "QUARTZ"
+            ],
+            "expiration": "2022-03-08T05:22:39.523Z"
+          },
+          {
+            "signature": "X1-OE-9913BD",
+            "deposits": [
+              "QUARTZ"
+            ],
+            "expiration": "2022-03-08T05:37:45.523Z"
+          },
+          {
+            "signature": "X1-OE-8D87D2",
+            "deposits": [
+              "COPPER_ORE",
+              "SILICON"
+            ],
+            "expiration": "2022-03-08T05:32:57.524Z"
+          }
+        ]
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "data": {
+      "$ref": "Data8"
+    }
+  },
+  "required": [
+    "data"
+  ]
+}

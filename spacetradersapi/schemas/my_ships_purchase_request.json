@@ -1,0 +1,14 @@
+{
+  "id": "My Ships Purchase Request",
+  "title": "My Ships Purchase Request",
+  "type": "object",
+  "properties": {
+    "tradeSymbol": {
+      "type": "string"
+    },
+    "units": {
+      "type": "integer",
+      "format": "int32"
+    }
+  }
+}

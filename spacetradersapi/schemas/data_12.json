@@ -1,0 +1,19 @@
+{
+  "id": "Data12",
+  "title": "Data12",
+  "type": "object",
+  "properties": {
+    "credits": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "fuel": {
+      "type": "integer",
+      "format": "int32"
+    }
+  },
+  "required": [
+    "credits",
+    "fuel"
+  ]
+}

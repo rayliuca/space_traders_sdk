@@ -1,0 +1,19 @@
+{
+  "id": "Yield",
+  "title": "Yield",
+  "type": "object",
+  "properties": {
+    "tradeSymbol": {
+      "type": "string",
+      "minLength": 1
+    },
+    "units": {
+      "type": "integer",
+      "format": "int32"
+    }
+  },
+  "required": [
+    "tradeSymbol",
+    "units"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "Data4",
+  "title": "Data4",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string"
+    }
+  }
+}

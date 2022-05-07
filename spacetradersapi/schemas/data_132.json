@@ -1,0 +1,13 @@
+{
+  "id": "Data132",
+  "title": "Data132",
+  "type": "object",
+  "properties": {
+    "cooldown": {
+      "$ref": "Cooldown.json"
+    },
+    "waypoint": {
+      "$ref": "Waypoint.json"
+    }
+  }
+}

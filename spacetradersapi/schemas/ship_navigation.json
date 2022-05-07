@@ -1,0 +1,53 @@
+{
+  "id": "ShipNavigation",
+  "title": "ShipNavigation",
+  "example": {
+    "shipSymbol": "3AE434-1",
+    "departure": "X1-OE-PM",
+    "destination": "X1-OE-A005",
+    "durationRemaining": 2159,
+    "arrivedAt": null
+  },
+  "extensions": {
+    "x-stoplight": {
+      "id": "c931uxk79820k"
+    },
+    "x-examples": {
+      "example-1": {
+        "shipSymbol": "3AE434-1",
+        "departure": "X1-OE-PM",
+        "destination": "X1-OE-A005",
+        "durationRemaining": 2159,
+        "arrivedAt": null
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "shipSymbol": {
+      "type": "string",
+      "minLength": 1
+    },
+    "departure": {
+      "type": "string",
+      "minLength": 1
+    },
+    "destination": {
+      "type": "string",
+      "minLength": 1
+    },
+    "durationRemaining": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "arrivedAt": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "shipSymbol",
+    "departure",
+    "destination",
+    "durationRemaining"
+  ]
+}

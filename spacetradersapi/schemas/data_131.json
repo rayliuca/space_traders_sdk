@@ -1,0 +1,13 @@
+{
+  "id": "Data131",
+  "title": "Data131",
+  "type": "object",
+  "properties": {
+    "cooldown": {
+      "$ref": "Cooldown.json"
+    },
+    "system": {
+      "$ref": "System.json"
+    }
+  }
+}

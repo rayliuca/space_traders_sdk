@@ -1,0 +1,10 @@
+{
+  "id": "Data16",
+  "title": "Data16",
+  "type": "object",
+  "properties": {
+    "navigation": {
+      "$ref": "ShipNavigation.json"
+    }
+  }
+}

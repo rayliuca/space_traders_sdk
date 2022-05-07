@@ -1,0 +1,10 @@
+{
+  "id": "Agents Response",
+  "title": "Agents Response",
+  "type": "object",
+  "properties": {
+    "data": {
+      "$ref": "Data1"
+    }
+  }
+}

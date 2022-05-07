@@ -1,0 +1,17 @@
+{
+  "id": "Data8",
+  "title": "Data8",
+  "type": "object",
+  "properties": {
+    "surveys": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$ref": "Survey.json"
+      }
+    },
+    "cooldown": {
+      "$ref": "Cooldown.json"
+    }
+  }
+}

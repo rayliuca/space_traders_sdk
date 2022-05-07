@@ -1,0 +1,10 @@
+{
+  "id": "My Ships Chart Response",
+  "title": "My Ships Chart Response",
+  "type": "object",
+  "properties": {
+    "data": {
+      "$ref": "Data2"
+    }
+  }
+}

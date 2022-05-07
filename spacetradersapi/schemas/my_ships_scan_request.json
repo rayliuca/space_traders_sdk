@@ -1,0 +1,13 @@
+{
+  "id": "My Ships Scan Request",
+  "title": "My Ships Scan Request",
+  "type": "object",
+  "properties": {
+    "mode": {
+      "$ref": "Mode.json"
+    }
+  },
+  "required": [
+    "mode"
+  ]
+}

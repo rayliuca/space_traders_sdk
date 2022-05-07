@@ -1,0 +1,21 @@
+{
+  "id": "Integrity",
+  "title": "Integrity",
+  "type": "object",
+  "properties": {
+    "frame": {
+      "type": "number"
+    },
+    "reactor": {
+      "type": "number"
+    },
+    "engine": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "frame",
+    "reactor",
+    "engine"
+  ]
+}

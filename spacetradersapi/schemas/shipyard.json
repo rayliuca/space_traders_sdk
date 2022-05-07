@@ -1,0 +1,34 @@
+{
+  "id": "Shipyard",
+  "title": "Shipyard",
+  "example": {
+    "symbol": "X1-OE-PM",
+    "faction": "COMMERCE_REPUBLIC"
+  },
+  "extensions": {
+    "x-stoplight": {
+      "id": "7tcen0z27im8d"
+    },
+    "x-examples": {
+      "example-1": {
+        "symbol": "X1-OE-PM",
+        "faction": "COMMERCE_REPUBLIC"
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "symbol": {
+      "type": "string",
+      "minLength": 1
+    },
+    "faction": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "symbol",
+    "faction"
+  ]
+}

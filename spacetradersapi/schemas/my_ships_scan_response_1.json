@@ -1,0 +1,10 @@
+{
+  "id": "My Ships Scan Response1",
+  "title": "My Ships Scan Response1",
+  "type": "object",
+  "properties": {
+    "data": {
+      "$ref": "Data9"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "id": "System",
+  "title": "System",
+  "example": {
+    "symbol": "X1-OE",
+    "sector": "X1",
+    "type": "RED_STAR",
+    "x": 0,
+    "y": 0,
+    "waypoints": [
+      "X1-OE-PM",
+      "X1-OE-PM01",
+      "X1-OE-A005",
+      "X1-OE-25X"
+    ],
+    "factions": [
+      "COMMERCE_REPUBLIC",
+      "MINERS_COLLECTIVE",
+      "SPACERS_GUILD"
+    ],
+    "charted": true,
+    "chartedBy": null
+  },
+  "extensions": {
+    "x-stoplight": {
+      "id": "4svz455p1dnpl"
+    },
+    "x-examples": {
+      "example-1": {
+        "symbol": "X1-OE",
+        "sector": "X1",
+        "type": "RED_STAR",
+        "x": 0,
+        "y": 0,
+        "waypoints": [
+          "X1-OE-PM",
+          "X1-OE-PM01",
+          "X1-OE-A005",
+          "X1-OE-25X"
+        ],
+        "factions": [
+          "COMMERCE_REPUBLIC",
+          "MINERS_COLLECTIVE",
+          "SPACERS_GUILD"
+        ],
+        "charted": true,
+        "chartedBy": null
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "symbol": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sector": {
+      "type": "string",
+      "minLength": 1
+    },
+    "type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "x": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "y": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "waypoints": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "factions": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "charted": {
+      "type": "boolean"
+    },
+    "chartedBy": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "symbol",
+    "sector",
+    "type",
+    "x",
+    "y",
+    "waypoints",
+    "factions",
+    "charted"
+  ]
+}

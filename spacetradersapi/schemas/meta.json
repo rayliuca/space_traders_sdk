@@ -1,0 +1,41 @@
+{
+  "id": "Meta",
+  "title": "Meta",
+  "example": {
+    "total": 10,
+    "page": 1,
+    "limit": 10
+  },
+  "extensions": {
+    "x-stoplight": {
+      "id": "pfl9hqmwxjp7l"
+    },
+    "x-examples": {
+      "example-1": {
+        "total": 6,
+        "page": 1,
+        "limit": 20
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "total": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "page": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "limit": {
+      "type": "integer",
+      "format": "int32"
+    }
+  },
+  "required": [
+    "total",
+    "page",
+    "limit"
+  ]
+}

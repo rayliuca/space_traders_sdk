@@ -1,0 +1,10 @@
+{
+  "id": "My Ships Extract Request",
+  "title": "My Ships Extract Request",
+  "type": "object",
+  "properties": {
+    "survey": {
+      "$ref": "Survey.json"
+    }
+  }
+}

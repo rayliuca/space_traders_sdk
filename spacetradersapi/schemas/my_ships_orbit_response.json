@@ -1,0 +1,22 @@
+{
+  "id": "My Ships Orbit Response",
+  "title": "My Ships Orbit Response",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "data": {
+          "status": "ORBIT"
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "data": {
+      "$ref": "Data4"
+    }
+  },
+  "required": [
+    "data"
+  ]
+}

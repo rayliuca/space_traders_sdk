@@ -1,0 +1,51 @@
+{
+  "id": "Systems Shipyards Ships Response",
+  "title": "Systems Shipyards Ships Response",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "data": [
+          {
+            "id": "cl0nahta90000aq0jonm1nprl",
+            "waypoint": "X1-OE-PM",
+            "price": 58191,
+            "role": "EXCAVATOR",
+            "frame": "FRAME_DRONE",
+            "reactor": "REACTOR_SOLAR_I",
+            "engine": "ENGINE_SOLAR_PROPULSION",
+            "modules": [
+              "MODULE_CARGO_HOLD"
+            ],
+            "mounts": [
+              "MOUNT_MINING_LASER_I"
+            ]
+          }
+        ],
+        "meta": {
+          "total": 1,
+          "page": 1,
+          "limit": 20
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "data": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$ref": "ShipyardListing.json"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "meta": {
+      "$ref": "Meta.json"
+    }
+  },
+  "required": [
+    "data",
+    "meta"
+  ]
+}

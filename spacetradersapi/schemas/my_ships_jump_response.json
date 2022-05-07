@@ -1,0 +1,29 @@
+{
+  "id": "My Ships Jump Response",
+  "title": "My Ships Jump Response",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "data": {
+          "jump": {
+            "shipSymbol": "1D7FDA-1",
+            "destination": "00E0B1"
+          },
+          "cooldown": {
+            "duration": 719,
+            "expiration": "2022-03-12T00:52:56.735Z"
+          }
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "data": {
+      "$ref": "Data10"
+    }
+  },
+  "required": [
+    "data"
+  ]
+}

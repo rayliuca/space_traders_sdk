@@ -1,0 +1,15 @@
+{
+  "id": "My Ships Jettison Request",
+  "title": "My Ships Jettison Request",
+  "type": "object",
+  "properties": {
+    "tradeSymbol": {
+      "type": "string"
+    },
+    "units": {
+      "type": "integer",
+      "minimum": 1.0,
+      "format": "int32"
+    }
+  }
+}

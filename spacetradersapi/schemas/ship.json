@@ -1,0 +1,157 @@
+{
+  "id": "Ship",
+  "title": "Ship",
+  "example": {
+    "symbol": "55B261-1",
+    "crew": null,
+    "officers": null,
+    "fuel": 100,
+    "frame": "FRAME_DRONE",
+    "reactor": "REACTOR_SOLAR_I",
+    "engine": "ENGINE_SOLAR_PROPULSION",
+    "modules": [
+      "MODULE_CARGO_HOLD"
+    ],
+    "mounts": [
+      "MOUNT_MINING_LASER_I"
+    ],
+    "registration": {
+      "factionSymbol": "COMMERCE_REPUBLIC",
+      "agentSymbol": "55B261",
+      "fee": 100,
+      "role": "EXCAVATOR"
+    },
+    "integrity": {
+      "frame": 1,
+      "reactor": 1,
+      "engine": 1
+    },
+    "status": "DOCKED",
+    "location": "X1-OE-PM",
+    "cargo": []
+  },
+  "extensions": {
+    "x-stoplight": {
+      "id": "90sf9llrdidt5"
+    },
+    "x-examples": {
+      "example-1": {
+        "symbol": "2C52AD-1",
+        "crew": null,
+        "officers": null,
+        "frame": "FRAME_FRIGATE",
+        "reactor": "REACTOR_FUSION_I",
+        "engine": "ENGINE_ION_DRIVE_II",
+        "modules": [
+          "MODULE_GAS_TANK",
+          "MODULE_CARGO_HOLD",
+          "MODULE_CARGO_HOLD",
+          "MODULE_CREW_QUARTERS",
+          "MODULE_ENVOY_QUARTERS",
+          "MODULE_JUMP_DRIVE_I"
+        ],
+        "mounts": [
+          "MOUNT_SENSOR_ARRAY_II",
+          "MOUNT_MINING_LASER_II",
+          "MOUNT_GAS_SIPHON_II"
+        ],
+        "registration": {
+          "factionSymbol": "COMMERCE_REPUBLIC",
+          "agentSymbol": "2C52AD",
+          "fee": 0,
+          "role": "COMMAND"
+        },
+        "integrity": {
+          "frame": 1,
+          "reactor": 1,
+          "engine": 1
+        },
+        "status": "DOCKED",
+        "location": "X1-OE-PM",
+        "cargo": [
+          {
+            "tradeSymbol": "IRON_ORE",
+            "units": 100
+          }
+        ]
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "symbol": {
+      "type": "string",
+      "minLength": 1
+    },
+    "frame": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reactor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "engine": {
+      "type": "string",
+      "minLength": 1
+    },
+    "modules": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "mounts": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "registration": {
+      "$ref": "Registration1"
+    },
+    "integrity": {
+      "$ref": "Integrity.json"
+    },
+    "stats": {
+      "$ref": "Stats.json"
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "location": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cargo": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$ref": "Cargo.json"
+      },
+      "uniqueItems": true,
+      "minItems": 0
+    },
+    "fuel": {
+      "type": "integer",
+      "format": "int32"
+    }
+  },
+  "required": [
+    "symbol",
+    "frame",
+    "reactor",
+    "engine",
+    "modules",
+    "mounts",
+    "registration",
+    "integrity",
+    "status",
+    "location",
+    "cargo",
+    "fuel"
+  ]
+}

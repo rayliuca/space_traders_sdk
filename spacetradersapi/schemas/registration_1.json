@@ -1,0 +1,29 @@
+{
+  "id": "Registration1",
+  "title": "Registration1",
+  "type": "object",
+  "properties": {
+    "factionSymbol": {
+      "type": "string",
+      "minLength": 1
+    },
+    "agentSymbol": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fee": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "role": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "factionSymbol",
+    "agentSymbol",
+    "fee",
+    "role"
+  ]
+}

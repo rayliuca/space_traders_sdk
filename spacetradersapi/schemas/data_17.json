@@ -1,0 +1,14 @@
+{
+  "id": "Data17",
+  "title": "Data17",
+  "type": "object",
+  "properties": {
+    "ship": {
+      "$ref": "Ship.json"
+    },
+    "credits": {
+      "type": "integer",
+      "format": "int32"
+    }
+  }
+}

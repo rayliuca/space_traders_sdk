@@ -1,0 +1,17 @@
+{
+  "id": "Data6",
+  "title": "Data6",
+  "type": "object",
+  "properties": {
+    "extraction": {
+      "$ref": "Extraction.json"
+    },
+    "cooldown": {
+      "$ref": "Cooldown.json"
+    }
+  },
+  "required": [
+    "extraction",
+    "cooldown"
+  ]
+}

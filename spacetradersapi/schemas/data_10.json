@@ -1,0 +1,17 @@
+{
+  "id": "Data10",
+  "title": "Data10",
+  "type": "object",
+  "properties": {
+    "jump": {
+      "$ref": "Jump.json"
+    },
+    "cooldown": {
+      "$ref": "Cooldown.json"
+    }
+  },
+  "required": [
+    "jump",
+    "cooldown"
+  ]
+}

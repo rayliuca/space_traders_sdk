@@ -1,0 +1,14 @@
+{
+  "id": "Data2",
+  "title": "Data2",
+  "type": "object",
+  "properties": {
+    "submitted": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

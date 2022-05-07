@@ -1,0 +1,97 @@
+{
+  "id": "ShipyardListing",
+  "title": "ShipyardListing",
+  "example": {
+    "id": "cl0nahta90000aq0jonm1nprl",
+    "waypoint": "X1-OE-PM",
+    "price": 58191,
+    "role": "EXCAVATOR",
+    "frame": "FRAME_DRONE",
+    "reactor": "REACTOR_SOLAR_I",
+    "engine": "ENGINE_SOLAR_PROPULSION",
+    "modules": [
+      "MODULE_CARGO_HOLD"
+    ],
+    "mounts": [
+      "MOUNT_MINING_LASER_I"
+    ]
+  },
+  "extensions": {
+    "x-stoplight": {
+      "id": "t2fsmdd96n7di"
+    },
+    "x-examples": {
+      "example-1": {
+        "id": "cl0nahta90000aq0jonm1nprl",
+        "waypoint": "X1-OE-PM",
+        "price": 58191,
+        "role": "EXCAVATOR",
+        "frame": "FRAME_DRONE",
+        "reactor": "REACTOR_SOLAR_I",
+        "engine": "ENGINE_SOLAR_PROPULSION",
+        "modules": [
+          "MODULE_CARGO_HOLD"
+        ],
+        "mounts": [
+          "MOUNT_MINING_LASER_I"
+        ]
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "waypoint": {
+      "type": "string",
+      "minLength": 1
+    },
+    "price": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "frame": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reactor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "engine": {
+      "type": "string",
+      "minLength": 1
+    },
+    "modules": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "mounts": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "waypoint",
+    "price",
+    "role",
+    "frame",
+    "reactor",
+    "engine",
+    "modules",
+    "mounts"
+  ]
+}

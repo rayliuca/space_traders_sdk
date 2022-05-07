@@ -1,0 +1,23 @@
+{
+  "id": "My Ships Jettison Response",
+  "title": "My Ships Jettison Response",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "data": {
+          "tradeSymbol": "ALUMINUM",
+          "units": 95
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "data": {
+      "$ref": "Data5"
+    }
+  },
+  "required": [
+    "data"
+  ]
+}

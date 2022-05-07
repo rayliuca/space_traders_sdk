@@ -1,0 +1,40 @@
+{
+  "id": "Systems Shipyards Response",
+  "title": "Systems Shipyards Response",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "data": [
+          {
+            "symbol": "X1-OE-PM",
+            "faction": "COMMERCE_REPUBLIC"
+          }
+        ],
+        "meta": {
+          "total": 1,
+          "page": 1,
+          "limit": 20
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "data": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$ref": "Shipyard.json"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "meta": {
+      "$ref": "Meta.json"
+    }
+  },
+  "required": [
+    "data",
+    "meta"
+  ]
+}

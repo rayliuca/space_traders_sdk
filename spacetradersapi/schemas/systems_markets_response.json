@@ -1,0 +1,48 @@
+{
+  "id": "Systems Markets Response",
+  "title": "Systems Markets Response",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "data": {
+          "exports": [
+            {
+              "waypointSymbol": "X1-OE-PM",
+              "tradeSymbol": "MICROPROCESSORS",
+              "price": 834,
+              "tariff": 0
+            }
+          ],
+          "imports": [
+            {
+              "waypointSymbol": "X1-OE-PM",
+              "tradeSymbol": "SILICON",
+              "price": 144,
+              "tariff": 0
+            },
+            {
+              "waypointSymbol": "X1-OE-PM",
+              "tradeSymbol": "QUARTZ",
+              "price": 286,
+              "tariff": 0
+            }
+          ],
+          "exchange": []
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "data": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "data"
+  ]
+}

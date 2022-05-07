@@ -1,0 +1,13 @@
+{
+  "id": "Data3",
+  "title": "Data3",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "status"
+  ]
+}

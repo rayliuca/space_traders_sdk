@@ -1,0 +1,204 @@
+{
+  "id": "My Ships Response1",
+  "title": "My Ships Response1",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "data": [
+          {
+            "symbol": "653298-1",
+            "crew": null,
+            "officers": null,
+            "frame": "FRAME_DRONE",
+            "reactor": "REACTOR_SOLAR_I",
+            "engine": "ENGINE_SOLAR_PROPULSION",
+            "modules": [
+              "MODULE_CARGO_HOLD"
+            ],
+            "mounts": [
+              "MOUNT_MINING_LASER_I"
+            ],
+            "registration": {
+              "factionSymbol": "COMMERCE_REPUBLIC",
+              "agentSymbol": "653298",
+              "fee": 100,
+              "role": "EXCAVATOR"
+            },
+            "integrity": {
+              "frame": 1,
+              "reactor": 1,
+              "engine": 1
+            },
+            "status": "DOCKED",
+            "location": "X1-OE-PM",
+            "cargo": []
+          },
+          {
+            "symbol": "653298-2",
+            "crew": null,
+            "officers": null,
+            "frame": "FRAME_DRONE",
+            "reactor": "REACTOR_SOLAR_I",
+            "engine": "ENGINE_SOLAR_PROPULSION",
+            "modules": [
+              "MODULE_CARGO_HOLD"
+            ],
+            "mounts": [
+              "MOUNT_MINING_LASER_I"
+            ],
+            "registration": {
+              "factionSymbol": "COMMERCE_REPUBLIC",
+              "agentSymbol": "653298",
+              "fee": 100,
+              "role": "EXCAVATOR"
+            },
+            "integrity": {
+              "frame": 1,
+              "reactor": 1,
+              "engine": 1
+            },
+            "status": "DOCKED",
+            "location": "X1-OE-PM",
+            "cargo": []
+          },
+          {
+            "symbol": "653298-3",
+            "crew": null,
+            "officers": null,
+            "frame": "FRAME_DRONE",
+            "reactor": "REACTOR_SOLAR_I",
+            "engine": "ENGINE_SOLAR_PROPULSION",
+            "modules": [
+              "MODULE_CARGO_HOLD"
+            ],
+            "mounts": [
+              "MOUNT_MINING_LASER_I"
+            ],
+            "registration": {
+              "factionSymbol": "COMMERCE_REPUBLIC",
+              "agentSymbol": "653298",
+              "fee": 100,
+              "role": "EXCAVATOR"
+            },
+            "integrity": {
+              "frame": 1,
+              "reactor": 1,
+              "engine": 1
+            },
+            "status": "DOCKED",
+            "location": "X1-OE-PM",
+            "cargo": []
+          },
+          {
+            "symbol": "653298-4",
+            "crew": null,
+            "officers": null,
+            "frame": "FRAME_DRONE",
+            "reactor": "REACTOR_SOLAR_I",
+            "engine": "ENGINE_SOLAR_PROPULSION",
+            "modules": [
+              "MODULE_CARGO_HOLD"
+            ],
+            "mounts": [
+              "MOUNT_MINING_LASER_I"
+            ],
+            "registration": {
+              "factionSymbol": "COMMERCE_REPUBLIC",
+              "agentSymbol": "653298",
+              "fee": 100,
+              "role": "EXCAVATOR"
+            },
+            "integrity": {
+              "frame": 1,
+              "reactor": 1,
+              "engine": 1
+            },
+            "status": "DOCKED",
+            "location": "X1-OE-PM",
+            "cargo": []
+          },
+          {
+            "symbol": "653298-5",
+            "crew": null,
+            "officers": null,
+            "frame": "FRAME_DRONE",
+            "reactor": "REACTOR_SOLAR_I",
+            "engine": "ENGINE_SOLAR_PROPULSION",
+            "modules": [
+              "MODULE_CARGO_HOLD"
+            ],
+            "mounts": [
+              "MOUNT_MINING_LASER_I"
+            ],
+            "registration": {
+              "factionSymbol": "COMMERCE_REPUBLIC",
+              "agentSymbol": "653298",
+              "fee": 100,
+              "role": "EXCAVATOR"
+            },
+            "integrity": {
+              "frame": 1,
+              "reactor": 1,
+              "engine": 1
+            },
+            "status": "DOCKED",
+            "location": "X1-OE-PM",
+            "cargo": []
+          },
+          {
+            "symbol": "653298-6",
+            "crew": null,
+            "officers": null,
+            "frame": "FRAME_DRONE",
+            "reactor": "REACTOR_SOLAR_I",
+            "engine": "ENGINE_SOLAR_PROPULSION",
+            "modules": [
+              "MODULE_CARGO_HOLD"
+            ],
+            "mounts": [
+              "MOUNT_MINING_LASER_I"
+            ],
+            "registration": {
+              "factionSymbol": "COMMERCE_REPUBLIC",
+              "agentSymbol": "653298",
+              "fee": 100,
+              "role": "EXCAVATOR"
+            },
+            "integrity": {
+              "frame": 1,
+              "reactor": 1,
+              "engine": 1
+            },
+            "status": "DOCKED",
+            "location": "X1-OE-PM",
+            "cargo": []
+          }
+        ],
+        "meta": {
+          "total": 6,
+          "page": 1,
+          "limit": 20
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "data": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$ref": "Ship.json"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "meta": {
+      "$ref": "Meta.json"
+    }
+  },
+  "required": [
+    "data",
+    "meta"
+  ]
+}

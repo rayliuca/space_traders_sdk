@@ -1,0 +1,25 @@
+{
+  "id": "My Ships Extract Response1",
+  "title": "My Ships Extract Response1",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "data": {
+          "cooldown": {
+            "duration": 119,
+            "expiration": "2022-03-12T00:41:29.285Z"
+          }
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "data": {
+      "$ref": "Data7"
+    }
+  },
+  "required": [
+    "data"
+  ]
+}

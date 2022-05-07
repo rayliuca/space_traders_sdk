@@ -1,0 +1,11 @@
+{
+  "id": "My Ships Jump Request",
+  "title": "My Ships Jump Request",
+  "type": "object",
+  "properties": {
+    "destination": {
+      "description": "The system symbol to jump to.",
+      "type": "string"
+    }
+  }
+}

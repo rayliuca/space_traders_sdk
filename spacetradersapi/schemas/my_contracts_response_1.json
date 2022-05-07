@@ -1,0 +1,10 @@
+{
+  "id": "My Contracts Response1",
+  "title": "My Contracts Response1",
+  "type": "object",
+  "properties": {
+    "data": {
+      "$ref": "Contract.json"
+    }
+  }
+}
