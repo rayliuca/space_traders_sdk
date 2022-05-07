@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `credits` | `int` | Required | - |
-| `fuel` | `int` | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `credits` | `int` | Required | - | getCredits(): int | setCredits(int credits): void |
+| `fuel` | `int` | Required | - | getFuel(): int | setFuel(int fuel): void |
 
 ## Example (as JSON)
 

@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `destination` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `shipSymbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getShipSymbol(): string | setShipSymbol(string shipSymbol): void |
+| `destination` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getDestination(): string | setDestination(string destination): void |
 
 ## Example (as JSON)
 

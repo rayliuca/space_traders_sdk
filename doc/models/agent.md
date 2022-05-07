@@ -7,12 +7,12 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `account_id` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `headquarters` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `credits` | `int` | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `accountId` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getAccountId(): string | setAccountId(string accountId): void |
+| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getSymbol(): string | setSymbol(string symbol): void |
+| `headquarters` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getHeadquarters(): string | setHeadquarters(string headquarters): void |
+| `credits` | `int` | Required | - | getCredits(): int | setCredits(int credits): void |
 
 ## Example (as JSON)
 

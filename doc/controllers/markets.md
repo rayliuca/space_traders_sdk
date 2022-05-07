@@ -1,7 +1,7 @@
 # Markets
 
-```python
-markets_controller = client.markets
+```php
+$marketsController = $client->getMarketsController();
 ```
 
 ## Class Name
@@ -24,18 +24,16 @@ Use this endpoint to deploy a Communications Relay to a waypoint. A waypoint wit
 
 Communication relays can be purchased from a market that exports `COMM_RELAY_I`.
 
-```python
-def post_my_ships_ship_symbol_deploy(self,
-                                    ship_symbol,
-                                    body=None)
+```php
+function postMyShipsShipSymbolDeploy(string $shipSymbol, ?MyShipsDeployRequest $body = null): void
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The ship symbol |
-| `body` | [`MyShipsDeployRequest`](../../doc/models/my-ships-deploy-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | The ship symbol |
+| `body` | [`?MyShipsDeployRequest`](../../doc/models/my-ships-deploy-request.md) | Body, Optional | - |
 
 ## Response Type
 
@@ -43,10 +41,10 @@ def post_my_ships_ship_symbol_deploy(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = markets_controller.post_my_ships_ship_symbol_deploy(ship_symbol)
+$marketsController->postMyShipsShipSymbolDeploy($shipSymbol);
 ```
 
 
@@ -54,16 +52,15 @@ result = markets_controller.post_my_ships_ship_symbol_deploy(ship_symbol)
 
 Trade Imports
 
-```python
-def get_trade_trade_symbol_imports(self,
-                                  trade_symbol)
+```php
+function getTradeTradeSymbolImports(string $tradeSymbol): TradeImportsResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Template, Required | The trade symbol |
+| `tradeSymbol` | `string` | Template, Required | The trade symbol |
 
 ## Response Type
 
@@ -71,10 +68,10 @@ def get_trade_trade_symbol_imports(self,
 
 ## Example Usage
 
-```python
-trade_symbol = 'tradeSymbol8'
+```php
+$tradeSymbol = 'tradeSymbol8';
 
-result = markets_controller.get_trade_trade_symbol_imports(trade_symbol)
+$result = $marketsController->getTradeTradeSymbolImports($tradeSymbol);
 ```
 
 
@@ -82,16 +79,15 @@ result = markets_controller.get_trade_trade_symbol_imports(trade_symbol)
 
 Trade Exports
 
-```python
-def get_trade_trade_symbol_exports(self,
-                                  trade_symbol)
+```php
+function getTradeTradeSymbolExports(string $tradeSymbol): TradeExportsResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Template, Required | The trade symbol |
+| `tradeSymbol` | `string` | Template, Required | The trade symbol |
 
 ## Response Type
 
@@ -99,10 +95,10 @@ def get_trade_trade_symbol_exports(self,
 
 ## Example Usage
 
-```python
-trade_symbol = 'tradeSymbol8'
+```php
+$tradeSymbol = 'tradeSymbol8';
 
-result = markets_controller.get_trade_trade_symbol_exports(trade_symbol)
+$result = $marketsController->getTradeTradeSymbolExports($tradeSymbol);
 ```
 
 
@@ -110,16 +106,15 @@ result = markets_controller.get_trade_trade_symbol_exports(trade_symbol)
 
 Trade Exchanges
 
-```python
-def get_trade_trade_symbol_exchange(self,
-                                   trade_symbol)
+```php
+function getTradeTradeSymbolExchange(string $tradeSymbol): TradeExchangeResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Template, Required | The trade symbol |
+| `tradeSymbol` | `string` | Template, Required | The trade symbol |
 
 ## Response Type
 
@@ -127,10 +122,10 @@ def get_trade_trade_symbol_exchange(self,
 
 ## Example Usage
 
-```python
-trade_symbol = 'tradeSymbol8'
+```php
+$tradeSymbol = 'tradeSymbol8';
 
-result = markets_controller.get_trade_trade_symbol_exchange(trade_symbol)
+$result = $marketsController->getTradeTradeSymbolExchange($tradeSymbol);
 ```
 
 
@@ -140,16 +135,15 @@ Retrieve a list of all charted markets in the given system. Markets are only ava
 
 To install a communications relay at a market, look at the `my/ships/{shipSymbol}/deploy` endpoint.
 
-```python
-def get_systems_system_symbol_markets(self,
-                                     system_symbol)
+```php
+function getSystemsSystemSymbolMarkets(string $systemSymbol): SystemsMarketsResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
+| `systemSymbol` | `string` | Template, Required | The system symbol |
 
 ## Response Type
 
@@ -157,10 +151,10 @@ def get_systems_system_symbol_markets(self,
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
+```php
+$systemSymbol = 'systemSymbol4';
 
-result = markets_controller.get_systems_system_symbol_markets(system_symbol)
+$result = $marketsController->getSystemsSystemSymbolMarkets($systemSymbol);
 ```
 
 ## Example Response *(as JSON)*
@@ -187,18 +181,19 @@ Market data is only available if you have a ship at the location, or the locatio
 
 See `/my/ships/{shipSymbol}/deploy` for deploying relays at a location.
 
-```python
-def get_systems_system_symbol_markets_waypoint_symbol(self,
-                                                     system_symbol,
-                                                     waypoint_symbol)
+```php
+function getSystemsSystemSymbolMarketsWaypointSymbol(
+    string $systemSymbol,
+    string $waypointSymbol
+): SystemsMarketsResponse1
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
-| `waypoint_symbol` | `string` | Template, Required | The waypoint symbol |
+| `systemSymbol` | `string` | Template, Required | The system symbol |
+| `waypointSymbol` | `string` | Template, Required | The waypoint symbol |
 
 ## Response Type
 
@@ -206,11 +201,11 @@ def get_systems_system_symbol_markets_waypoint_symbol(self,
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
-waypoint_symbol = 'waypointSymbol2'
+```php
+$systemSymbol = 'systemSymbol4';
+$waypointSymbol = 'waypointSymbol2';
 
-result = markets_controller.get_systems_system_symbol_markets_waypoint_symbol(system_symbol, waypoint_symbol)
+$result = $marketsController->getSystemsSystemSymbolMarketsWaypointSymbol($systemSymbol, $waypointSymbol);
 ```
 
 ## Example Response *(as JSON)*

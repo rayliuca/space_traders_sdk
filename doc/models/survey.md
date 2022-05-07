@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `signature` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `deposits` | `List of string` | Required | - |
-| `expiration` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `signature` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getSignature(): string | setSignature(string signature): void |
+| `deposits` | `string[]` | Required | - | getDeposits(): array | setDeposits(array deposits): void |
+| `expiration` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getExpiration(): string | setExpiration(string expiration): void |
 
 ## Example (as JSON)
 

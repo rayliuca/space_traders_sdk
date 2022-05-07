@@ -1,7 +1,7 @@
 # Ships
 
-```python
-ships_controller = client.ships
+```php
+$shipsController = $client->getShipsController();
 ```
 
 ## Class Name
@@ -21,18 +21,19 @@ ships_controller = client.ships
 
 Jettison cargo from your ship's cargo hold.
 
-```python
-def post_my_ships_ship_symbol_jettison(self,
-                                      ship_symbol,
-                                      body=None)
+```php
+function postMyShipsShipSymbolJettison(
+    string $shipSymbol,
+    ?MyShipsJettisonRequest $body = null
+): MyShipsJettisonResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
-| `body` | [`MyShipsJettisonRequest`](../../doc/models/my-ships-jettison-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | - |
+| `body` | [`?MyShipsJettisonRequest`](../../doc/models/my-ships-jettison-request.md) | Body, Optional | - |
 
 ## Response Type
 
@@ -40,10 +41,10 @@ def post_my_ships_ship_symbol_jettison(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = ships_controller.post_my_ships_ship_symbol_jettison(ship_symbol)
+$result = $shipsController->postMyShipsShipSymbolJettison($shipSymbol);
 ```
 
 ## Example Response *(as JSON)*
@@ -62,18 +63,16 @@ result = ships_controller.post_my_ships_ship_symbol_jettison(ship_symbol)
 
 Execute a ship scan to view approach / departing ships, system information or details about a waypoint. Send a scan mode to select the type of scan performed by your ship.
 
-```python
-def post_my_ships_ship_symbol_scan(self,
-                                  ship_symbol,
-                                  body=None)
+```php
+function postMyShipsShipSymbolScan(string $shipSymbol, ?MyShipsScanRequest $body = null): MyShipsScanResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
-| `body` | [`MyShipsScanRequest`](../../doc/models/my-ships-scan-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | - |
+| `body` | [`?MyShipsScanRequest`](../../doc/models/my-ships-scan-request.md) | Body, Optional | - |
 
 ## Response Type
 
@@ -81,12 +80,14 @@ def post_my_ships_ship_symbol_scan(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
-body = MyShipsScanRequest()
-body.mode = ModeEnum.APPROACHING_SHIPS
+```php
+$shipSymbol = 'shipSymbol2';
+$body_mode = Models\ModeEnum::APPROACHING_SHIPS;
+$body = new Models\MyShipsScanRequest(
+    $body_mode
+);
 
-result = ships_controller.post_my_ships_ship_symbol_scan(ship_symbol, body)
+$result = $shipsController->postMyShipsShipSymbolScan($shipSymbol, $body);
 ```
 
 
@@ -94,16 +95,15 @@ result = ships_controller.post_my_ships_ship_symbol_scan(ship_symbol, body)
 
 Scan Cooldown
 
-```python
-def get_my_ships_ship_symbol_scan(self,
-                                 ship_symbol)
+```php
+function getMyShipsShipSymbolScan(string $shipSymbol): MyShipsScanResponse1
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `string` | Template, Required | - |
 
 ## Response Type
 
@@ -111,10 +111,10 @@ def get_my_ships_ship_symbol_scan(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = ships_controller.get_my_ships_ship_symbol_scan(ship_symbol)
+$result = $shipsController->getMyShipsShipSymbolScan($shipSymbol);
 ```
 
 ## Example Response *(as JSON)*
@@ -135,16 +135,15 @@ result = ships_controller.get_my_ships_ship_symbol_scan(ship_symbol)
 
 Retrieve the details of your ship.
 
-```python
-def get_my_ships_ship_symbol(self,
-                            ship_symbol)
+```php
+function getMyShipsShipSymbol(string $shipSymbol): MyShipsResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `string` | Template, Required | - |
 
 ## Response Type
 
@@ -152,10 +151,10 @@ def get_my_ships_ship_symbol(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = ships_controller.get_my_ships_ship_symbol(ship_symbol)
+$result = $shipsController->getMyShipsShipSymbol($shipSymbol);
 ```
 
 
@@ -163,8 +162,8 @@ result = ships_controller.get_my_ships_ship_symbol(ship_symbol)
 
 Retrieve all of your ships.
 
-```python
-def get_my_ships(self)
+```php
+function getMyShips(): MyShipsResponse1
 ```
 
 ## Response Type
@@ -173,8 +172,8 @@ def get_my_ships(self)
 
 ## Example Usage
 
-```python
-result = ships_controller.get_my_ships()
+```php
+$result = $shipsController->getMyShips();
 ```
 
 ## Example Response *(as JSON)*

@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `jump` | [`Jump`](../../doc/models/jump.md) | Required | - |
-| `cooldown` | [`Cooldown`](../../doc/models/cooldown.md) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `jump` | [`Jump`](../../doc/models/jump.md) | Required | - | getJump(): Jump | setJump(Jump jump): void |
+| `cooldown` | [`Cooldown`](../../doc/models/cooldown.md) | Required | - | getCooldown(): Cooldown | setCooldown(Cooldown cooldown): void |
 
 ## Example (as JSON)
 

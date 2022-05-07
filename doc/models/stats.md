@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `fuel_tank` | `int` | Required | - |
-| `cargo_limit` | `int` | Required | - |
-| `jump_range` | `int` | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `fuelTank` | `int` | Required | - | getFuelTank(): int | setFuelTank(int fuelTank): void |
+| `cargoLimit` | `int` | Required | - | getCargoLimit(): int | setCargoLimit(int cargoLimit): void |
+| `jumpRange` | `int` | Required | - | getJumpRange(): int | setJumpRange(int jumpRange): void |
 
 ## Example (as JSON)
 

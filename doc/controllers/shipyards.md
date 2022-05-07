@@ -1,7 +1,7 @@
 # Shipyards
 
-```python
-shipyards_controller = client.shipyards
+```php
+$shipyardsController = $client->getShipyardsController();
 ```
 
 ## Class Name
@@ -20,16 +20,15 @@ shipyards_controller = client.shipyards
 
 Purchase a ship
 
-```python
-def post_my_ships(self,
-                 body=None)
+```php
+function postMyShips(?MyShipsRequest $body = null): MyShipsResponse2
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`MyShipsRequest`](../../doc/models/my-ships-request.md) | Body, Optional | - |
+| `body` | [`?MyShipsRequest`](../../doc/models/my-ships-request.md) | Body, Optional | - |
 
 ## Response Type
 
@@ -37,8 +36,8 @@ def post_my_ships(self,
 
 ## Example Usage
 
-```python
-result = shipyards_controller.post_my_ships()
+```php
+$result = $shipyardsController->postMyShips();
 ```
 
 
@@ -46,16 +45,15 @@ result = shipyards_controller.post_my_ships()
 
 Returns a list of all shipyards in a system.
 
-```python
-def get_systems_system_symbol_shipyards(self,
-                                       system_symbol)
+```php
+function getSystemsSystemSymbolShipyards(string $systemSymbol): SystemsShipyardsResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | the system symbol |
+| `systemSymbol` | `string` | Template, Required | the system symbol |
 
 ## Response Type
 
@@ -63,10 +61,10 @@ def get_systems_system_symbol_shipyards(self,
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
+```php
+$systemSymbol = 'systemSymbol4';
 
-result = shipyards_controller.get_systems_system_symbol_shipyards(system_symbol)
+$result = $shipyardsController->getSystemsSystemSymbolShipyards($systemSymbol);
 ```
 
 
@@ -74,18 +72,19 @@ result = shipyards_controller.get_systems_system_symbol_shipyards(system_symbol)
 
 Shipyard Details
 
-```python
-def get_systems_system_symbol_shipyards_waypoint_symbol(self,
-                                                       system_symbol,
-                                                       waypoint_symbol)
+```php
+function getSystemsSystemSymbolShipyardsWaypointSymbol(
+    string $systemSymbol,
+    string $waypointSymbol
+): SystemsShipyardsResponse1
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
-| `waypoint_symbol` | `string` | Template, Required | The waypoint symbol |
+| `systemSymbol` | `string` | Template, Required | The system symbol |
+| `waypointSymbol` | `string` | Template, Required | The waypoint symbol |
 
 ## Response Type
 
@@ -93,11 +92,11 @@ def get_systems_system_symbol_shipyards_waypoint_symbol(self,
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
-waypoint_symbol = 'waypointSymbol2'
+```php
+$systemSymbol = 'systemSymbol4';
+$waypointSymbol = 'waypointSymbol2';
 
-result = shipyards_controller.get_systems_system_symbol_shipyards_waypoint_symbol(system_symbol, waypoint_symbol)
+$result = $shipyardsController->getSystemsSystemSymbolShipyardsWaypointSymbol($systemSymbol, $waypointSymbol);
 ```
 
 
@@ -105,18 +104,19 @@ result = shipyards_controller.get_systems_system_symbol_shipyards_waypoint_symbo
 
 Shipyard Listings
 
-```python
-def get_systems_system_symbol_shipyards_waypoint_symbol_ships(self,
-                                                             system_symbol,
-                                                             waypoint_symbol)
+```php
+function getSystemsSystemSymbolShipyardsWaypointSymbolShips(
+    string $systemSymbol,
+    string $waypointSymbol
+): SystemsShipyardsShipsResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
-| `waypoint_symbol` | `string` | Template, Required | The waypoint symbol |
+| `systemSymbol` | `string` | Template, Required | The system symbol |
+| `waypointSymbol` | `string` | Template, Required | The waypoint symbol |
 
 ## Response Type
 
@@ -124,10 +124,10 @@ def get_systems_system_symbol_shipyards_waypoint_symbol_ships(self,
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
-waypoint_symbol = 'waypointSymbol2'
+```php
+$systemSymbol = 'systemSymbol4';
+$waypointSymbol = 'waypointSymbol2';
 
-result = shipyards_controller.get_systems_system_symbol_shipyards_waypoint_symbol_ships(system_symbol, waypoint_symbol)
+$result = $shipyardsController->getSystemsSystemSymbolShipyardsWaypointSymbolShips($systemSymbol, $waypointSymbol);
 ```
 

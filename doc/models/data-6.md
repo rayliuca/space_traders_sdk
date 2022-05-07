@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `extraction` | [`Extraction`](../../doc/models/extraction.md) | Required | - |
-| `cooldown` | [`Cooldown`](../../doc/models/cooldown.md) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `extraction` | [`Extraction`](../../doc/models/extraction.md) | Required | - | getExtraction(): Extraction | setExtraction(Extraction extraction): void |
+| `cooldown` | [`Cooldown`](../../doc/models/cooldown.md) | Required | - | getCooldown(): Cooldown | setCooldown(Cooldown cooldown): void |
 
 ## Example (as JSON)
 

@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Optional | - |
-| `units` | `int` | Optional | **Constraints**: `>= 1` |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `tradeSymbol` | `?string` | Optional | - | getTradeSymbol(): ?string | setTradeSymbol(?string tradeSymbol): void |
+| `units` | `?int` | Optional | **Constraints**: `>= 1` | getUnits(): ?int | setUnits(?int units): void |
 
 ## Example (as JSON)
 

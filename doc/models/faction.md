@@ -7,13 +7,13 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `name` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `description` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `headquarters` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `traits` | `List of string` | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getSymbol(): string | setSymbol(string symbol): void |
+| `name` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getName(): string | setName(string name): void |
+| `description` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getDescription(): string | setDescription(string description): void |
+| `headquarters` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getHeadquarters(): string | setHeadquarters(string headquarters): void |
+| `traits` | `string[]` | Required | - | getTraits(): array | setTraits(array traits): void |
 
 ## Example (as JSON)
 

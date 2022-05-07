@@ -1,7 +1,7 @@
 # Contracts
 
-```python
-contracts_controller = client.contracts
+```php
+$contractsController = $client->getContractsController();
 ```
 
 ## Class Name
@@ -20,18 +20,19 @@ contracts_controller = client.contracts
 
 Deliver cargo on a given contract.
 
-```python
-def post_my_ships_ship_symbol_deliver(self,
-                                     ship_symbol,
-                                     body=None)
+```php
+function postMyShipsShipSymbolDeliver(
+    string $shipSymbol,
+    ?MyShipsDeliverRequest $body = null
+): MyShipsDeliverResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The symbol of the ship |
-| `body` | [`MyShipsDeliverRequest`](../../doc/models/my-ships-deliver-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | The symbol of the ship |
+| `body` | [`?MyShipsDeliverRequest`](../../doc/models/my-ships-deliver-request.md) | Body, Optional | - |
 
 ## Response Type
 
@@ -39,10 +40,10 @@ def post_my_ships_ship_symbol_deliver(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = contracts_controller.post_my_ships_ship_symbol_deliver(ship_symbol)
+$result = $contractsController->postMyShipsShipSymbolDeliver($shipSymbol);
 ```
 
 
@@ -50,8 +51,8 @@ result = contracts_controller.post_my_ships_ship_symbol_deliver(ship_symbol)
 
 List all of your contracts.
 
-```python
-def get_my_contracts(self)
+```php
+function getMyContracts(): MyContractsResponse
 ```
 
 ## Response Type
@@ -60,8 +61,8 @@ def get_my_contracts(self)
 
 ## Example Usage
 
-```python
-result = contracts_controller.get_my_contracts()
+```php
+$result = $contractsController->getMyContracts();
 ```
 
 ## Example Response *(as JSON)*
@@ -106,16 +107,15 @@ result = contracts_controller.get_my_contracts()
 
 Get the details of a contract by ID.
 
-```python
-def get_my_contracts_contract_id(self,
-                                contract_id)
+```php
+function getMyContractsContractId(string $contractId): MyContractsResponse1
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `contract_id` | `string` | Template, Required | The contract ID |
+| `contractId` | `string` | Template, Required | The contract ID |
 
 ## Response Type
 
@@ -123,10 +123,10 @@ def get_my_contracts_contract_id(self,
 
 ## Example Usage
 
-```python
-contract_id = 'contractId2'
+```php
+$contractId = 'contractId2';
 
-result = contracts_controller.get_my_contracts_contract_id(contract_id)
+$result = $contractsController->getMyContractsContractId($contractId);
 ```
 
 ## Example Response *(as JSON)*
@@ -164,16 +164,15 @@ result = contracts_controller.get_my_contracts_contract_id(contract_id)
 
 Accept a contract.
 
-```python
-def post_my_contracts_contract_id_accept(self,
-                                        contract_id)
+```php
+function postMyContractsContractIdAccept(string $contractId): MyContractsAcceptResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `contract_id` | `string` | Template, Required | - |
+| `contractId` | `string` | Template, Required | - |
 
 ## Response Type
 
@@ -181,9 +180,9 @@ def post_my_contracts_contract_id_accept(self,
 
 ## Example Usage
 
-```python
-contract_id = 'contractId2'
+```php
+$contractId = 'contractId2';
 
-result = contracts_controller.post_my_contracts_contract_id_accept(contract_id)
+$result = $contractsController->postMyContractsContractIdAccept($contractId);
 ```
 

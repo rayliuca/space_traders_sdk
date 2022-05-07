@@ -1,7 +1,7 @@
 # Trade
 
-```python
-trade_controller = client.trade
+```php
+$tradeController = $client->getTradeController();
 ```
 
 ## Class Name
@@ -18,18 +18,19 @@ trade_controller = client.trade
 
 Purchase Cargo
 
-```python
-def post_my_ships_ship_symbol_purchase(self,
-                                      ship_symbol,
-                                      body=None)
+```php
+function postMyShipsShipSymbolPurchase(
+    string $shipSymbol,
+    ?MyShipsPurchaseRequest $body = null
+): MyShipsPurchaseResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
-| `body` | [`MyShipsPurchaseRequest`](../../doc/models/my-ships-purchase-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | - |
+| `body` | [`?MyShipsPurchaseRequest`](../../doc/models/my-ships-purchase-request.md) | Body, Optional | - |
 
 ## Response Type
 
@@ -37,10 +38,10 @@ def post_my_ships_ship_symbol_purchase(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = trade_controller.post_my_ships_ship_symbol_purchase(ship_symbol)
+$result = $tradeController->postMyShipsShipSymbolPurchase($shipSymbol);
 ```
 
 ## Example Response *(as JSON)*
@@ -61,18 +62,16 @@ result = trade_controller.post_my_ships_ship_symbol_purchase(ship_symbol)
 
 Sell cargo from your ship's hold to the local market.
 
-```python
-def post_my_ships_ship_symbol_sell(self,
-                                  ship_symbol,
-                                  body=None)
+```php
+function postMyShipsShipSymbolSell(string $shipSymbol, ?MyShipsSellRequest $body = null): MyShipsSellResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
-| `body` | [`MyShipsSellRequest`](../../doc/models/my-ships-sell-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | - |
+| `body` | [`?MyShipsSellRequest`](../../doc/models/my-ships-sell-request.md) | Body, Optional | - |
 
 ## Response Type
 
@@ -80,10 +79,10 @@ def post_my_ships_ship_symbol_sell(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = trade_controller.post_my_ships_ship_symbol_sell(ship_symbol)
+$result = $tradeController->postMyShipsShipSymbolSell($shipSymbol);
 ```
 
 ## Example Response *(as JSON)*

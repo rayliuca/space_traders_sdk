@@ -1,7 +1,7 @@
 # Extract
 
-```python
-extract_controller = client.extract
+```php
+$extractController = $client->getExtractController();
 ```
 
 ## Class Name
@@ -20,18 +20,19 @@ extract_controller = client.extract
 
 Extract resources from the waypoint into your ship. Send a survey as the payload to target specific yields. The entire survey must be sent as it contains a signature that the backend verifies.
 
-```python
-def post_my_ships_ship_symbol_extract(self,
-                                     ship_symbol,
-                                     body=None)
+```php
+function postMyShipsShipSymbolExtract(
+    string $shipSymbol,
+    ?MyShipsExtractRequest $body = null
+): MyShipsExtractResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The ship symbol |
-| `body` | [`MyShipsExtractRequest`](../../doc/models/my-ships-extract-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | The ship symbol |
+| `body` | [`?MyShipsExtractRequest`](../../doc/models/my-ships-extract-request.md) | Body, Optional | - |
 
 ## Response Type
 
@@ -39,11 +40,11 @@ def post_my_ships_ship_symbol_extract(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
-body = MyShipsExtractRequest()
+```php
+$shipSymbol = 'shipSymbol2';
+$body = new Models\MyShipsExtractRequest;
 
-result = extract_controller.post_my_ships_ship_symbol_extract(ship_symbol, body)
+$result = $extractController->postMyShipsShipSymbolExtract($shipSymbol, $body);
 ```
 
 ## Example Response *(as JSON)*
@@ -71,16 +72,15 @@ result = extract_controller.post_my_ships_ship_symbol_extract(ship_symbol, body)
 
 Get the status of your last extraction.
 
-```python
-def get_my_ships_ship_symbol_extract(self,
-                                    ship_symbol)
+```php
+function getMyShipsShipSymbolExtract(string $shipSymbol): MyShipsExtractResponse1
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The ship symbol |
+| `shipSymbol` | `string` | Template, Required | The ship symbol |
 
 ## Response Type
 
@@ -88,10 +88,10 @@ def get_my_ships_ship_symbol_extract(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = extract_controller.get_my_ships_ship_symbol_extract(ship_symbol)
+$result = $extractController->getMyShipsShipSymbolExtract($shipSymbol);
 ```
 
 ## Example Response *(as JSON)*
@@ -114,16 +114,15 @@ If you want to target specific yields for an extraction, you can survey a waypoi
 
 Your ship will enter a cooldown between consecutive survey requests. Surveys will eventually expire after a period of time. Multiple ships can use the same survey for extraction.
 
-```python
-def post_my_ships_ship_symbol_survey(self,
-                                    ship_symbol)
+```php
+function postMyShipsShipSymbolSurvey(string $shipSymbol): MyShipsSurveyResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `string` | Template, Required | - |
 
 ## Response Type
 
@@ -131,10 +130,10 @@ def post_my_ships_ship_symbol_survey(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = extract_controller.post_my_ships_ship_symbol_survey(ship_symbol)
+$result = $extractController->postMyShipsShipSymbolSurvey($shipSymbol);
 ```
 
 ## Example Response *(as JSON)*
@@ -207,16 +206,15 @@ result = extract_controller.post_my_ships_ship_symbol_survey(ship_symbol)
 
 Executing a survey will initiate a cooldown for a number of seconds before you can call it again. This endpoint returns the details of your cooldown, or a 404 if there is no cooldown for the survey action.
 
-```python
-def get_my_ships_ship_symbol_survey(self,
-                                   ship_symbol)
+```php
+function getMyShipsShipSymbolSurvey(string $shipSymbol): MyShipsSurveyResponse1
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `string` | Template, Required | - |
 
 ## Response Type
 
@@ -224,10 +222,10 @@ def get_my_ships_ship_symbol_survey(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = extract_controller.get_my_ships_ship_symbol_survey(ship_symbol)
+$result = $extractController->getMyShipsShipSymbolSurvey($shipSymbol);
 ```
 
 ## Example Response *(as JSON)*

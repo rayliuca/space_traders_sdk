@@ -1,7 +1,7 @@
 # Systems
 
-```python
-systems_controller = client.systems
+```php
+$systemsController = $client->getSystemsController();
 ```
 
 ## Class Name
@@ -21,16 +21,15 @@ systems_controller = client.systems
 
 Chart a new system or waypoint. Returns an array of the symbols that have been charted, including the system and the waypoint if both were uncharted, or just the waypoint.
 
-```python
-def post_my_ships_ship_symbol_chart(self,
-                                   ship_symbol)
+```php
+function postMyShipsShipSymbolChart(string $shipSymbol): MyShipsChartResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The symbol of the ship |
+| `shipSymbol` | `string` | Template, Required | The symbol of the ship |
 
 ## Response Type
 
@@ -38,10 +37,10 @@ def post_my_ships_ship_symbol_chart(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = systems_controller.post_my_ships_ship_symbol_chart(ship_symbol)
+$result = $systemsController->postMyShipsShipSymbolChart($shipSymbol);
 ```
 
 ## Example Response *(as JSON)*
@@ -62,8 +61,8 @@ result = systems_controller.post_my_ships_ship_symbol_chart(ship_symbol)
 
 Return a list of all systems.
 
-```python
-def get_systems(self)
+```php
+function getSystems(): SystemsResponse
 ```
 
 ## Response Type
@@ -72,8 +71,8 @@ def get_systems(self)
 
 ## Example Usage
 
-```python
-result = systems_controller.get_systems()
+```php
+$result = $systemsController->getSystems();
 ```
 
 ## Example Response *(as JSON)*
@@ -115,16 +114,15 @@ result = systems_controller.get_systems()
 
 View System
 
-```python
-def get_systems_system_symbol(self,
-                             system_symbol)
+```php
+function getSystemsSystemSymbol(string $systemSymbol): SystemsResponse1
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
+| `systemSymbol` | `string` | Template, Required | The system symbol |
 
 ## Response Type
 
@@ -132,10 +130,10 @@ def get_systems_system_symbol(self,
 
 ## Example Usage
 
-```python
-system_symbol = 'X1-OE'
+```php
+$systemSymbol = 'X1-OE';
 
-result = systems_controller.get_systems_system_symbol(system_symbol)
+$result = $systemsController->getSystemsSystemSymbol($systemSymbol);
 ```
 
 ## Example Response *(as JSON)*
@@ -161,16 +159,15 @@ result = systems_controller.get_systems_system_symbol(system_symbol)
 
 Fetch all of the waypoints for a given system. System must be charted or a ship must be present to return waypoint details.
 
-```python
-def get_systems_system_symbol_waypoints_waypoint_symbol(self,
-                                                       system_symbol)
+```php
+function getSystemsSystemSymbolWaypointsWaypointSymbol(string $systemSymbol): SystemsWaypointsResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
+| `systemSymbol` | `string` | Template, Required | The system symbol |
 
 ## Response Type
 
@@ -178,10 +175,10 @@ def get_systems_system_symbol_waypoints_waypoint_symbol(self,
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
+```php
+$systemSymbol = 'systemSymbol4';
 
-result = systems_controller.get_systems_system_symbol_waypoints_waypoint_symbol(system_symbol)
+$result = $systemsController->getSystemsSystemSymbolWaypointsWaypointSymbol($systemSymbol);
 ```
 
 ## Example Response *(as JSON)*
@@ -272,18 +269,16 @@ result = systems_controller.get_systems_system_symbol_waypoints_waypoint_symbol(
 
 View the details of a waypoint.
 
-```python
-def get_systems_system_symbol_waypoints(self,
-                                       system_symbol,
-                                       waypoint_symbol)
+```php
+function getSystemsSystemSymbolWaypoints(string $systemSymbol, string $waypointSymbol): SystemsWaypointsResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
-| `waypoint_symbol` | `string` | Template, Required | The waypoint symbol |
+| `systemSymbol` | `string` | Template, Required | The system symbol |
+| `waypointSymbol` | `string` | Template, Required | The waypoint symbol |
 
 ## Response Type
 
@@ -291,11 +286,11 @@ def get_systems_system_symbol_waypoints(self,
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
-waypoint_symbol = 'waypointSymbol2'
+```php
+$systemSymbol = 'systemSymbol4';
+$waypointSymbol = 'waypointSymbol2';
 
-result = systems_controller.get_systems_system_symbol_waypoints(system_symbol, waypoint_symbol)
+$result = $systemsController->getSystemsSystemSymbolWaypoints($systemSymbol, $waypointSymbol);
 ```
 
 ## Example Response *(as JSON)*

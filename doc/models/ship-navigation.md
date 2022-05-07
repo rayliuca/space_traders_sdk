@@ -7,13 +7,13 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `departure` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `destination` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `duration_remaining` | `int` | Required | - |
-| `arrived_at` | `object` | Optional | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `shipSymbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getShipSymbol(): string | setShipSymbol(string shipSymbol): void |
+| `departure` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getDeparture(): string | setDeparture(string departure): void |
+| `destination` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getDestination(): string | setDestination(string destination): void |
+| `durationRemaining` | `int` | Required | - | getDurationRemaining(): int | setDurationRemaining(int durationRemaining): void |
+| `arrivedAt` | `?array` | Optional | - | getArrivedAt(): ?array | setArrivedAt(?array arrivedAt): void |
 
 ## Example (as JSON)
 

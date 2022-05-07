@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `deadline` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `payment` | [`Payment`](../../doc/models/payment.md) | Required | - |
-| `deliver` | [`List of Deliver`](../../doc/models/deliver.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `deadline` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getDeadline(): string | setDeadline(string deadline): void |
+| `payment` | [`Payment`](../../doc/models/payment.md) | Required | - | getPayment(): Payment | setPayment(Payment payment): void |
+| `deliver` | [`Deliver[]`](../../doc/models/deliver.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* | getDeliver(): array | setDeliver(array deliver): void |
 
 ## Example (as JSON)
 

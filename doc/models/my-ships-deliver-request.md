@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `contract_id` | `string` | Required | - |
-| `trade_symbol` | `string` | Required | - |
-| `units` | `int` | Optional | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `contractId` | `string` | Required | - | getContractId(): string | setContractId(string contractId): void |
+| `tradeSymbol` | `string` | Required | - | getTradeSymbol(): string | setTradeSymbol(string tradeSymbol): void |
+| `units` | `?int` | Optional | - | getUnits(): ?int | setUnits(?int units): void |
 
 ## Example (as JSON)
 

@@ -1,7 +1,7 @@
 # Navigation
 
-```python
-navigation_controller = client.navigation
+```php
+$navigationController = $client->getNavigationController();
 ```
 
 ## Class Name
@@ -23,16 +23,15 @@ navigation_controller = client.navigation
 
 Transition your ship from orbit to docked. Consecutive calls to this endpoint will succeed.
 
-```python
-def post_my_ships_ship_symbol_dock(self,
-                                  ship_symbol)
+```php
+function postMyShipsShipSymbolDock(string $shipSymbol): MyShipsDockResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The symbol of the ship |
+| `shipSymbol` | `string` | Template, Required | The symbol of the ship |
 
 ## Response Type
 
@@ -40,10 +39,10 @@ def post_my_ships_ship_symbol_dock(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = navigation_controller.post_my_ships_ship_symbol_dock(ship_symbol)
+$result = $navigationController->postMyShipsShipSymbolDock($shipSymbol);
 ```
 
 ## Example Response *(as JSON)*
@@ -61,16 +60,15 @@ result = navigation_controller.post_my_ships_ship_symbol_dock(ship_symbol)
 
 Transition your ship from docked into orbit. Ships are placed into orbit by default when arriving at a destination. Consecutive calls to this endpoint will continue to return a 200 response status.
 
-```python
-def post_my_ships_ship_symbol_orbit(self,
-                                   ship_symbol)
+```php
+function postMyShipsShipSymbolOrbit(string $shipSymbol): MyShipsOrbitResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The symbol of the ship |
+| `shipSymbol` | `string` | Template, Required | The symbol of the ship |
 
 ## Response Type
 
@@ -78,10 +76,10 @@ def post_my_ships_ship_symbol_orbit(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = navigation_controller.post_my_ships_ship_symbol_orbit(ship_symbol)
+$result = $navigationController->postMyShipsShipSymbolOrbit($shipSymbol);
 ```
 
 ## Example Response *(as JSON)*
@@ -99,18 +97,16 @@ result = navigation_controller.post_my_ships_ship_symbol_orbit(ship_symbol)
 
 Jump Ship
 
-```python
-def post_my_ships_ship_symbol_jump(self,
-                                  ship_symbol,
-                                  body=None)
+```php
+function postMyShipsShipSymbolJump(string $shipSymbol, ?MyShipsJumpRequest $body = null): MyShipsJumpResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
-| `body` | [`MyShipsJumpRequest`](../../doc/models/my-ships-jump-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | - |
+| `body` | [`?MyShipsJumpRequest`](../../doc/models/my-ships-jump-request.md) | Body, Optional | - |
 
 ## Response Type
 
@@ -118,10 +114,10 @@ def post_my_ships_ship_symbol_jump(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = navigation_controller.post_my_ships_ship_symbol_jump(ship_symbol)
+$result = $navigationController->postMyShipsShipSymbolJump($shipSymbol);
 ```
 
 ## Example Response *(as JSON)*
@@ -146,16 +142,15 @@ result = navigation_controller.post_my_ships_ship_symbol_jump(ship_symbol)
 
 Jump Cooldown
 
-```python
-def get_my_ships_ship_symbol_jump(self,
-                                 ship_symbol)
+```php
+function getMyShipsShipSymbolJump(string $shipSymbol): MyShipsJumpResponse1
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `string` | Template, Required | - |
 
 ## Response Type
 
@@ -163,10 +158,10 @@ def get_my_ships_ship_symbol_jump(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = navigation_controller.get_my_ships_ship_symbol_jump(ship_symbol)
+$result = $navigationController->getMyShipsShipSymbolJump($shipSymbol);
 ```
 
 
@@ -174,16 +169,15 @@ result = navigation_controller.get_my_ships_ship_symbol_jump(ship_symbol)
 
 Refuel Ship
 
-```python
-def post_my_ships_ship_symbol_refuel(self,
-                                    ship_symbol)
+```php
+function postMyShipsShipSymbolRefuel(string $shipSymbol): MyShipsRefuelResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `string` | Template, Required | - |
 
 ## Response Type
 
@@ -191,10 +185,10 @@ def post_my_ships_ship_symbol_refuel(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = navigation_controller.post_my_ships_ship_symbol_refuel(ship_symbol)
+$result = $navigationController->postMyShipsShipSymbolRefuel($shipSymbol);
 ```
 
 ## Example Response *(as JSON)*
@@ -213,18 +207,19 @@ result = navigation_controller.post_my_ships_ship_symbol_refuel(ship_symbol)
 
 Navigate Ship
 
-```python
-def post_my_ships_ship_symbol_navigate(self,
-                                      ship_symbol,
-                                      body=None)
+```php
+function postMyShipsShipSymbolNavigate(
+    string $shipSymbol,
+    ?MyShipsNavigateRequest $body = null
+): MyShipsNavigateResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The ship symbol |
-| `body` | [`MyShipsNavigateRequest`](../../doc/models/my-ships-navigate-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | The ship symbol |
+| `body` | [`?MyShipsNavigateRequest`](../../doc/models/my-ships-navigate-request.md) | Body, Optional | - |
 
 ## Response Type
 
@@ -232,10 +227,10 @@ def post_my_ships_ship_symbol_navigate(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = navigation_controller.post_my_ships_ship_symbol_navigate(ship_symbol)
+$result = $navigationController->postMyShipsShipSymbolNavigate($shipSymbol);
 ```
 
 ## Example Response *(as JSON)*
@@ -260,16 +255,15 @@ result = navigation_controller.post_my_ships_ship_symbol_navigate(ship_symbol)
 
 Get the status of your last navigation.
 
-```python
-def get_my_ships_ship_symbol_navigate(self,
-                                     ship_symbol)
+```php
+function getMyShipsShipSymbolNavigate(string $shipSymbol): MyShipsNavigateResponse1
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The ship symbol |
+| `shipSymbol` | `string` | Template, Required | The ship symbol |
 
 ## Response Type
 
@@ -277,10 +271,10 @@ def get_my_ships_ship_symbol_navigate(self,
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```php
+$shipSymbol = 'shipSymbol2';
 
-result = navigation_controller.get_my_ships_ship_symbol_navigate(ship_symbol)
+$result = $navigationController->getMyShipsShipSymbolNavigate($shipSymbol);
 ```
 
 ## Example Response *(as JSON)*

@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `data` | [`object`]($m/) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `data` | [`Data13\|Data131\|Data132`]($m/) | Required | - | getData(): | setData( data): void |
 
 ## Example (as JSON)
 

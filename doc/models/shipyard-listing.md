@@ -7,17 +7,17 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `id` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `waypoint` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `price` | `int` | Required | - |
-| `role` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `frame` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `reactor` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `engine` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `modules` | `List of string` | Required | - |
-| `mounts` | `List of string` | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `id` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getId(): string | setId(string id): void |
+| `waypoint` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getWaypoint(): string | setWaypoint(string waypoint): void |
+| `price` | `int` | Required | - | getPrice(): int | setPrice(int price): void |
+| `role` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getRole(): string | setRole(string role): void |
+| `frame` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getFrame(): string | setFrame(string frame): void |
+| `reactor` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getReactor(): string | setReactor(string reactor): void |
+| `engine` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getEngine(): string | setEngine(string engine): void |
+| `modules` | `string[]` | Required | - | getModules(): array | setModules(array modules): void |
+| `mounts` | `string[]` | Required | - | getMounts(): array | setMounts(array mounts): void |
 
 ## Example (as JSON)
 

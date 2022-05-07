@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `exports` | [`List of MarketTrade`](../../doc/models/market-trade.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
-| `imports` | [`List of MarketTrade`](../../doc/models/market-trade.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
-| `exchange` | [`List of MarketTrade`](../../doc/models/market-trade.md) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `exports` | [`MarketTrade[]`](../../doc/models/market-trade.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* | getExports(): array | setExports(array exports): void |
+| `imports` | [`MarketTrade[]`](../../doc/models/market-trade.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* | getImports(): array | setImports(array imports): void |
+| `exchange` | [`MarketTrade[]`](../../doc/models/market-trade.md) | Required | - | getExchange(): array | setExchange(array exchange): void |
 
 ## Example (as JSON)
 

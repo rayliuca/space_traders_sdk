@@ -7,19 +7,19 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `system` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `mtype` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `x` | `int` | Required | - |
-| `y` | `int` | Required | - |
-| `orbitals` | `List of string` | Required | - |
-| `faction` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `features` | `List of string` | Required | - |
-| `traits` | `List of string` | Required | - |
-| `charted` | `bool` | Required | - |
-| `charted_by` | `string` | Optional | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `system` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getSystem(): string | setSystem(string system): void |
+| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getSymbol(): string | setSymbol(string symbol): void |
+| `type` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getType(): string | setType(string type): void |
+| `x` | `int` | Required | - | getX(): int | setX(int x): void |
+| `y` | `int` | Required | - | getY(): int | setY(int y): void |
+| `orbitals` | `string[]` | Required | - | getOrbitals(): array | setOrbitals(array orbitals): void |
+| `faction` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getFaction(): string | setFaction(string faction): void |
+| `features` | `string[]` | Required | - | getFeatures(): array | setFeatures(array features): void |
+| `traits` | `string[]` | Required | - | getTraits(): array | setTraits(array traits): void |
+| `charted` | `bool` | Required | - | getCharted(): bool | setCharted(bool charted): void |
+| `chartedBy` | `?string` | Optional | - | getChartedBy(): ?string | setChartedBy(?string chartedBy): void |
 
 ## Example (as JSON)
 

@@ -7,15 +7,15 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `id` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `faction` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `mtype` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `terms` | [`Terms`](../../doc/models/terms.md) | Required | - |
-| `accepted` | `bool` | Required | - |
-| `fulfilled` | `bool` | Required | - |
-| `expires_at` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `id` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getId(): string | setId(string id): void |
+| `faction` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getFaction(): string | setFaction(string faction): void |
+| `type` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getType(): string | setType(string type): void |
+| `terms` | [`Terms`](../../doc/models/terms.md) | Required | - | getTerms(): Terms | setTerms(Terms terms): void |
+| `accepted` | `bool` | Required | - | getAccepted(): bool | setAccepted(bool accepted): void |
+| `fulfilled` | `bool` | Required | - | getFulfilled(): bool | setFulfilled(bool fulfilled): void |
+| `expiresAt` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getExpiresAt(): string | setExpiresAt(string expiresAt): void |
 
 ## Example (as JSON)
 

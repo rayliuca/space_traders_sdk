@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `status` | `string` | Optional | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `status` | `?string` | Optional | - | getStatus(): ?string | setStatus(?string status): void |
 
 ## Example (as JSON)
 

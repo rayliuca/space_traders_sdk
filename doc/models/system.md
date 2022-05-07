@@ -7,17 +7,17 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `sector` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `mtype` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `x` | `int` | Required | - |
-| `y` | `int` | Required | - |
-| `waypoints` | `List of string` | Required | - |
-| `factions` | `List of string` | Required | - |
-| `charted` | `bool` | Required | - |
-| `charted_by` | `string` | Optional | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getSymbol(): string | setSymbol(string symbol): void |
+| `sector` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getSector(): string | setSector(string sector): void |
+| `type` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getType(): string | setType(string type): void |
+| `x` | `int` | Required | - | getX(): int | setX(int x): void |
+| `y` | `int` | Required | - | getY(): int | setY(int y): void |
+| `waypoints` | `string[]` | Required | - | getWaypoints(): array | setWaypoints(array waypoints): void |
+| `factions` | `string[]` | Required | - | getFactions(): array | setFactions(array factions): void |
+| `charted` | `bool` | Required | - | getCharted(): bool | setCharted(bool charted): void |
+| `chartedBy` | `?string` | Optional | - | getChartedBy(): ?string | setChartedBy(?string chartedBy): void |
 
 ## Example (as JSON)
 

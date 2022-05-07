@@ -7,21 +7,21 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `frame` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `reactor` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `engine` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `modules` | `List of string` | Required | - |
-| `mounts` | `List of string` | Required | - |
-| `registration` | [`Registration1`](../../doc/models/registration-1.md) | Required | - |
-| `integrity` | [`Integrity`](../../doc/models/integrity.md) | Required | - |
-| `stats` | [`Stats`](../../doc/models/stats.md) | Optional | - |
-| `status` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `location` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `cargo` | [`List of Cargo`](../../doc/models/cargo.md) | Required | **Constraints**: *Minimum Items*: `0`, *Unique Items Required* |
-| `fuel` | `int` | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getSymbol(): string | setSymbol(string symbol): void |
+| `frame` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getFrame(): string | setFrame(string frame): void |
+| `reactor` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getReactor(): string | setReactor(string reactor): void |
+| `engine` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getEngine(): string | setEngine(string engine): void |
+| `modules` | `string[]` | Required | - | getModules(): array | setModules(array modules): void |
+| `mounts` | `string[]` | Required | - | getMounts(): array | setMounts(array mounts): void |
+| `registration` | [`Registration1`](../../doc/models/registration-1.md) | Required | - | getRegistration(): Registration1 | setRegistration(Registration1 registration): void |
+| `integrity` | [`Integrity`](../../doc/models/integrity.md) | Required | - | getIntegrity(): Integrity | setIntegrity(Integrity integrity): void |
+| `stats` | [`?Stats`](../../doc/models/stats.md) | Optional | - | getStats(): ?Stats | setStats(?Stats stats): void |
+| `status` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getStatus(): string | setStatus(string status): void |
+| `location` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getLocation(): string | setLocation(string location): void |
+| `cargo` | [`Cargo[]`](../../doc/models/cargo.md) | Required | **Constraints**: *Minimum Items*: `0`, *Unique Items Required* | getCargo(): array | setCargo(array cargo): void |
+| `fuel` | `int` | Required | - | getFuel(): int | setFuel(int fuel): void |
 
 ## Example (as JSON)
 

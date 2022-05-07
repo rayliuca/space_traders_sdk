@@ -1,0 +1,43 @@
+{
+    "name": "apimatic/spacetradersapi",
+    "description": "SpaceTraders is a multiplayer sci-fi strategy game where you acquire and manage a fleet of ships across a growing and dynamic universe.  Similar to games such as Eve Online, you work with or against other players to establish trade routes, chart new systems, mine precious ores, patrol for pirates, spy on factions, and discover hidden treasures.  But what makes our game unique? SpaceTraders is entirely accessible through open and well-documented Web API endpoints. In fact, SpaceTraders doesn't have a first-class client to play the game - if you want to take it for a spin, you should try one of our community-created web clients, or use the API documentation to see how you might play a game through an API.  If this sounds fun and interesting to you, please drop into our Discord and get to know the community. We are actively working on new clients, new ideas and sharing tips for how to play the game.   ```json http {   \"method\": \"GET\",   \"url\": \"https://v2-0-0.alpha.spacetraders.io\", } ```",
+    "type": "library",
+    "keywords": [
+        "SpaceTraders API",
+        "API",
+        "SDK"
+    ],
+    "homepage": "https://www.apimatic.io",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joel Brubaker",
+            "email": "joel@spacetraders.io"
+        }
+    ],
+    "require": {
+        "php": ">=7.2 <8.2",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "apimatic/unirest-php": "^2.2.2",
+        "apimatic/jsonmapper": "^3.0.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "phan/phan": "5.3.1",
+        "phpunit/phpunit": "^7.5 || ^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "SpaceTradersAPILib\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test-coverage": "phpunit --coverage-html=coverage",
+        "lint": "phpcs --standard=phpcs-ruleset.xml src/",
+        "lint-fix": "phpcbf --standard=phpcs-ruleset.xml src/",
+        "analyze": "phan --allow-polyfill-parser"
+    }
+}

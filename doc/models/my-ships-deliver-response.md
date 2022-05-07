@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `data` | [`ContractDelivery`](../../doc/models/contract-delivery.md) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `data` | [`ContractDelivery`](../../doc/models/contract-delivery.md) | Required | - | getData(): ContractDelivery | setData(ContractDelivery data): void |
 
 ## Example (as JSON)
 

@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `submitted` | `List of string` | Optional | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `submitted` | `?(string[])` | Optional | - | getSubmitted(): ?array | setSubmitted(?array submitted): void |
 
 ## Example (as JSON)
 

@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `myield` | [`Yield`](../../doc/models/yield.md) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `shipSymbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getShipSymbol(): string | setShipSymbol(string shipSymbol): void |
+| `mYield` | [`MYield`](../../doc/models/m-yield.md) | Required | - | getMYield(): MYield | setMYield(MYield mYield): void |
 
 ## Example (as JSON)
 

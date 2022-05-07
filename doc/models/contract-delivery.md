@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `data` | [`Data`](../../doc/models/data.md) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `data` | [`Data`](../../doc/models/data.md) | Required | - | getData(): Data | setData(Data data): void |
 
 ## Example (as JSON)
 

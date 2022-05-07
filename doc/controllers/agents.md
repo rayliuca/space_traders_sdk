@@ -1,7 +1,7 @@
 # Agents
 
-```python
-agents_controller = client.agents
+```php
+$agentsController = $client->getAgentsController();
 ```
 
 ## Class Name
@@ -32,16 +32,15 @@ Return to the contract destination and execute the `/my/ships/{shipSymbol}/deliv
 
 When your contract is fulfilled, you can call `/my/contracts/{contractId}/fulfill` to retrieve payment.
 
-```python
-def post_agents(self,
-               body=None)
+```php
+function postAgents(?AgentsRequest $body = null): AgentsResponse
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`AgentsRequest`](../../doc/models/agents-request.md) | Body, Optional | - |
+| `body` | [`?AgentsRequest`](../../doc/models/agents-request.md) | Body, Optional | - |
 
 ## Response Type
 
@@ -49,8 +48,8 @@ def post_agents(self,
 
 ## Example Usage
 
-```python
-result = agents_controller.post_agents()
+```php
+$result = $agentsController->postAgents();
 ```
 
 ## Example Response *(as JSON)*
@@ -141,8 +140,8 @@ result = agents_controller.post_agents()
 
 Fetch your agent's details.
 
-```python
-def get_my_agent(self)
+```php
+function getMyAgent(): MyAgentResponse
 ```
 
 ## Response Type
@@ -151,8 +150,8 @@ def get_my_agent(self)
 
 ## Example Usage
 
-```python
-result = agents_controller.get_my_agent()
+```php
+$result = $agentsController->getMyAgent();
 ```
 
 ## Example Response *(as JSON)*

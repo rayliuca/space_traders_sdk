@@ -7,12 +7,12 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `destination` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `units` | `int` | Required | - |
-| `fulfilled` | `int` | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `tradeSymbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getTradeSymbol(): string | setTradeSymbol(string tradeSymbol): void |
+| `destination` | `string` | Required | **Constraints**: *Minimum Length*: `1` | getDestination(): string | setDestination(string destination): void |
+| `units` | `int` | Required | - | getUnits(): int | setUnits(int units): void |
+| `fulfilled` | `int` | Required | - | getFulfilled(): int | setFulfilled(int fulfilled): void |
 
 ## Example (as JSON)
 

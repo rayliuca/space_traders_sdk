@@ -7,13 +7,13 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `token` | `string` | Optional | - |
-| `agent` | [`Agent`](../../doc/models/agent.md) | Optional | - |
-| `faction` | [`Faction`](../../doc/models/faction.md) | Optional | - |
-| `contract` | [`Contract`](../../doc/models/contract.md) | Optional | - |
-| `ship` | [`Ship`](../../doc/models/ship.md) | Optional | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `token` | `?string` | Optional | - | getToken(): ?string | setToken(?string token): void |
+| `agent` | [`?Agent`](../../doc/models/agent.md) | Optional | - | getAgent(): ?Agent | setAgent(?Agent agent): void |
+| `faction` | [`?Faction`](../../doc/models/faction.md) | Optional | - | getFaction(): ?Faction | setFaction(?Faction faction): void |
+| `contract` | [`?Contract`](../../doc/models/contract.md) | Optional | - | getContract(): ?Contract | setContract(?Contract contract): void |
+| `ship` | [`?Ship`](../../doc/models/ship.md) | Optional | - | getShip(): ?Ship | setShip(?Ship ship): void |
 
 ## Example (as JSON)
 

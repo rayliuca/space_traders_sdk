@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `mode` | [`ModeEnum`](../../doc/models/mode-enum.md) | Required | - |
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `mode` | [`string (ModeEnum)`](../../doc/models/mode-enum.md) | Required | - | getMode(): string | setMode(string mode): void |
 
 ## Example (as JSON)
 
