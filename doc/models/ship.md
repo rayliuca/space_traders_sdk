@@ -9,19 +9,19 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `frame` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `reactor` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `engine` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `modules` | `List of string` | Required | - |
-| `mounts` | `List of string` | Required | - |
-| `registration` | [`Registration1`](../../doc/models/registration-1.md) | Required | - |
-| `integrity` | [`Integrity`](../../doc/models/integrity.md) | Required | - |
-| `stats` | [`Stats`](../../doc/models/stats.md) | Optional | - |
-| `status` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `location` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `cargo` | [`List of Cargo`](../../doc/models/cargo.md) | Required | **Constraints**: *Minimum Items*: `0`, *Unique Items Required* |
-| `fuel` | `int` | Required | - |
+| `Symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Frame` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Reactor` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Engine` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Modules` | `List<string>` | Required | - |
+| `Mounts` | `List<string>` | Required | - |
+| `Registration` | [`Models.Registration1`](../../doc/models/registration-1.md) | Required | - |
+| `Integrity` | [`Models.Integrity`](../../doc/models/integrity.md) | Required | - |
+| `Stats` | [`Models.Stats`](../../doc/models/stats.md) | Optional | - |
+| `Status` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Location` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Cargo` | [`List<Models.Cargo>`](../../doc/models/cargo.md) | Required | **Constraints**: *Minimum Items*: `0`, *Unique Items Required* |
+| `Fuel` | `int` | Required | - |
 
 ## Example (as JSON)
 

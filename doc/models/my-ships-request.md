@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `id` | `string` | Optional | The id of the shipyard listing you want to purchase. |
+| `Id` | `string` | Optional | The id of the shipyard listing you want to purchase. |
 
 ## Example (as JSON)
 

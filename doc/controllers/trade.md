@@ -1,7 +1,7 @@
 # Trade
 
-```python
-trade_controller = client.trade
+```csharp
+TradeController tradeController = client.TradeController;
 ```
 
 ## Class Name
@@ -18,29 +18,33 @@ trade_controller = client.trade
 
 Purchase Cargo
 
-```python
-def post_my_ships_ship_symbol_purchase(self,
-                                      ship_symbol,
-                                      body=None)
+```csharp
+PostMyShipsShipSymbolPurchaseAsync(
+    string shipSymbol,
+    Models.MyShipsPurchaseRequest body = null)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
-| `body` | [`MyShipsPurchaseRequest`](../../doc/models/my-ships-purchase-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | - |
+| `body` | [`Models.MyShipsPurchaseRequest`](../../doc/models/my-ships-purchase-request.md) | Body, Optional | - |
 
 ## Response Type
 
-[`MyShipsPurchaseResponse`](../../doc/models/my-ships-purchase-response.md)
+[`Task<Models.MyShipsPurchaseResponse>`](../../doc/models/my-ships-purchase-response.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = trade_controller.post_my_ships_ship_symbol_purchase(ship_symbol)
+try
+{
+    MyShipsPurchaseResponse result = await tradeController.PostMyShipsShipSymbolPurchaseAsync(shipSymbol, null);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -61,29 +65,33 @@ result = trade_controller.post_my_ships_ship_symbol_purchase(ship_symbol)
 
 Sell cargo from your ship's hold to the local market.
 
-```python
-def post_my_ships_ship_symbol_sell(self,
-                                  ship_symbol,
-                                  body=None)
+```csharp
+PostMyShipsShipSymbolSellAsync(
+    string shipSymbol,
+    Models.MyShipsSellRequest body = null)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
-| `body` | [`MyShipsSellRequest`](../../doc/models/my-ships-sell-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | - |
+| `body` | [`Models.MyShipsSellRequest`](../../doc/models/my-ships-sell-request.md) | Body, Optional | - |
 
 ## Response Type
 
-[`MyShipsSellResponse`](../../doc/models/my-ships-sell-response.md)
+[`Task<Models.MyShipsSellResponse>`](../../doc/models/my-ships-sell-response.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = trade_controller.post_my_ships_ship_symbol_sell(ship_symbol)
+try
+{
+    MyShipsSellResponse result = await tradeController.PostMyShipsShipSymbolSellAsync(shipSymbol, null);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*

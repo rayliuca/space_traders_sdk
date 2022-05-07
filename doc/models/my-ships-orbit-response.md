@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `data` | [`Data4`](../../doc/models/data-4.md) | Required | - |
+| `Data` | [`Models.Data4`](../../doc/models/data-4.md) | Required | - |
 
 ## Example (as JSON)
 

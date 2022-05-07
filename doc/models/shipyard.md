@@ -9,8 +9,8 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `faction` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Faction` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
 
 ## Example (as JSON)
 

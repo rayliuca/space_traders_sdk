@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `data` | [`System`](../../doc/models/system.md) | Required | - |
+| `Data` | [`Models.System`](../../doc/models/system.md) | Required | - |
 
 ## Example (as JSON)
 

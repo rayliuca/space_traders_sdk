@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `data` | [`Data9`](../../doc/models/data-9.md) | Optional | - |
+| `Data` | [`Models.Data9`](../../doc/models/data-9.md) | Optional | - |
 
 ## Example (as JSON)
 

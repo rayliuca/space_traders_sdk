@@ -9,9 +9,9 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `fuel_tank` | `int` | Required | - |
-| `cargo_limit` | `int` | Required | - |
-| `jump_range` | `int` | Required | - |
+| `FuelTank` | `int` | Required | - |
+| `CargoLimit` | `int` | Required | - |
+| `JumpRange` | `int` | Required | - |
 
 ## Example (as JSON)
 

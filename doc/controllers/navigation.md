@@ -1,7 +1,7 @@
 # Navigation
 
-```python
-navigation_controller = client.navigation
+```csharp
+NavigationController navigationController = client.NavigationController;
 ```
 
 ## Class Name
@@ -23,27 +23,31 @@ navigation_controller = client.navigation
 
 Transition your ship from orbit to docked. Consecutive calls to this endpoint will succeed.
 
-```python
-def post_my_ships_ship_symbol_dock(self,
-                                  ship_symbol)
+```csharp
+PostMyShipsShipSymbolDockAsync(
+    string shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The symbol of the ship |
+| `shipSymbol` | `string` | Template, Required | The symbol of the ship |
 
 ## Response Type
 
-[`MyShipsDockResponse`](../../doc/models/my-ships-dock-response.md)
+[`Task<Models.MyShipsDockResponse>`](../../doc/models/my-ships-dock-response.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = navigation_controller.post_my_ships_ship_symbol_dock(ship_symbol)
+try
+{
+    MyShipsDockResponse result = await navigationController.PostMyShipsShipSymbolDockAsync(shipSymbol);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -61,27 +65,31 @@ result = navigation_controller.post_my_ships_ship_symbol_dock(ship_symbol)
 
 Transition your ship from docked into orbit. Ships are placed into orbit by default when arriving at a destination. Consecutive calls to this endpoint will continue to return a 200 response status.
 
-```python
-def post_my_ships_ship_symbol_orbit(self,
-                                   ship_symbol)
+```csharp
+PostMyShipsShipSymbolOrbitAsync(
+    string shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The symbol of the ship |
+| `shipSymbol` | `string` | Template, Required | The symbol of the ship |
 
 ## Response Type
 
-[`MyShipsOrbitResponse`](../../doc/models/my-ships-orbit-response.md)
+[`Task<Models.MyShipsOrbitResponse>`](../../doc/models/my-ships-orbit-response.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = navigation_controller.post_my_ships_ship_symbol_orbit(ship_symbol)
+try
+{
+    MyShipsOrbitResponse result = await navigationController.PostMyShipsShipSymbolOrbitAsync(shipSymbol);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -99,29 +107,33 @@ result = navigation_controller.post_my_ships_ship_symbol_orbit(ship_symbol)
 
 Jump Ship
 
-```python
-def post_my_ships_ship_symbol_jump(self,
-                                  ship_symbol,
-                                  body=None)
+```csharp
+PostMyShipsShipSymbolJumpAsync(
+    string shipSymbol,
+    Models.MyShipsJumpRequest body = null)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
-| `body` | [`MyShipsJumpRequest`](../../doc/models/my-ships-jump-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | - |
+| `body` | [`Models.MyShipsJumpRequest`](../../doc/models/my-ships-jump-request.md) | Body, Optional | - |
 
 ## Response Type
 
-[`MyShipsJumpResponse`](../../doc/models/my-ships-jump-response.md)
+[`Task<Models.MyShipsJumpResponse>`](../../doc/models/my-ships-jump-response.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = navigation_controller.post_my_ships_ship_symbol_jump(ship_symbol)
+try
+{
+    MyShipsJumpResponse result = await navigationController.PostMyShipsShipSymbolJumpAsync(shipSymbol, null);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -146,27 +158,31 @@ result = navigation_controller.post_my_ships_ship_symbol_jump(ship_symbol)
 
 Jump Cooldown
 
-```python
-def get_my_ships_ship_symbol_jump(self,
-                                 ship_symbol)
+```csharp
+GetMyShipsShipSymbolJumpAsync(
+    string shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `string` | Template, Required | - |
 
 ## Response Type
 
-[`MyShipsJumpResponse1`](../../doc/models/my-ships-jump-response-1.md)
+[`Task<Models.MyShipsJumpResponse1>`](../../doc/models/my-ships-jump-response-1.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = navigation_controller.get_my_ships_ship_symbol_jump(ship_symbol)
+try
+{
+    MyShipsJumpResponse1 result = await navigationController.GetMyShipsShipSymbolJumpAsync(shipSymbol);
+}
+catch (ApiException e){};
 ```
 
 
@@ -174,27 +190,31 @@ result = navigation_controller.get_my_ships_ship_symbol_jump(ship_symbol)
 
 Refuel Ship
 
-```python
-def post_my_ships_ship_symbol_refuel(self,
-                                    ship_symbol)
+```csharp
+PostMyShipsShipSymbolRefuelAsync(
+    string shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `string` | Template, Required | - |
 
 ## Response Type
 
-[`MyShipsRefuelResponse`](../../doc/models/my-ships-refuel-response.md)
+[`Task<Models.MyShipsRefuelResponse>`](../../doc/models/my-ships-refuel-response.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = navigation_controller.post_my_ships_ship_symbol_refuel(ship_symbol)
+try
+{
+    MyShipsRefuelResponse result = await navigationController.PostMyShipsShipSymbolRefuelAsync(shipSymbol);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -213,29 +233,33 @@ result = navigation_controller.post_my_ships_ship_symbol_refuel(ship_symbol)
 
 Navigate Ship
 
-```python
-def post_my_ships_ship_symbol_navigate(self,
-                                      ship_symbol,
-                                      body=None)
+```csharp
+PostMyShipsShipSymbolNavigateAsync(
+    string shipSymbol,
+    Models.MyShipsNavigateRequest body = null)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The ship symbol |
-| `body` | [`MyShipsNavigateRequest`](../../doc/models/my-ships-navigate-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | The ship symbol |
+| `body` | [`Models.MyShipsNavigateRequest`](../../doc/models/my-ships-navigate-request.md) | Body, Optional | - |
 
 ## Response Type
 
-[`MyShipsNavigateResponse`](../../doc/models/my-ships-navigate-response.md)
+[`Task<Models.MyShipsNavigateResponse>`](../../doc/models/my-ships-navigate-response.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = navigation_controller.post_my_ships_ship_symbol_navigate(ship_symbol)
+try
+{
+    MyShipsNavigateResponse result = await navigationController.PostMyShipsShipSymbolNavigateAsync(shipSymbol, null);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -260,27 +284,31 @@ result = navigation_controller.post_my_ships_ship_symbol_navigate(ship_symbol)
 
 Get the status of your last navigation.
 
-```python
-def get_my_ships_ship_symbol_navigate(self,
-                                     ship_symbol)
+```csharp
+GetMyShipsShipSymbolNavigateAsync(
+    string shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The ship symbol |
+| `shipSymbol` | `string` | Template, Required | The ship symbol |
 
 ## Response Type
 
-[`MyShipsNavigateResponse1`](../../doc/models/my-ships-navigate-response-1.md)
+[`Task<Models.MyShipsNavigateResponse1>`](../../doc/models/my-ships-navigate-response-1.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = navigation_controller.get_my_ships_ship_symbol_navigate(ship_symbol)
+try
+{
+    MyShipsNavigateResponse1 result = await navigationController.GetMyShipsShipSymbolNavigateAsync(shipSymbol);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*

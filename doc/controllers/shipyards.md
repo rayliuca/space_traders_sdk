@@ -1,7 +1,7 @@
 # Shipyards
 
-```python
-shipyards_controller = client.shipyards
+```csharp
+ShipyardsController shipyardsController = client.ShipyardsController;
 ```
 
 ## Class Name
@@ -20,25 +20,29 @@ shipyards_controller = client.shipyards
 
 Purchase a ship
 
-```python
-def post_my_ships(self,
-                 body=None)
+```csharp
+PostMyShipsAsync(
+    Models.MyShipsRequest body = null)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`MyShipsRequest`](../../doc/models/my-ships-request.md) | Body, Optional | - |
+| `body` | [`Models.MyShipsRequest`](../../doc/models/my-ships-request.md) | Body, Optional | - |
 
 ## Response Type
 
-[`MyShipsResponse2`](../../doc/models/my-ships-response-2.md)
+[`Task<Models.MyShipsResponse2>`](../../doc/models/my-ships-response-2.md)
 
 ## Example Usage
 
-```python
-result = shipyards_controller.post_my_ships()
+```csharp
+try
+{
+    MyShipsResponse2 result = await shipyardsController.PostMyShipsAsync(null);
+}
+catch (ApiException e){};
 ```
 
 
@@ -46,27 +50,31 @@ result = shipyards_controller.post_my_ships()
 
 Returns a list of all shipyards in a system.
 
-```python
-def get_systems_system_symbol_shipyards(self,
-                                       system_symbol)
+```csharp
+GetSystemsSystemSymbolShipyardsAsync(
+    string systemSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | the system symbol |
+| `systemSymbol` | `string` | Template, Required | the system symbol |
 
 ## Response Type
 
-[`SystemsShipyardsResponse`](../../doc/models/systems-shipyards-response.md)
+[`Task<Models.SystemsShipyardsResponse>`](../../doc/models/systems-shipyards-response.md)
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
+```csharp
+string systemSymbol = "systemSymbol4";
 
-result = shipyards_controller.get_systems_system_symbol_shipyards(system_symbol)
+try
+{
+    SystemsShipyardsResponse result = await shipyardsController.GetSystemsSystemSymbolShipyardsAsync(systemSymbol);
+}
+catch (ApiException e){};
 ```
 
 
@@ -74,30 +82,34 @@ result = shipyards_controller.get_systems_system_symbol_shipyards(system_symbol)
 
 Shipyard Details
 
-```python
-def get_systems_system_symbol_shipyards_waypoint_symbol(self,
-                                                       system_symbol,
-                                                       waypoint_symbol)
+```csharp
+GetSystemsSystemSymbolShipyardsWaypointSymbolAsync(
+    string systemSymbol,
+    string waypointSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
-| `waypoint_symbol` | `string` | Template, Required | The waypoint symbol |
+| `systemSymbol` | `string` | Template, Required | The system symbol |
+| `waypointSymbol` | `string` | Template, Required | The waypoint symbol |
 
 ## Response Type
 
-[`SystemsShipyardsResponse1`](../../doc/models/systems-shipyards-response-1.md)
+[`Task<Models.SystemsShipyardsResponse1>`](../../doc/models/systems-shipyards-response-1.md)
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
-waypoint_symbol = 'waypointSymbol2'
+```csharp
+string systemSymbol = "systemSymbol4";
+string waypointSymbol = "waypointSymbol2";
 
-result = shipyards_controller.get_systems_system_symbol_shipyards_waypoint_symbol(system_symbol, waypoint_symbol)
+try
+{
+    SystemsShipyardsResponse1 result = await shipyardsController.GetSystemsSystemSymbolShipyardsWaypointSymbolAsync(systemSymbol, waypointSymbol);
+}
+catch (ApiException e){};
 ```
 
 
@@ -105,29 +117,33 @@ result = shipyards_controller.get_systems_system_symbol_shipyards_waypoint_symbo
 
 Shipyard Listings
 
-```python
-def get_systems_system_symbol_shipyards_waypoint_symbol_ships(self,
-                                                             system_symbol,
-                                                             waypoint_symbol)
+```csharp
+GetSystemsSystemSymbolShipyardsWaypointSymbolShipsAsync(
+    string systemSymbol,
+    string waypointSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
-| `waypoint_symbol` | `string` | Template, Required | The waypoint symbol |
+| `systemSymbol` | `string` | Template, Required | The system symbol |
+| `waypointSymbol` | `string` | Template, Required | The waypoint symbol |
 
 ## Response Type
 
-[`SystemsShipyardsShipsResponse`](../../doc/models/systems-shipyards-ships-response.md)
+[`Task<Models.SystemsShipyardsShipsResponse>`](../../doc/models/systems-shipyards-ships-response.md)
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
-waypoint_symbol = 'waypointSymbol2'
+```csharp
+string systemSymbol = "systemSymbol4";
+string waypointSymbol = "waypointSymbol2";
 
-result = shipyards_controller.get_systems_system_symbol_shipyards_waypoint_symbol_ships(system_symbol, waypoint_symbol)
+try
+{
+    SystemsShipyardsShipsResponse result = await shipyardsController.GetSystemsSystemSymbolShipyardsWaypointSymbolShipsAsync(systemSymbol, waypointSymbol);
+}
+catch (ApiException e){};
 ```
 

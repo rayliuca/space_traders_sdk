@@ -9,11 +9,11 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `token` | `string` | Optional | - |
-| `agent` | [`Agent`](../../doc/models/agent.md) | Optional | - |
-| `faction` | [`Faction`](../../doc/models/faction.md) | Optional | - |
-| `contract` | [`Contract`](../../doc/models/contract.md) | Optional | - |
-| `ship` | [`Ship`](../../doc/models/ship.md) | Optional | - |
+| `Token` | `string` | Optional | - |
+| `Agent` | [`Models.Agent`](../../doc/models/agent.md) | Optional | - |
+| `Faction` | [`Models.Faction`](../../doc/models/faction.md) | Optional | - |
+| `Contract` | [`Models.Contract`](../../doc/models/contract.md) | Optional | - |
+| `Ship` | [`Models.Ship`](../../doc/models/ship.md) | Optional | - |
 
 ## Example (as JSON)
 

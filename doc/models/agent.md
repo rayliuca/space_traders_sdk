@@ -9,10 +9,10 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `account_id` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `headquarters` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `credits` | `int` | Required | - |
+| `AccountId` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Headquarters` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Credits` | `int` | Required | - |
 
 ## Example (as JSON)
 

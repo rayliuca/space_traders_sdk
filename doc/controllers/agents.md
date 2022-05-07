@@ -1,7 +1,7 @@
 # Agents
 
-```python
-agents_controller = client.agents
+```csharp
+AgentsController agentsController = client.AgentsController;
 ```
 
 ## Class Name
@@ -32,25 +32,29 @@ Return to the contract destination and execute the `/my/ships/{shipSymbol}/deliv
 
 When your contract is fulfilled, you can call `/my/contracts/{contractId}/fulfill` to retrieve payment.
 
-```python
-def post_agents(self,
-               body=None)
+```csharp
+PostAgentsAsync(
+    Models.AgentsRequest body = null)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`AgentsRequest`](../../doc/models/agents-request.md) | Body, Optional | - |
+| `body` | [`Models.AgentsRequest`](../../doc/models/agents-request.md) | Body, Optional | - |
 
 ## Response Type
 
-[`AgentsResponse`](../../doc/models/agents-response.md)
+[`Task<Models.AgentsResponse>`](../../doc/models/agents-response.md)
 
 ## Example Usage
 
-```python
-result = agents_controller.post_agents()
+```csharp
+try
+{
+    AgentsResponse result = await agentsController.PostAgentsAsync(null);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -141,18 +145,22 @@ result = agents_controller.post_agents()
 
 Fetch your agent's details.
 
-```python
-def get_my_agent(self)
+```csharp
+GetMyAgentAsync()
 ```
 
 ## Response Type
 
-[`MyAgentResponse`](../../doc/models/my-agent-response.md)
+[`Task<Models.MyAgentResponse>`](../../doc/models/my-agent-response.md)
 
 ## Example Usage
 
-```python
-result = agents_controller.get_my_agent()
+```csharp
+try
+{
+    MyAgentResponse result = await agentsController.GetMyAgentAsync();
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*

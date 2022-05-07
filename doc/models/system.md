@@ -9,15 +9,15 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `sector` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `mtype` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `x` | `int` | Required | - |
-| `y` | `int` | Required | - |
-| `waypoints` | `List of string` | Required | - |
-| `factions` | `List of string` | Required | - |
-| `charted` | `bool` | Required | - |
-| `charted_by` | `string` | Optional | - |
+| `Symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Sector` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Type` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `X` | `int` | Required | - |
+| `Y` | `int` | Required | - |
+| `Waypoints` | `List<string>` | Required | - |
+| `Factions` | `List<string>` | Required | - |
+| `Charted` | `bool` | Required | - |
+| `ChartedBy` | `string` | Optional | - |
 
 ## Example (as JSON)
 

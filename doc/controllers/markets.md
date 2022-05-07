@@ -1,7 +1,7 @@
 # Markets
 
-```python
-markets_controller = client.markets
+```csharp
+MarketsController marketsController = client.MarketsController;
 ```
 
 ## Class Name
@@ -24,29 +24,33 @@ Use this endpoint to deploy a Communications Relay to a waypoint. A waypoint wit
 
 Communication relays can be purchased from a market that exports `COMM_RELAY_I`.
 
-```python
-def post_my_ships_ship_symbol_deploy(self,
-                                    ship_symbol,
-                                    body=None)
+```csharp
+PostMyShipsShipSymbolDeployAsync(
+    string shipSymbol,
+    Models.MyShipsDeployRequest body = null)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The ship symbol |
-| `body` | [`MyShipsDeployRequest`](../../doc/models/my-ships-deploy-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | The ship symbol |
+| `body` | [`Models.MyShipsDeployRequest`](../../doc/models/my-ships-deploy-request.md) | Body, Optional | - |
 
 ## Response Type
 
-`void`
+`Task`
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = markets_controller.post_my_ships_ship_symbol_deploy(ship_symbol)
+try
+{
+    await marketsController.PostMyShipsShipSymbolDeployAsync(shipSymbol, null);
+}
+catch (ApiException e){};
 ```
 
 
@@ -54,27 +58,31 @@ result = markets_controller.post_my_ships_ship_symbol_deploy(ship_symbol)
 
 Trade Imports
 
-```python
-def get_trade_trade_symbol_imports(self,
-                                  trade_symbol)
+```csharp
+GetTradeTradeSymbolImportsAsync(
+    string tradeSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Template, Required | The trade symbol |
+| `tradeSymbol` | `string` | Template, Required | The trade symbol |
 
 ## Response Type
 
-[`TradeImportsResponse`](../../doc/models/trade-imports-response.md)
+[`Task<Models.TradeImportsResponse>`](../../doc/models/trade-imports-response.md)
 
 ## Example Usage
 
-```python
-trade_symbol = 'tradeSymbol8'
+```csharp
+string tradeSymbol = "tradeSymbol8";
 
-result = markets_controller.get_trade_trade_symbol_imports(trade_symbol)
+try
+{
+    TradeImportsResponse result = await marketsController.GetTradeTradeSymbolImportsAsync(tradeSymbol);
+}
+catch (ApiException e){};
 ```
 
 
@@ -82,27 +90,31 @@ result = markets_controller.get_trade_trade_symbol_imports(trade_symbol)
 
 Trade Exports
 
-```python
-def get_trade_trade_symbol_exports(self,
-                                  trade_symbol)
+```csharp
+GetTradeTradeSymbolExportsAsync(
+    string tradeSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Template, Required | The trade symbol |
+| `tradeSymbol` | `string` | Template, Required | The trade symbol |
 
 ## Response Type
 
-[`TradeExportsResponse`](../../doc/models/trade-exports-response.md)
+[`Task<Models.TradeExportsResponse>`](../../doc/models/trade-exports-response.md)
 
 ## Example Usage
 
-```python
-trade_symbol = 'tradeSymbol8'
+```csharp
+string tradeSymbol = "tradeSymbol8";
 
-result = markets_controller.get_trade_trade_symbol_exports(trade_symbol)
+try
+{
+    TradeExportsResponse result = await marketsController.GetTradeTradeSymbolExportsAsync(tradeSymbol);
+}
+catch (ApiException e){};
 ```
 
 
@@ -110,27 +122,31 @@ result = markets_controller.get_trade_trade_symbol_exports(trade_symbol)
 
 Trade Exchanges
 
-```python
-def get_trade_trade_symbol_exchange(self,
-                                   trade_symbol)
+```csharp
+GetTradeTradeSymbolExchangeAsync(
+    string tradeSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Template, Required | The trade symbol |
+| `tradeSymbol` | `string` | Template, Required | The trade symbol |
 
 ## Response Type
 
-[`TradeExchangeResponse`](../../doc/models/trade-exchange-response.md)
+[`Task<Models.TradeExchangeResponse>`](../../doc/models/trade-exchange-response.md)
 
 ## Example Usage
 
-```python
-trade_symbol = 'tradeSymbol8'
+```csharp
+string tradeSymbol = "tradeSymbol8";
 
-result = markets_controller.get_trade_trade_symbol_exchange(trade_symbol)
+try
+{
+    TradeExchangeResponse result = await marketsController.GetTradeTradeSymbolExchangeAsync(tradeSymbol);
+}
+catch (ApiException e){};
 ```
 
 
@@ -140,27 +156,31 @@ Retrieve a list of all charted markets in the given system. Markets are only ava
 
 To install a communications relay at a market, look at the `my/ships/{shipSymbol}/deploy` endpoint.
 
-```python
-def get_systems_system_symbol_markets(self,
-                                     system_symbol)
+```csharp
+GetSystemsSystemSymbolMarketsAsync(
+    string systemSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
+| `systemSymbol` | `string` | Template, Required | The system symbol |
 
 ## Response Type
 
-[`SystemsMarketsResponse`](../../doc/models/systems-markets-response.md)
+[`Task<Models.SystemsMarketsResponse>`](../../doc/models/systems-markets-response.md)
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
+```csharp
+string systemSymbol = "systemSymbol4";
 
-result = markets_controller.get_systems_system_symbol_markets(system_symbol)
+try
+{
+    SystemsMarketsResponse result = await marketsController.GetSystemsSystemSymbolMarketsAsync(systemSymbol);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -187,30 +207,34 @@ Market data is only available if you have a ship at the location, or the locatio
 
 See `/my/ships/{shipSymbol}/deploy` for deploying relays at a location.
 
-```python
-def get_systems_system_symbol_markets_waypoint_symbol(self,
-                                                     system_symbol,
-                                                     waypoint_symbol)
+```csharp
+GetSystemsSystemSymbolMarketsWaypointSymbolAsync(
+    string systemSymbol,
+    string waypointSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
-| `waypoint_symbol` | `string` | Template, Required | The waypoint symbol |
+| `systemSymbol` | `string` | Template, Required | The system symbol |
+| `waypointSymbol` | `string` | Template, Required | The waypoint symbol |
 
 ## Response Type
 
-[`SystemsMarketsResponse1`](../../doc/models/systems-markets-response-1.md)
+[`Task<Models.SystemsMarketsResponse1>`](../../doc/models/systems-markets-response-1.md)
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
-waypoint_symbol = 'waypointSymbol2'
+```csharp
+string systemSymbol = "systemSymbol4";
+string waypointSymbol = "waypointSymbol2";
 
-result = markets_controller.get_systems_system_symbol_markets_waypoint_symbol(system_symbol, waypoint_symbol)
+try
+{
+    SystemsMarketsResponse1 result = await marketsController.GetSystemsSystemSymbolMarketsWaypointSymbolAsync(systemSymbol, waypointSymbol);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*

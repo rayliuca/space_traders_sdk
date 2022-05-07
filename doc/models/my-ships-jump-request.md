@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `destination` | `string` | Optional | The system symbol to jump to. |
+| `Destination` | `string` | Optional | The system symbol to jump to. |
 
 ## Example (as JSON)
 

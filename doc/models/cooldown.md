@@ -9,8 +9,8 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `duration` | `int` | Required | - |
-| `expiration` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Duration` | `int` | Required | - |
+| `Expiration` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
 
 ## Example (as JSON)
 

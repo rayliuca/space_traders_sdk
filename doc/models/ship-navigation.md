@@ -9,11 +9,11 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `departure` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `destination` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `duration_remaining` | `int` | Required | - |
-| `arrived_at` | `object` | Optional | - |
+| `ShipSymbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Departure` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Destination` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `DurationRemaining` | `int` | Required | - |
+| `ArrivedAt` | `object` | Optional | - |
 
 ## Example (as JSON)
 

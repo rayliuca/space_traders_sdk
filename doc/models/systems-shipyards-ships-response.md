@@ -9,8 +9,8 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `data` | [`List of ShipyardListing`](../../doc/models/shipyard-listing.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
-| `meta` | [`Meta`](../../doc/models/meta.md) | Required | - |
+| `Data` | [`List<Models.ShipyardListing>`](../../doc/models/shipyard-listing.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
+| `Meta` | [`Models.Meta`](../../doc/models/meta.md) | Required | - |
 
 ## Example (as JSON)
 

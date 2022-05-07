@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `destination` | `string` | Optional | The waypoint symbol to navigate to. |
+| `Destination` | `string` | Optional | The waypoint symbol to navigate to. |
 
 ## Example (as JSON)
 

@@ -1,7 +1,7 @@
 # Contracts
 
-```python
-contracts_controller = client.contracts
+```csharp
+ContractsController contractsController = client.ContractsController;
 ```
 
 ## Class Name
@@ -20,29 +20,33 @@ contracts_controller = client.contracts
 
 Deliver cargo on a given contract.
 
-```python
-def post_my_ships_ship_symbol_deliver(self,
-                                     ship_symbol,
-                                     body=None)
+```csharp
+PostMyShipsShipSymbolDeliverAsync(
+    string shipSymbol,
+    Models.MyShipsDeliverRequest body = null)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The symbol of the ship |
-| `body` | [`MyShipsDeliverRequest`](../../doc/models/my-ships-deliver-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | The symbol of the ship |
+| `body` | [`Models.MyShipsDeliverRequest`](../../doc/models/my-ships-deliver-request.md) | Body, Optional | - |
 
 ## Response Type
 
-[`MyShipsDeliverResponse`](../../doc/models/my-ships-deliver-response.md)
+[`Task<Models.MyShipsDeliverResponse>`](../../doc/models/my-ships-deliver-response.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = contracts_controller.post_my_ships_ship_symbol_deliver(ship_symbol)
+try
+{
+    MyShipsDeliverResponse result = await contractsController.PostMyShipsShipSymbolDeliverAsync(shipSymbol, null);
+}
+catch (ApiException e){};
 ```
 
 
@@ -50,18 +54,22 @@ result = contracts_controller.post_my_ships_ship_symbol_deliver(ship_symbol)
 
 List all of your contracts.
 
-```python
-def get_my_contracts(self)
+```csharp
+GetMyContractsAsync()
 ```
 
 ## Response Type
 
-[`MyContractsResponse`](../../doc/models/my-contracts-response.md)
+[`Task<Models.MyContractsResponse>`](../../doc/models/my-contracts-response.md)
 
 ## Example Usage
 
-```python
-result = contracts_controller.get_my_contracts()
+```csharp
+try
+{
+    MyContractsResponse result = await contractsController.GetMyContractsAsync();
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -106,27 +114,31 @@ result = contracts_controller.get_my_contracts()
 
 Get the details of a contract by ID.
 
-```python
-def get_my_contracts_contract_id(self,
-                                contract_id)
+```csharp
+GetMyContractsContractIdAsync(
+    string contractId)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `contract_id` | `string` | Template, Required | The contract ID |
+| `contractId` | `string` | Template, Required | The contract ID |
 
 ## Response Type
 
-[`MyContractsResponse1`](../../doc/models/my-contracts-response-1.md)
+[`Task<Models.MyContractsResponse1>`](../../doc/models/my-contracts-response-1.md)
 
 ## Example Usage
 
-```python
-contract_id = 'contractId2'
+```csharp
+string contractId = "contractId2";
 
-result = contracts_controller.get_my_contracts_contract_id(contract_id)
+try
+{
+    MyContractsResponse1 result = await contractsController.GetMyContractsContractIdAsync(contractId);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -164,26 +176,30 @@ result = contracts_controller.get_my_contracts_contract_id(contract_id)
 
 Accept a contract.
 
-```python
-def post_my_contracts_contract_id_accept(self,
-                                        contract_id)
+```csharp
+PostMyContractsContractIdAcceptAsync(
+    string contractId)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `contract_id` | `string` | Template, Required | - |
+| `contractId` | `string` | Template, Required | - |
 
 ## Response Type
 
-[`MyContractsAcceptResponse`](../../doc/models/my-contracts-accept-response.md)
+[`Task<Models.MyContractsAcceptResponse>`](../../doc/models/my-contracts-accept-response.md)
 
 ## Example Usage
 
-```python
-contract_id = 'contractId2'
+```csharp
+string contractId = "contractId2";
 
-result = contracts_controller.post_my_contracts_contract_id_accept(contract_id)
+try
+{
+    MyContractsAcceptResponse result = await contractsController.PostMyContractsContractIdAcceptAsync(contractId);
+}
+catch (ApiException e){};
 ```
 

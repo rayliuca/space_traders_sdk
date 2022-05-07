@@ -9,10 +9,10 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `waypoint_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `trade_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `price` | `int` | Required | - |
-| `tariff` | `int` | Required | - |
+| `WaypointSymbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `TradeSymbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Price` | `int` | Required | - |
+| `Tariff` | `int` | Required | - |
 
 ## Example (as JSON)
 

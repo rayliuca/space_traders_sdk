@@ -9,13 +9,13 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `id` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `faction` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `mtype` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `terms` | [`Terms`](../../doc/models/terms.md) | Required | - |
-| `accepted` | `bool` | Required | - |
-| `fulfilled` | `bool` | Required | - |
-| `expires_at` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Id` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Faction` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Type` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Terms` | [`Models.Terms`](../../doc/models/terms.md) | Required | - |
+| `Accepted` | `bool` | Required | - |
+| `Fulfilled` | `bool` | Required | - |
+| `ExpiresAt` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
 
 ## Example (as JSON)
 

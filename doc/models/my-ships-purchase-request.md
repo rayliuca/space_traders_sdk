@@ -9,8 +9,8 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Optional | - |
-| `units` | `int` | Optional | - |
+| `TradeSymbol` | `string` | Optional | - |
+| `Units` | `int?` | Optional | - |
 
 ## Example (as JSON)
 

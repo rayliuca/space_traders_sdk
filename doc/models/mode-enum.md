@@ -9,8 +9,8 @@
 
 | Name |
 |  --- |
-| `APPROACHING_SHIPS` |
-| `DEPARTING_SHIPS` |
+| `APPROACHINGSHIPS` |
+| `DEPARTINGSHIPS` |
 | `SYSTEM` |
 | `WAYPOINT` |
 

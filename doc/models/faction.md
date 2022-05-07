@@ -9,11 +9,11 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `name` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `description` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `headquarters` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `traits` | `List of string` | Required | - |
+| `Symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Name` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Description` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Headquarters` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Traits` | `List<string>` | Required | - |
 
 ## Example (as JSON)
 

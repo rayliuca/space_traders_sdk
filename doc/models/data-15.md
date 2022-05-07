@@ -9,8 +9,8 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `navigation` | [`ShipNavigation`](../../doc/models/ship-navigation.md) | Optional | - |
-| `fuel_cost` | `int` | Optional | - |
+| `Navigation` | [`Models.ShipNavigation`](../../doc/models/ship-navigation.md) | Optional | - |
+| `FuelCost` | `int?` | Optional | - |
 
 ## Example (as JSON)
 

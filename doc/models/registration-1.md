@@ -9,10 +9,10 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `faction_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `agent_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `fee` | `int` | Required | - |
-| `role` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `FactionSymbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `AgentSymbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Fee` | `int` | Required | - |
+| `Role` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
 
 ## Example (as JSON)
 

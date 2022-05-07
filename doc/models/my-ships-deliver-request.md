@@ -9,9 +9,9 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `contract_id` | `string` | Required | - |
-| `trade_symbol` | `string` | Required | - |
-| `units` | `int` | Optional | - |
+| `ContractId` | `string` | Required | - |
+| `TradeSymbol` | `string` | Required | - |
+| `Units` | `int?` | Optional | - |
 
 ## Example (as JSON)
 

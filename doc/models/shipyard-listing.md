@@ -9,15 +9,15 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `id` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `waypoint` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `price` | `int` | Required | - |
-| `role` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `frame` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `reactor` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `engine` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `modules` | `List of string` | Required | - |
-| `mounts` | `List of string` | Required | - |
+| `Id` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Waypoint` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Price` | `int` | Required | - |
+| `Role` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Frame` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Reactor` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Engine` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Modules` | `List<string>` | Required | - |
+| `Mounts` | `List<string>` | Required | - |
 
 ## Example (as JSON)
 

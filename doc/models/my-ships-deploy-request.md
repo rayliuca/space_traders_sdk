@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Required | - |
+| `TradeSymbol` | `string` | Required | - |
 
 ## Example (as JSON)
 

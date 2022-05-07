@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `data` | [`Agent`](../../doc/models/agent.md) | Optional | - |
+| `Data` | [`Models.Agent`](../../doc/models/agent.md) | Optional | - |
 
 ## Example (as JSON)
 

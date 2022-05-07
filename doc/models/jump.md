@@ -9,8 +9,8 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `destination` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `ShipSymbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Destination` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
 
 ## Example (as JSON)
 

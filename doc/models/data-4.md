@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `status` | `string` | Optional | - |
+| `Status` | `string` | Optional | - |
 
 ## Example (as JSON)
 

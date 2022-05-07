@@ -9,8 +9,8 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `units` | `int` | Required | - |
+| `TradeSymbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Units` | `int` | Required | - |
 
 ## Example (as JSON)
 

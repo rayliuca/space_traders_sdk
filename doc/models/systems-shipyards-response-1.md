@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `data` | [`Shipyard`](../../doc/models/shipyard.md) | Optional | - |
+| `Data` | [`Models.Shipyard`](../../doc/models/shipyard.md) | Optional | - |
 
 ## Example (as JSON)
 

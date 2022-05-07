@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `survey` | [`Survey`](../../doc/models/survey.md) | Optional | - |
+| `Survey` | [`Models.Survey`](../../doc/models/survey.md) | Optional | - |
 
 ## Example (as JSON)
 

@@ -9,9 +9,9 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `exports` | [`List of MarketTrade`](../../doc/models/market-trade.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
-| `imports` | [`List of MarketTrade`](../../doc/models/market-trade.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
-| `exchange` | [`List of MarketTrade`](../../doc/models/market-trade.md) | Required | - |
+| `Exports` | [`List<Models.MarketTrade>`](../../doc/models/market-trade.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
+| `Imports` | [`List<Models.MarketTrade>`](../../doc/models/market-trade.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
+| `Exchange` | [`List<Models.MarketTrade>`](../../doc/models/market-trade.md) | Required | - |
 
 ## Example (as JSON)
 

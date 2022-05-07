@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `data` | [`ContractDelivery`](../../doc/models/contract-delivery.md) | Required | - |
+| `Data` | [`Models.ContractDelivery`](../../doc/models/contract-delivery.md) | Required | - |
 
 ## Example (as JSON)
 

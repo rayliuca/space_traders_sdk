@@ -9,8 +9,8 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `jump` | [`Jump`](../../doc/models/jump.md) | Required | - |
-| `cooldown` | [`Cooldown`](../../doc/models/cooldown.md) | Required | - |
+| `Jump` | [`Models.Jump`](../../doc/models/jump.md) | Required | - |
+| `Cooldown` | [`Models.Cooldown`](../../doc/models/cooldown.md) | Required | - |
 
 ## Example (as JSON)
 

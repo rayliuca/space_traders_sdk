@@ -9,9 +9,9 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `frame` | `float` | Required | - |
-| `reactor` | `float` | Required | - |
-| `engine` | `float` | Required | - |
+| `Frame` | `double` | Required | - |
+| `Reactor` | `double` | Required | - |
+| `Engine` | `double` | Required | - |
 
 ## Example (as JSON)
 

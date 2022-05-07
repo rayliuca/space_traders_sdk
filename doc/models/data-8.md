@@ -9,8 +9,8 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `surveys` | [`List of Survey`](../../doc/models/survey.md) | Optional | - |
-| `cooldown` | [`Cooldown`](../../doc/models/cooldown.md) | Optional | - |
+| `Surveys` | [`List<Models.Survey>`](../../doc/models/survey.md) | Optional | - |
+| `Cooldown` | [`Models.Cooldown`](../../doc/models/cooldown.md) | Optional | - |
 
 ## Example (as JSON)
 

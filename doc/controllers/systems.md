@@ -1,7 +1,7 @@
 # Systems
 
-```python
-systems_controller = client.systems
+```csharp
+SystemsController systemsController = client.SystemsController;
 ```
 
 ## Class Name
@@ -21,27 +21,31 @@ systems_controller = client.systems
 
 Chart a new system or waypoint. Returns an array of the symbols that have been charted, including the system and the waypoint if both were uncharted, or just the waypoint.
 
-```python
-def post_my_ships_ship_symbol_chart(self,
-                                   ship_symbol)
+```csharp
+PostMyShipsShipSymbolChartAsync(
+    string shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The symbol of the ship |
+| `shipSymbol` | `string` | Template, Required | The symbol of the ship |
 
 ## Response Type
 
-[`MyShipsChartResponse`](../../doc/models/my-ships-chart-response.md)
+[`Task<Models.MyShipsChartResponse>`](../../doc/models/my-ships-chart-response.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = systems_controller.post_my_ships_ship_symbol_chart(ship_symbol)
+try
+{
+    MyShipsChartResponse result = await systemsController.PostMyShipsShipSymbolChartAsync(shipSymbol);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -62,18 +66,22 @@ result = systems_controller.post_my_ships_ship_symbol_chart(ship_symbol)
 
 Return a list of all systems.
 
-```python
-def get_systems(self)
+```csharp
+GetSystemsAsync()
 ```
 
 ## Response Type
 
-[`SystemsResponse`](../../doc/models/systems-response.md)
+[`Task<Models.SystemsResponse>`](../../doc/models/systems-response.md)
 
 ## Example Usage
 
-```python
-result = systems_controller.get_systems()
+```csharp
+try
+{
+    SystemsResponse result = await systemsController.GetSystemsAsync();
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -115,27 +123,31 @@ result = systems_controller.get_systems()
 
 View System
 
-```python
-def get_systems_system_symbol(self,
-                             system_symbol)
+```csharp
+GetSystemsSystemSymbolAsync(
+    string systemSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
+| `systemSymbol` | `string` | Template, Required | The system symbol |
 
 ## Response Type
 
-[`SystemsResponse1`](../../doc/models/systems-response-1.md)
+[`Task<Models.SystemsResponse1>`](../../doc/models/systems-response-1.md)
 
 ## Example Usage
 
-```python
-system_symbol = 'X1-OE'
+```csharp
+string systemSymbol = "X1-OE";
 
-result = systems_controller.get_systems_system_symbol(system_symbol)
+try
+{
+    SystemsResponse1 result = await systemsController.GetSystemsSystemSymbolAsync(systemSymbol);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -161,27 +173,31 @@ result = systems_controller.get_systems_system_symbol(system_symbol)
 
 Fetch all of the waypoints for a given system. System must be charted or a ship must be present to return waypoint details.
 
-```python
-def get_systems_system_symbol_waypoints_waypoint_symbol(self,
-                                                       system_symbol)
+```csharp
+GetSystemsSystemSymbolWaypointsWaypointSymbolAsync(
+    string systemSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
+| `systemSymbol` | `string` | Template, Required | The system symbol |
 
 ## Response Type
 
-[`SystemsWaypointsResponse`](../../doc/models/systems-waypoints-response.md)
+[`Task<Models.SystemsWaypointsResponse>`](../../doc/models/systems-waypoints-response.md)
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
+```csharp
+string systemSymbol = "systemSymbol4";
 
-result = systems_controller.get_systems_system_symbol_waypoints_waypoint_symbol(system_symbol)
+try
+{
+    SystemsWaypointsResponse result = await systemsController.GetSystemsSystemSymbolWaypointsWaypointSymbolAsync(systemSymbol);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -272,30 +288,34 @@ result = systems_controller.get_systems_system_symbol_waypoints_waypoint_symbol(
 
 View the details of a waypoint.
 
-```python
-def get_systems_system_symbol_waypoints(self,
-                                       system_symbol,
-                                       waypoint_symbol)
+```csharp
+GetSystemsSystemSymbolWaypointsAsync(
+    string systemSymbol,
+    string waypointSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system_symbol` | `string` | Template, Required | The system symbol |
-| `waypoint_symbol` | `string` | Template, Required | The waypoint symbol |
+| `systemSymbol` | `string` | Template, Required | The system symbol |
+| `waypointSymbol` | `string` | Template, Required | The waypoint symbol |
 
 ## Response Type
 
-[`SystemsWaypointsResponse`](../../doc/models/systems-waypoints-response.md)
+[`Task<Models.SystemsWaypointsResponse>`](../../doc/models/systems-waypoints-response.md)
 
 ## Example Usage
 
-```python
-system_symbol = 'systemSymbol4'
-waypoint_symbol = 'waypointSymbol2'
+```csharp
+string systemSymbol = "systemSymbol4";
+string waypointSymbol = "waypointSymbol2";
 
-result = systems_controller.get_systems_system_symbol_waypoints(system_symbol, waypoint_symbol)
+try
+{
+    SystemsWaypointsResponse result = await systemsController.GetSystemsSystemSymbolWaypointsAsync(systemSymbol, waypointSymbol);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*

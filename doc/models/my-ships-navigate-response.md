@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `data` | [`Data15`](../../doc/models/data-15.md) | Required | - |
+| `Data` | [`Models.Data15`](../../doc/models/data-15.md) | Required | - |
 
 ## Example (as JSON)
 

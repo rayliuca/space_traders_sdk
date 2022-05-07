@@ -9,17 +9,17 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `system` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `mtype` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `x` | `int` | Required | - |
-| `y` | `int` | Required | - |
-| `orbitals` | `List of string` | Required | - |
-| `faction` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `features` | `List of string` | Required | - |
-| `traits` | `List of string` | Required | - |
-| `charted` | `bool` | Required | - |
-| `charted_by` | `string` | Optional | - |
+| `System` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Type` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `X` | `int` | Required | - |
+| `Y` | `int` | Required | - |
+| `Orbitals` | `List<string>` | Required | - |
+| `Faction` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Features` | `List<string>` | Required | - |
+| `Traits` | `List<string>` | Required | - |
+| `Charted` | `bool` | Required | - |
+| `ChartedBy` | `string` | Optional | - |
 
 ## Example (as JSON)
 

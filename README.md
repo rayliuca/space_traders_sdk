@@ -20,77 +20,53 @@ If this sounds fun and interesting to you, please drop into our Discord and get 
 
 ## Building
 
-You must have Python `3 >=3.7, <= 3.9` installed on your system to install and run this SDK. This SDK package depends on other Python packages like nose, jsonpickle etc. These dependencies are defined in the `requirements.txt` file that comes with the SDK. To resolve these dependencies, you can use the PIP Dependency manager. Install it by following steps at [https://pip.pypa.io/en/stable/installing/](https://pip.pypa.io/en/stable/installing/).
+The generated code uses the Newtonsoft Json.NET NuGet Package. If the automatic NuGet package restore is enabled, these dependencies will be installed automatically. Therefore, you will need internet access for build.
 
-Python and PIP executables should be defined in your PATH. Open command prompt and type `pip --version`. This should display the version of the PIP Dependency Manager installed if your installation was successful and the paths are properly defined.
+* Open the solution (SpaceTradersAPI.sln) file.
 
-* Using command line, navigate to the directory containing the generated files (including `requirements.txt`) for the SDK.
-* Run the command `pip install -r requirements.txt`. This should install all the required dependencies.
+Invoke the build process using Ctrl + Shift + B shortcut key or using the Build menu as shown below.
 
-![Building SDK - Step 1](https://apidocs.io/illustration/python?workspaceFolder=Spacetradersapi-Python&step=installDependencies)
+The build process generates a portable class library, which can be used like a normal class library. The generated library is compatible with Windows Forms, Windows RT, Windows Phone 8, Silverlight 5, Xamarin iOS, Xamarin Android and Mono. More information on how to use can be found at the MSDN Portable Class Libraries documentation.
 
 ## Installation
 
-The following section explains how to use the spacetradersapi library in a new project.
+The following section explains how to use the SpaceTradersAPI.Standard library in a new project.
 
-### 1. Open Project in an IDE
+### 1. Starting a new project
 
-Open up a Python IDE like PyCharm. The basic workflow presented here is also applicable if you prefer using a different editor or IDE.
+For starting a new project, right click on the current solution from the solution explorer and choose `Add -> New Project`.
 
-![Open project in PyCharm - Step 1](https://apidocs.io/illustration/python?workspaceFolder=Spacetradersapi-Python&step=pyCharm)
+![Add a new project in Visual Studio](https://apidocs.io/illustration/cs?workspaceFolder=SpaceTraders%20API-CSharp&workspaceName=SpaceTradersAPI&projectName=SpaceTradersAPI.Standard&rootNamespace=SpaceTradersAPI.Standard&step=addProject)
 
-Click on `Open` in PyCharm to browse to your generated SDK directory and then click `OK`.
+Next, choose `Console Application`, provide `TestConsoleProject` as the project name and click OK.
 
-![Open project in PyCharm - Step 2](https://apidocs.io/illustration/python?workspaceFolder=Spacetradersapi-Python&step=openProject0)
+![Create a new Console Application in Visual Studio](https://apidocs.io/illustration/cs?workspaceFolder=SpaceTraders%20API-CSharp&workspaceName=SpaceTradersAPI&projectName=SpaceTradersAPI.Standard&rootNamespace=SpaceTradersAPI.Standard&step=createProject)
 
-The project files will be displayed in the side bar as follows:
+### 2. Set as startup project
 
-![Open project in PyCharm - Step 3](https://apidocs.io/illustration/python?workspaceFolder=Spacetradersapi-Python&projectName=spacetradersapi&step=openProject1)
+The new console project is the entry point for the eventual execution. This requires us to set the `TestConsoleProject` as the start-up project. To do this, right-click on the `TestConsoleProject` and choose `Set as StartUp Project` form the context menu.
 
-### 2. Add a new Test Project
+![Adding a project reference](https://apidocs.io/illustration/cs?workspaceFolder=SpaceTraders%20API-CSharp&workspaceName=SpaceTradersAPI&projectName=SpaceTradersAPI.Standard&rootNamespace=SpaceTradersAPI.Standard&step=setStartup)
 
-Create a new directory by right clicking on the solution name as shown below:
+### 3. Add reference of the library project
 
-![Add a new project in PyCharm - Step 1](https://apidocs.io/illustration/python?workspaceFolder=Spacetradersapi-Python&projectName=spacetradersapi&step=createDirectory)
+In order to use the Tester library in the new project, first we must add a project reference to the `TestConsoleProject`. First, right click on the `References` node in the solution explorer and click `Add Reference...`
 
-Name the directory as "test".
+![Adding a project reference](https://apidocs.io/illustration/cs?workspaceFolder=SpaceTraders%20API-CSharp&workspaceName=SpaceTradersAPI&projectName=SpaceTradersAPI.Standard&rootNamespace=SpaceTradersAPI.Standard&step=addReference)
 
-![Add a new project in PyCharm - Step 2](https://apidocs.io/illustration/python?workspaceFolder=Spacetradersapi-Python&step=nameDirectory)
+Next, a window will be displayed where we must set the `checkbox` on `Tester.Tests` and click `OK`. By doing this, we have added a reference of the `Tester.Tests` project into the new `TestConsoleProject`.
 
-Add a python file to this project.
+![Creating a project reference](https://apidocs.io/illustration/cs?workspaceFolder=SpaceTraders%20API-CSharp&workspaceName=SpaceTradersAPI&projectName=SpaceTradersAPI.Standard&rootNamespace=SpaceTradersAPI.Standard&step=createReference)
 
-![Add a new project in PyCharm - Step 3](https://apidocs.io/illustration/python?workspaceFolder=Spacetradersapi-Python&projectName=spacetradersapi&step=createFile)
+### 4. Write sample code
 
-Name it "testSDK".
+Once the `TestConsoleProject` is created, a file named `Program.cs` will be visible in the solution explorer with an empty `Main` method. This is the entry point for the execution of the entire solution. Here, you can add code to initialize the client library and acquire the instance of a Controller class. Sample code to initialize the client library and using Controller methods is given in the subsequent sections.
 
-![Add a new project in PyCharm - Step 4](https://apidocs.io/illustration/python?workspaceFolder=Spacetradersapi-Python&projectName=spacetradersapi&step=nameFile)
-
-In your python file you will be required to import the generated python library using the following code lines
-
-```python
-from spacetradersapi.spacetradersapi_client import SpacetradersapiClient
-```
-
-![Add a new project in PyCharm - Step 5](https://apidocs.io/illustration/python?workspaceFolder=Spacetradersapi-Python&projectName=spacetradersapi&libraryName=spacetradersapi.spacetradersapi_client&className=SpacetradersapiClient&step=projectFiles)
-
-After this you can write code to instantiate an API client object, get a controller object and  make API calls. Sample code is given in the subsequent sections.
-
-### 3. Run the Test Project
-
-To run the file within your test project, right click on your Python file inside your Test project and click on `Run`
-
-![Run Test Project - Step 1](https://apidocs.io/illustration/python?workspaceFolder=Spacetradersapi-Python&projectName=spacetradersapi&libraryName=spacetradersapi.spacetradersapi_client&className=SpacetradersapiClient&step=runProject)
+![Adding a project reference](https://apidocs.io/illustration/cs?workspaceFolder=SpaceTraders%20API-CSharp&workspaceName=SpaceTradersAPI&projectName=SpaceTradersAPI.Standard&rootNamespace=SpaceTradersAPI.Standard&step=addCode)
 
 ## Test the SDK
 
-You can test the generated SDK and the server with test cases. `unittest` is used as the testing framework and `nose` is used as the test runner. You can run the tests as follows:
-
-Navigate to the root directory of the SDK and run the following commands
-
-```
-pip install -r test-requirements.txt
-nosetests
-```
+The generated SDK also contain one or more Tests, which are contained in the Tests project. In order to invoke these test cases, you will need `NUnit 3.0 Test Adapter Extension` for Visual Studio. Once the SDK is complied, the test cases should appear in the Test Explorer window. Here, you can click `Run All` to execute these test cases.
 
 ## Initialize the API Client
 
@@ -100,25 +76,13 @@ The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
-| `http_client_instance` | `HttpClient` | The Http Client passed from the sdk user for making requests |
-| `override_http_client_configuration` | `bool` | The value which determines to override properties of the passed Http Client from the sdk user |
-| `http_call_back` | `HttpCallBack` | The callback value that is invoked before and after an HTTP call is made to an endpoint |
-| `timeout` | `float` | The value to use for connection timeout. <br> **Default: 60** |
-| `max_retries` | `int` | The number of times to retry an endpoint call if it fails. <br> **Default: 0** |
-| `backoff_factor` | `float` | A backoff factor to apply between attempts after the second try. <br> **Default: 2** |
-| `retry_statuses` | `Array of int` | The http statuses on which retry is to be done. <br> **Default: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524]** |
-| `retry_methods` | `Array of string` | The http methods on which retry is to be done. <br> **Default: ['GET', 'PUT']** |
-| `access_token` | `string` | The OAuth 2.0 Access Token to use for API requests. |
+| `Timeout` | `TimeSpan` | Http client timeout.<br>*Default*: `TimeSpan.FromSeconds(100)` |
+| `AccessToken` | `string` | The OAuth 2.0 Access Token to use for API requests. |
 
 The API client can be initialized as follows:
 
-```python
-from spacetradersapi.spacetradersapi_client import SpacetradersapiClient
-from spacetradersapi.configuration import Environment
-
-client = SpacetradersapiClient(
-    access_token='AccessToken',
-    environment=Environment.PRODUCTION,)
+```csharp
+SpaceTradersAPI.Standard.SpaceTradersAPIClient client = new SpaceTradersAPI.Standard.SpaceTradersAPIClient.Builder().Build();
 ```
 
 ## Authorization
@@ -140,6 +104,12 @@ This API uses `OAuth 2 Bearer token`.
 ## Classes Documentation
 
 * [Utility Classes](doc/utility-classes.md)
-* [HttpResponse](doc/http-response.md)
 * [HttpRequest](doc/http-request.md)
+* [HttpResponse](doc/http-response.md)
+* [HttpStringResponse](doc/http-string-response.md)
+* [HttpContext](doc/http-context.md)
+* [HttpClientConfiguration](doc/http-client-configuration.md)
+* [HttpClientConfiguration Builder](doc/http-client-configuration-builder.md)
+* [IAuthManager](doc/i-auth-manager.md)
+* [ApiException](doc/api-exception.md)
 

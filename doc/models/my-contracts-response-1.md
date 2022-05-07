@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `data` | [`Contract`](../../doc/models/contract.md) | Optional | - |
+| `Data` | [`Models.Contract`](../../doc/models/contract.md) | Optional | - |
 
 ## Example (as JSON)
 

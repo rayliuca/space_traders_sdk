@@ -1,7 +1,7 @@
 # Ships
 
-```python
-ships_controller = client.ships
+```csharp
+ShipsController shipsController = client.ShipsController;
 ```
 
 ## Class Name
@@ -21,29 +21,33 @@ ships_controller = client.ships
 
 Jettison cargo from your ship's cargo hold.
 
-```python
-def post_my_ships_ship_symbol_jettison(self,
-                                      ship_symbol,
-                                      body=None)
+```csharp
+PostMyShipsShipSymbolJettisonAsync(
+    string shipSymbol,
+    Models.MyShipsJettisonRequest body = null)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
-| `body` | [`MyShipsJettisonRequest`](../../doc/models/my-ships-jettison-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | - |
+| `body` | [`Models.MyShipsJettisonRequest`](../../doc/models/my-ships-jettison-request.md) | Body, Optional | - |
 
 ## Response Type
 
-[`MyShipsJettisonResponse`](../../doc/models/my-ships-jettison-response.md)
+[`Task<Models.MyShipsJettisonResponse>`](../../doc/models/my-ships-jettison-response.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = ships_controller.post_my_ships_ship_symbol_jettison(ship_symbol)
+try
+{
+    MyShipsJettisonResponse result = await shipsController.PostMyShipsShipSymbolJettisonAsync(shipSymbol, null);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -62,31 +66,35 @@ result = ships_controller.post_my_ships_ship_symbol_jettison(ship_symbol)
 
 Execute a ship scan to view approach / departing ships, system information or details about a waypoint. Send a scan mode to select the type of scan performed by your ship.
 
-```python
-def post_my_ships_ship_symbol_scan(self,
-                                  ship_symbol,
-                                  body=None)
+```csharp
+PostMyShipsShipSymbolScanAsync(
+    string shipSymbol,
+    Models.MyShipsScanRequest body = null)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
-| `body` | [`MyShipsScanRequest`](../../doc/models/my-ships-scan-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | - |
+| `body` | [`Models.MyShipsScanRequest`](../../doc/models/my-ships-scan-request.md) | Body, Optional | - |
 
 ## Response Type
 
-[`MyShipsScanResponse`](../../doc/models/my-ships-scan-response.md)
+[`Task<Models.MyShipsScanResponse>`](../../doc/models/my-ships-scan-response.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
-body = MyShipsScanRequest()
-body.mode = ModeEnum.APPROACHING_SHIPS
+```csharp
+string shipSymbol = "shipSymbol2";
+var body = new MyShipsScanRequest();
+body.Mode = ModeEnum.APPROACHINGSHIPS;
 
-result = ships_controller.post_my_ships_ship_symbol_scan(ship_symbol, body)
+try
+{
+    MyShipsScanResponse result = await shipsController.PostMyShipsShipSymbolScanAsync(shipSymbol, body);
+}
+catch (ApiException e){};
 ```
 
 
@@ -94,27 +102,31 @@ result = ships_controller.post_my_ships_ship_symbol_scan(ship_symbol, body)
 
 Scan Cooldown
 
-```python
-def get_my_ships_ship_symbol_scan(self,
-                                 ship_symbol)
+```csharp
+GetMyShipsShipSymbolScanAsync(
+    string shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `string` | Template, Required | - |
 
 ## Response Type
 
-[`MyShipsScanResponse1`](../../doc/models/my-ships-scan-response-1.md)
+[`Task<Models.MyShipsScanResponse1>`](../../doc/models/my-ships-scan-response-1.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = ships_controller.get_my_ships_ship_symbol_scan(ship_symbol)
+try
+{
+    MyShipsScanResponse1 result = await shipsController.GetMyShipsShipSymbolScanAsync(shipSymbol);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -135,27 +147,31 @@ result = ships_controller.get_my_ships_ship_symbol_scan(ship_symbol)
 
 Retrieve the details of your ship.
 
-```python
-def get_my_ships_ship_symbol(self,
-                            ship_symbol)
+```csharp
+GetMyShipsShipSymbolAsync(
+    string shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `string` | Template, Required | - |
 
 ## Response Type
 
-[`MyShipsResponse`](../../doc/models/my-ships-response.md)
+[`Task<Models.MyShipsResponse>`](../../doc/models/my-ships-response.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = ships_controller.get_my_ships_ship_symbol(ship_symbol)
+try
+{
+    MyShipsResponse result = await shipsController.GetMyShipsShipSymbolAsync(shipSymbol);
+}
+catch (ApiException e){};
 ```
 
 
@@ -163,18 +179,22 @@ result = ships_controller.get_my_ships_ship_symbol(ship_symbol)
 
 Retrieve all of your ships.
 
-```python
-def get_my_ships(self)
+```csharp
+GetMyShipsAsync()
 ```
 
 ## Response Type
 
-[`MyShipsResponse1`](../../doc/models/my-ships-response-1.md)
+[`Task<Models.MyShipsResponse1>`](../../doc/models/my-ships-response-1.md)
 
 ## Example Usage
 
-```python
-result = ships_controller.get_my_ships()
+```csharp
+try
+{
+    MyShipsResponse1 result = await shipsController.GetMyShipsAsync();
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*

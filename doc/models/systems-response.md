@@ -9,8 +9,8 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `data` | [`List of System`](../../doc/models/system.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
-| `meta` | [`Meta`](../../doc/models/meta.md) | Required | - |
+| `Data` | [`List<Models.System>`](../../doc/models/system.md) | Required | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
+| `Meta` | [`Models.Meta`](../../doc/models/meta.md) | Required | - |
 
 ## Example (as JSON)
 

@@ -1,15 +1,19 @@
 
-# HttpResponse
+# HttpResponse Class
 
-Http response received.
+HttpResponse stores necessary information about the http response.
 
-## Parameters
+## Properties
 
-| Name | Type | Description |
+| Name | Description | Type |
 |  --- | --- | --- |
-| status_code | int | The status code returned by the server. |
-| reason_phrase | str | The reason phrase returned by the server. |
-| headers | dict | Response headers. |
-| text | str | Response body. |
-| request | HttpRequest | The request that resulted in this response. |
+| StatusCode | Gets the HTTP Status code of the http response. | `int` |
+| Headers | Gets the headers of the http response. | `Dictionary<string, string>` |
+| RawBody | Gets the stream of the body. | `Stream` |
+
+## Constructors
+
+| Name | Description |
+|  --- | --- |
+| `HttpResponse(int statusCode, Dictionary<string, string> headers, Stream rawBody)` | Initializes a new instance of the <see cref="HttpResponse"/> class. |
 

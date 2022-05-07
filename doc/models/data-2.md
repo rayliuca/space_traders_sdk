@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `submitted` | `List of string` | Optional | - |
+| `Submitted` | `List<string>` | Optional | - |
 
 ## Example (as JSON)
 

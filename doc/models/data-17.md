@@ -9,8 +9,8 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship` | [`Ship`](../../doc/models/ship.md) | Optional | - |
-| `credits` | `int` | Optional | - |
+| `Ship` | [`Models.Ship`](../../doc/models/ship.md) | Optional | - |
+| `Credits` | `int?` | Optional | - |
 
 ## Example (as JSON)
 

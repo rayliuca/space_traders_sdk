@@ -9,8 +9,8 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `myield` | [`Yield`](../../doc/models/yield.md) | Required | - |
+| `ShipSymbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Yield` | [`Models.Yield`](../../doc/models/yield.md) | Required | - |
 
 ## Example (as JSON)
 

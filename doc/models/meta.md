@@ -9,9 +9,9 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `total` | `int` | Required | - |
-| `page` | `int` | Required | - |
-| `limit` | `int` | Required | - |
+| `Total` | `int` | Required | - |
+| `Page` | `int` | Required | - |
+| `Limit` | `int` | Required | - |
 
 ## Example (as JSON)
 

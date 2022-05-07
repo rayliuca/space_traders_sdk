@@ -9,12 +9,12 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `registration` | [`Registration`](../../doc/models/registration.md) | Required | - |
-| `frame_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `reactor_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `engine_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `expiration` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Registration` | [`Models.Registration`](../../doc/models/registration.md) | Required | - |
+| `FrameSymbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `ReactorSymbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `EngineSymbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Expiration` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
 
 ## Example (as JSON)
 

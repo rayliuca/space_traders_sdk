@@ -9,8 +9,8 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `credits` | `int` | Required | - |
-| `fuel` | `int` | Required | - |
+| `Credits` | `int` | Required | - |
+| `Fuel` | `int` | Required | - |
 
 ## Example (as JSON)
 

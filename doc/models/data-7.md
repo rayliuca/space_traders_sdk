@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `cooldown` | [`Cooldown`](../../doc/models/cooldown.md) | Required | - |
+| `Cooldown` | [`Models.Cooldown`](../../doc/models/cooldown.md) | Required | - |
 
 ## Example (as JSON)
 

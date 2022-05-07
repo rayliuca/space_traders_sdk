@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `navigation` | [`ShipNavigation`](../../doc/models/ship-navigation.md) | Optional | - |
+| `Navigation` | [`Models.ShipNavigation`](../../doc/models/ship-navigation.md) | Optional | - |
 
 ## Example (as JSON)
 

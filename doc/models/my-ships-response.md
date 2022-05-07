@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `data` | [`Ship`](../../doc/models/ship.md) | Required | - |
+| `Data` | [`Models.Ship`](../../doc/models/ship.md) | Required | - |
 
 ## Example (as JSON)
 

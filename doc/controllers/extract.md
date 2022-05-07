@@ -1,7 +1,7 @@
 # Extract
 
-```python
-extract_controller = client.extract
+```csharp
+ExtractController extractController = client.ExtractController;
 ```
 
 ## Class Name
@@ -20,30 +20,34 @@ extract_controller = client.extract
 
 Extract resources from the waypoint into your ship. Send a survey as the payload to target specific yields. The entire survey must be sent as it contains a signature that the backend verifies.
 
-```python
-def post_my_ships_ship_symbol_extract(self,
-                                     ship_symbol,
-                                     body=None)
+```csharp
+PostMyShipsShipSymbolExtractAsync(
+    string shipSymbol,
+    Models.MyShipsExtractRequest body = null)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The ship symbol |
-| `body` | [`MyShipsExtractRequest`](../../doc/models/my-ships-extract-request.md) | Body, Optional | - |
+| `shipSymbol` | `string` | Template, Required | The ship symbol |
+| `body` | [`Models.MyShipsExtractRequest`](../../doc/models/my-ships-extract-request.md) | Body, Optional | - |
 
 ## Response Type
 
-[`MyShipsExtractResponse`](../../doc/models/my-ships-extract-response.md)
+[`Task<Models.MyShipsExtractResponse>`](../../doc/models/my-ships-extract-response.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
-body = MyShipsExtractRequest()
+```csharp
+string shipSymbol = "shipSymbol2";
+var body = new MyShipsExtractRequest();
 
-result = extract_controller.post_my_ships_ship_symbol_extract(ship_symbol, body)
+try
+{
+    MyShipsExtractResponse result = await extractController.PostMyShipsShipSymbolExtractAsync(shipSymbol, body);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -71,27 +75,31 @@ result = extract_controller.post_my_ships_ship_symbol_extract(ship_symbol, body)
 
 Get the status of your last extraction.
 
-```python
-def get_my_ships_ship_symbol_extract(self,
-                                    ship_symbol)
+```csharp
+GetMyShipsShipSymbolExtractAsync(
+    string shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | The ship symbol |
+| `shipSymbol` | `string` | Template, Required | The ship symbol |
 
 ## Response Type
 
-[`MyShipsExtractResponse1`](../../doc/models/my-ships-extract-response-1.md)
+[`Task<Models.MyShipsExtractResponse1>`](../../doc/models/my-ships-extract-response-1.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = extract_controller.get_my_ships_ship_symbol_extract(ship_symbol)
+try
+{
+    MyShipsExtractResponse1 result = await extractController.GetMyShipsShipSymbolExtractAsync(shipSymbol);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -114,27 +122,31 @@ If you want to target specific yields for an extraction, you can survey a waypoi
 
 Your ship will enter a cooldown between consecutive survey requests. Surveys will eventually expire after a period of time. Multiple ships can use the same survey for extraction.
 
-```python
-def post_my_ships_ship_symbol_survey(self,
-                                    ship_symbol)
+```csharp
+PostMyShipsShipSymbolSurveyAsync(
+    string shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `string` | Template, Required | - |
 
 ## Response Type
 
-[`MyShipsSurveyResponse`](../../doc/models/my-ships-survey-response.md)
+[`Task<Models.MyShipsSurveyResponse>`](../../doc/models/my-ships-survey-response.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = extract_controller.post_my_ships_ship_symbol_survey(ship_symbol)
+try
+{
+    MyShipsSurveyResponse result = await extractController.PostMyShipsShipSymbolSurveyAsync(shipSymbol);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*
@@ -207,27 +219,31 @@ result = extract_controller.post_my_ships_ship_symbol_survey(ship_symbol)
 
 Executing a survey will initiate a cooldown for a number of seconds before you can call it again. This endpoint returns the details of your cooldown, or a 404 if there is no cooldown for the survey action.
 
-```python
-def get_my_ships_ship_symbol_survey(self,
-                                   ship_symbol)
+```csharp
+GetMyShipsShipSymbolSurveyAsync(
+    string shipSymbol)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `ship_symbol` | `string` | Template, Required | - |
+| `shipSymbol` | `string` | Template, Required | - |
 
 ## Response Type
 
-[`MyShipsSurveyResponse1`](../../doc/models/my-ships-survey-response-1.md)
+[`Task<Models.MyShipsSurveyResponse1>`](../../doc/models/my-ships-survey-response-1.md)
 
 ## Example Usage
 
-```python
-ship_symbol = 'shipSymbol2'
+```csharp
+string shipSymbol = "shipSymbol2";
 
-result = extract_controller.get_my_ships_ship_symbol_survey(ship_symbol)
+try
+{
+    MyShipsSurveyResponse1 result = await extractController.GetMyShipsShipSymbolSurveyAsync(shipSymbol);
+}
+catch (ApiException e){};
 ```
 
 ## Example Response *(as JSON)*

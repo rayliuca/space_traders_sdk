@@ -9,9 +9,9 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `signature` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `deposits` | `List of string` | Required | - |
-| `expiration` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Signature` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Deposits` | `List<string>` | Required | - |
+| `Expiration` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
 
 ## Example (as JSON)
 

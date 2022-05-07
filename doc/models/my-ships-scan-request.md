@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `mode` | [`ModeEnum`](../../doc/models/mode-enum.md) | Required | - |
+| `Mode` | [`Models.ModeEnum`](../../doc/models/mode-enum.md) | Required | - |
 
 ## Example (as JSON)
 

@@ -9,8 +9,8 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `extraction` | [`Extraction`](../../doc/models/extraction.md) | Required | - |
-| `cooldown` | [`Cooldown`](../../doc/models/cooldown.md) | Required | - |
+| `Extraction` | [`Models.Extraction`](../../doc/models/extraction.md) | Required | - |
+| `Cooldown` | [`Models.Cooldown`](../../doc/models/cooldown.md) | Required | - |
 
 ## Example (as JSON)
 

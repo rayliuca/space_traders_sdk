@@ -9,8 +9,8 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `on_accepted` | `int` | Required | - |
-| `on_fulfilled` | `int` | Required | - |
+| `OnAccepted` | `int` | Required | - |
+| `OnFulfilled` | `int` | Required | - |
 
 ## Example (as JSON)
 

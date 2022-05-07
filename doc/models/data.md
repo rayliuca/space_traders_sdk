@@ -9,10 +9,10 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `trade_symbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `destination` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
-| `units` | `int` | Required | - |
-| `fulfilled` | `int` | Required | - |
+| `TradeSymbol` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Destination` | `string` | Required | **Constraints**: *Minimum Length*: `1` |
+| `Units` | `int` | Required | - |
+| `Fulfilled` | `int` | Required | - |
 
 ## Example (as JSON)
 

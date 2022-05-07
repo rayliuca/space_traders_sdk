@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `data` | `List of string` | Required | - |
+| `Data` | `List<string>` | Required | - |
 
 ## Example (as JSON)
 
